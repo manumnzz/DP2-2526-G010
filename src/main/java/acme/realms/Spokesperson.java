@@ -1,4 +1,4 @@
-package acme.entities.spokesperson;
+package acme.realms;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

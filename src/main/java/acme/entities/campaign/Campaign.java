@@ -13,7 +13,7 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidUrl;
-import acme.entities.spokesperson.Spokesperson;
+import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
 
