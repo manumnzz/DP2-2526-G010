@@ -30,3 +30,9 @@ nbdist/
 mvnw
 
 mvnw\.cmd
+.classpath
+.project
+pom.xml
+.settings/org.eclipse.wst.common.component
+.classpath
+.gitignore
