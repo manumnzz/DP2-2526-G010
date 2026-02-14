@@ -4,15 +4,17 @@ package acme.entities.campaign;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.Optional;
+import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidTicker;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,10 +31,12 @@ public class Campaign extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
+	@ValidTicker
 	@Column(unique = true)
 	private String				ticker;
 
 	@Mandatory
+	//@ValidHeader
 	@Column
 	private String				name;
 
@@ -41,13 +45,14 @@ public class Campaign extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@Temporal(TemporalType.TIMESTAMP)
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	private Moment				startMoment;
 
 	@Mandatory
-	@Temporal(TemporalType.TIMESTAMP)
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	private Moment				endMoment;
 
+	@Optional
 	@ValidUrl
 	@Column
 	private String				moreInfo;
