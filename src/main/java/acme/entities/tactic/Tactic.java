@@ -27,7 +27,7 @@ public class Tactic extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	// @ValidHeader (si existe)
+	// @ValidHeader
 	@Column
 	private String				name;
 

@@ -42,7 +42,7 @@ public class Strategy extends AbstractEntity {
 	private String				ticker;
 
 	@Mandatory
-	// @ValidHeader (si existe en vuestro proyecto)
+	// @ValidHeader
 	@Column
 	private String				name;
 

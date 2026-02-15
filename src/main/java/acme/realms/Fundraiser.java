@@ -18,7 +18,7 @@ public class Fundraiser extends AbstractRole {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	// @ValidHeader (si existe)
+	// @ValidHeader
 	@Column
 	private String				bank;
 
