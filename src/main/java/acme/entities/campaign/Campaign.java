@@ -12,7 +12,11 @@ import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidText;
+import acme.constraints.ValidTicker;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,14 +33,17 @@ public class Campaign extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
+	@ValidTicker
 	@Column(unique = true)
 	private String				ticker;
 
 	@Mandatory
+	@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
+	@ValidText
 	@Column
 	private String				description;
 
@@ -57,6 +64,7 @@ public class Campaign extends AbstractEntity {
 	private Double				monthsActive;
 
 	@Mandatory
+	@ValidNumber(min = 0)
 	@Column
 	private Double				effort;
 
