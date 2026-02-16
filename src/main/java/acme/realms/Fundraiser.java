@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
-import acme.constraints.ValidLongText;
+import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,7 +23,7 @@ public class Fundraiser extends AbstractRole {
 	private String				bank;
 
 	@Mandatory
-	@ValidLongText
+	@ValidText
 	@Column
 	private String				statement;
 
