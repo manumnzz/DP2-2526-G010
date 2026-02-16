@@ -14,6 +14,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidNumber;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
+import acme.datatypes.MilestoneKind;
 import acme.entities.campaign.Campaign;
 import lombok.Getter;
 import lombok.Setter;
@@ -45,7 +46,8 @@ public class Milestone extends AbstractEntity {
 	private Double				effort;
 
 	@Mandatory
-	@Enumerated(EnumType.STRING)
+	@Valid
+	@Column
 	private MilestoneKind		kind;
 
 	// Derived attributes -----------------------------------------------------
