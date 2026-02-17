@@ -13,6 +13,7 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidScore;
 import acme.constraints.ValidText;
+import acme.datatypes.TacticKind;
 import acme.entities.strategy.Strategy;
 import lombok.Getter;
 import lombok.Setter;
@@ -44,6 +45,10 @@ public class Tactic extends AbstractEntity {
 	@Mandatory
 	@Enumerated(EnumType.STRING)
 	private TacticKind			kind;
+
+	@Mandatory
+	@Column
+	private boolean				draftMode;
 
 	// Relationships ----------------------------------------------------------
 
