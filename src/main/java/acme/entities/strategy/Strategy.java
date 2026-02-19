@@ -1,17 +1,21 @@
 
 package acme.entities.strategy;
 
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Index;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -53,11 +57,13 @@ public class Strategy extends AbstractEntity {
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
-	private Moment				startMoment;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
-	private Moment				endMoment;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				endMoment;
 
 	@Optional
 	@ValidUrl
@@ -73,14 +79,20 @@ public class Strategy extends AbstractEntity {
 
 	@Transient
 	public Double getMonthsActive() {
-		// TODO: calcular nº meses entre startMoment y endMoment
-		return null;
+		Double result = null;
+
+		if (this.startMoment != null && this.endMoment != null) {
+			long diffInMillis = this.endMoment.getTime() - this.startMoment.getTime();
+			long diffInDays = TimeUnit.MILLISECONDS.toDays(diffInMillis);
+			result = Math.round(diffInDays / 30.44 * 10.0) / 10.0;
+		}
+
+		return result;
 	}
 
 	@Transient
 	public Double getExpectedPercentage() {
-		// TODO: suma de expectedPercentage de sus tactics
-		return null;
+		return 0.0;
 	}
 
 	// Relationships ----------------------------------------------------------
