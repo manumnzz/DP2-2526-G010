@@ -2,6 +2,7 @@
 package acme.entities.inventions;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,9 +11,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -20,6 +25,7 @@ import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.features.intentions.InventionRepository;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -75,30 +81,40 @@ public class Invention extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-	/*
-	 * @Mandatory
-	 * 
-	 * @Valid
-	 * 
-	 * @Transient
-	 * private Double monthsActivate;
-	 * 
-	 * 
-	 * @Mandatory
-	 * 
-	 * @ValidMoney
-	 * 
-	 * @Transient
-	 * public Money getCost() {
-	 * 
-	 * }
-	 */
+	@Transient
+	@Autowired
+	private InventionRepository	repository;
+
+
+	@Transient
+	public Double getMonthsActive() {
+		double result = 0.0;
+		if (this.startMoment != null && this.endMoment != null) {
+			long diffInMillis = this.endMoment.getTime() - this.startMoment.getTime();
+			long diffInDays = TimeUnit.MILLISECONDS.toDays(diffInMillis);
+			result = Math.round(diffInDays / 30.0 * 10.0) / 10.0;
+		}
+		return result;
+	}
+
+	@Transient
+	public Money getCost() {
+		Money result = new Money();
+
+		Double amount = this.repository.getSummaryCostAmountByInventionId(this.getId());
+
+		result.setCurrency("EUR");
+		result.setAmount(amount != null ? amount : 0.0);
+
+		return result;
+	}
 
 	// Relationships ----------------------------------------------------------
+
 
 	@Mandatory
 	@Valid
 	@ManyToOne
-	private Inventor			inventor;
+	private Inventor inventor;
 
 }
