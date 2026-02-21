@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidScore;
+import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.datatypes.TacticKind;
 import acme.entities.strategy.Strategy;
@@ -28,7 +29,7 @@ public class Tactic extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	// @ValidHeader
+	@ValidHeader
 	@Column
 	private String				name;
 
