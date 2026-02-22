@@ -1,0 +1,4 @@
+key,key:userAccount,bank,statement,agent
+fundraiser-01,user-account-fundraiser-01,Bank One,Statement fundraiser 1,true
+fundraiser-02,user-account-fundraiser-02,Bank Two,Statement fundraiser 2,true
+fundraiser-03,user-account-fundraiser-03,Bank Three,Statement fundraiser 3,false
