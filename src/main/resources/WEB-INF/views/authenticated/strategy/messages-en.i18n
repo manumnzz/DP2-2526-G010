@@ -1,0 +1,13 @@
+authenticated.strategy.list.title = Listing of strategies
+authenticated.strategy.list.label.ticker = Ticker
+authenticated.strategy.list.label.name = Name
+authenticated.strategy.list.label.startMoment = Start moment
+authenticated.strategy.list.label.endMoment = End moment
+authenticated.strategy.list.label.moreInfo = More info
+
+authenticated.strategy.form.label.ticker = Ticker:
+authenticated.strategy.form.label.name = Name:
+authenticated.strategy.form.label.description = Description:
+authenticated.strategy.form.label.startMoment = Start moment:
+authenticated.strategy.form.label.endMoment = End moment:
+authenticated.strategy.form.label.moreInfo = More info:

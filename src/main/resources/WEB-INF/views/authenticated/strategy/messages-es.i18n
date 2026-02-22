@@ -1,0 +1,13 @@
+authenticated.strategy.list.title = Listado de estrategias
+authenticated.strategy.list.label.ticker = Ticker
+authenticated.strategy.list.label.name = Nombre
+authenticated.strategy.list.label.startMoment = Fecha inicio
+authenticated.strategy.list.label.endMoment = Fecha fin
+authenticated.strategy.list.label.moreInfo = Más información
+
+authenticated.strategy.form.label.ticker = Ticker:
+authenticated.strategy.form.label.name = Nombre:
+authenticated.strategy.form.label.description = Descripción:
+authenticated.strategy.form.label.startMoment = Fecha inicio:
+authenticated.strategy.form.label.endMoment = Fecha fin:
+authenticated.strategy.form.label.moreInfo = Más información:
