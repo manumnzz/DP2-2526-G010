@@ -1,11 +1,14 @@
 
 package acme.features.fundraiser;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
+import acme.entities.tactic.Tactic;
 import acme.realms.Fundraiser;
 
 @Service
@@ -38,17 +41,24 @@ public class FundraiserStrategyDeleteService extends AbstractService<Fundraiser,
 	}
 
 	@Override
+	public void bind() {
+
+	}
+
+	@Override
 	public void validate() {
 
 	}
 
 	@Override
 	public void execute() {
+		Collection<Tactic> tactics = this.repository.findManyTacticsByStrategyId(this.strategy.getId());
+		this.repository.deleteAll(tactics);
+
 		this.repository.delete(this.strategy);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.strategy, "ticker", "name", "description", "draftMode");
 	}
 }
