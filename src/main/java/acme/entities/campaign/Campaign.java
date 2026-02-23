@@ -2,13 +2,11 @@
 package acme.entities.campaign;
 
 import java.time.Duration;
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -26,7 +24,6 @@ import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
-import acme.entities.milestone.Milestone;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -103,9 +100,5 @@ public class Campaign extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Spokesperson			spokesperson;
-
-	@OneToMany(mappedBy = "campaign")
-	private Collection<Milestone>	milestones;
-
+	private Spokesperson spokesperson;
 }
