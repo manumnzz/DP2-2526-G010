@@ -1,26 +1,26 @@
 
-package acme.features.principal;
+package acme.features.any.strategy;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.principals.Authenticated;
+import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
 
 @Service
-public class PrincipalStrategyListService extends AbstractService<Authenticated, Strategy> {
+public class AnyStrategyListService extends AbstractService<Any, Strategy> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private PrincipalStrategyRepository	repository;
+	private AnyStrategyRepository	repository;
 
-	private Collection<Strategy>		strategies;
+	private Collection<Strategy>	strategies;
 
-	// AbstractService interface ----------------------------------------------
+	// AbstractService interface ---------------------------------------------
 
 
 	@Override
