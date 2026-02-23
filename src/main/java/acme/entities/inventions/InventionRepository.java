@@ -1,5 +1,5 @@
 
-package acme.features.intentions;
+package acme.entities.inventions;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -14,5 +14,8 @@ public interface InventionRepository extends AbstractRepository {
 
 	@Query("select p.cost.currency from Part p where p.invention.id = :inventionId")
 	String getAnyCurrencyByInventionId(int inventionId);
+	
+	@Query("select i from Invention i where i.ticker = :ticker")
+	Invention findInventionByTicker(String ticker);
 
 }
