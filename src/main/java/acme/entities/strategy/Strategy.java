@@ -86,15 +86,18 @@ public class Strategy extends AbstractEntity {
 
 	@Transient
 	public Double getExpectedPercentage() {
-		return 0.0;
+		return this.expectedPercentage;
 	}
 
-	// Relationships ----------------------------------------------------------
 
+	@Transient
+	private Double		expectedPercentage;
+
+	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Fundraiser fundraiser;
+	private Fundraiser	fundraiser;
 
 }
