@@ -1,9 +1,9 @@
 
 package acme.entities.campaign;
 
+import java.time.Duration;
 import java.util.Collection;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,11 +15,14 @@ import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
@@ -32,8 +35,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Campaign extends AbstractEntity {
-
-	// Serialisation version --------------------------------------------------
 
 	private static final long	serialVersionUID	= 1L;
 
@@ -72,31 +73,28 @@ public class Campaign extends AbstractEntity {
 	@Column
 	private boolean				draftMode;
 
-
 	// Derived attributes -----------------------------------------------------
+
 	@Transient
-	public Double getMonthsActive() {
-		Double result = null;
+	@Autowired
+	private CampaignRepository	repository;
 
-		if (this.startMoment != null && this.endMoment != null) {
-			long diffInMillis = this.endMoment.getTime() - this.startMoment.getTime();
-			long diffInDays = TimeUnit.MILLISECONDS.toDays(diffInMillis);
-			result = Math.round(diffInDays / 30.44 * 10.0) / 10.0;
-		}
 
+	@Transient
+	public double monthsActive() {
+		double result;
+		Duration duration;
+		duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
+		result = duration.toDays() / 30.0;
 		return result;
 	}
-
 	@Transient
 	public Double getEffort() {
-		double result = 0.0;
+		Double result;
 
-		if (this.milestones != null && !this.milestones.isEmpty())
-			for (Milestone milestone : this.milestones)
-				if (milestone.getEffort() != null)
-					result += milestone.getEffort();
+		result = this.repository.computeCampaignEffort(this.getId());
 
-		return result;
+		return result == null ? 0.0 : result;
 	}
 
 	// Relationships ----------------------------------------------------------
