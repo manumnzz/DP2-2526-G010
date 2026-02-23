@@ -11,14 +11,11 @@
 --%>
 
 <%@page%>
-
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="fundraiser.strategy.list.label.ticker" path="ticker" width="20%"/>
-	<acme:list-column code="fundraiser.strategy.list.label.name" path="name" width="40%"/>
-	<acme:list-column code="fundraiser.strategy.list.label.startMoment" path="startMoment" width="20%"/>
-	<acme:list-column code="fundraiser.strategy.list.label.endMoment" path="endMoment" width="20%"/>
+	<acme:list-column code="any.strategy.list.label.ticker" path="ticker" width="20%"/>
+	<acme:list-column code="any.strategy.list.label.name" path="name" width="40%"/>
+	<acme:list-column code="any.strategy.list.label.startMoment" path="startMoment" width="20%"/>
+	<acme:list-column code="any.strategy.list.label.endMoment" path="endMoment" width="20%"/>
 </acme:list>
-
-<acme:button code="fundraiser.strategy.list.button.create" action="/fundraiser/strategy/create"/>
