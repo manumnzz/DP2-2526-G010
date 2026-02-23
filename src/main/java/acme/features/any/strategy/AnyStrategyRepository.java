@@ -1,5 +1,5 @@
 
-package acme.features.principal;
+package acme.features.any.strategy;
 
 import java.util.Collection;
 
@@ -12,7 +12,7 @@ import acme.entities.tactic.Tactic;
 import acme.realms.Fundraiser;
 
 @Repository
-public interface PrincipalStrategyRepository extends AbstractRepository {
+public interface AnyStrategyRepository extends AbstractRepository {
 
 	@Query("select s from Strategy s where s.draftMode = false")
 	Collection<Strategy> findManyPublishedStrategies();

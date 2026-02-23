@@ -31,10 +31,10 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
-# master.menu.authenticated ###################################################
+# master.menu.any #############################################################
 
-master.menu.authenticated = Authenticated
-master.menu.authenticated.list-strategies = List strategies
+master.menu.any = Public
+master.menu.any.list-strategies = List strategies
 
 # master.menu.fundraiser ######################################################
 

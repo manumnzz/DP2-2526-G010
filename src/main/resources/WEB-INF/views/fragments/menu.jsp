@@ -22,8 +22,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.authenticated.list-strategies" action="/authenticated/strategy/list"/>
+		<acme:menu-option code="master.menu.any" access="true">
+			<acme:menu-suboption code="master.menu.any.list-strategies" action="/any/strategy/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">

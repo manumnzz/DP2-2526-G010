@@ -1,27 +1,23 @@
 
-package acme.features.principal;
-
-import java.util.Collection;
+package acme.features.any.strategy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
-import acme.client.components.principals.Authenticated;
+import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
-import acme.entities.tactic.Tactic;
-import acme.realms.Fundraiser;
 
 @Service
-public class PrincipalStrategyShowService extends AbstractService<Authenticated, Strategy> {
+public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private PrincipalStrategyRepository	repository;
+	private AnyStrategyRepository	repository;
 
-	private Strategy					strategy;
+	private Strategy				strategy;
 
 	// AbstractService interface ---------------------------------------------
 
@@ -50,14 +46,12 @@ public class PrincipalStrategyShowService extends AbstractService<Authenticated,
 
 		int strategyId = this.strategy.getId();
 
-		Collection<Tactic> tactics = this.repository.findManyPublishedTacticsByStrategyId(strategyId);
-		Fundraiser fundraiser = this.strategy.getFundraiser();
-
 		Double expectedPercentage = this.repository.sumExpectedPercentageByStrategyId(strategyId);
+		Double monthsActive = this.strategy.getMonthsActive();
 
-		tuple.put("tactics", tactics);
-		tuple.put("fundraiser", fundraiser);
 		tuple.put("expectedPercentage", expectedPercentage);
+		tuple.put("monthsActive", monthsActive);
+		tuple.put("fundraiserId", this.strategy.getFundraiser().getId());
 
 		tuple.put("readonly", true);
 	}
