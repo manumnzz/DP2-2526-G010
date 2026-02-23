@@ -85,7 +85,7 @@ public class Strategy extends AbstractEntity {
 		if (this.startMoment != null && this.endMoment != null) {
 			long diffInMillis = this.endMoment.getTime() - this.startMoment.getTime();
 			long diffInDays = TimeUnit.MILLISECONDS.toDays(diffInMillis);
-			result = Math.round(diffInDays / 30.44 * 10.0) / 10.0;
+			result = Math.round(diffInDays / 30 * 10.0) / 10.0;
 		}
 
 		return result;
