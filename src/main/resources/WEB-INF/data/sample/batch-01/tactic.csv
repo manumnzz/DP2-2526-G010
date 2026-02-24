@@ -1,5 +1,5 @@
 key,name,notes,expected-percentage,kind,draft-mode,key:strategy
 tactic-01,Tactic 1,Notes 1,50.0,SUBTLE,FALSE,strategy-01
-tactic-02,Tactic 2,Notes 2,50.0,AGGRESSIVE,TRUE,strategy-01
+tactic-02,Tactic 2,Notes 2,50.0,AGGRESSIVE,FALSE,strategy-01
 tactic-03,Tactic 3,Notes 3,60.0,TENDER,TRUE,strategy-02
-tactic-04,Tactic 4,Notes 4,40.0,SUBTLE,FALSE,strategy-02
+tactic-04,Tactic 4,Notes 4,40.0,SUBTLE,TRUE,strategy-02

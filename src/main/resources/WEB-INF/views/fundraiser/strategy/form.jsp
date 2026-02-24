@@ -24,13 +24,11 @@
 
 	<jstl:choose>
 		<jstl:when test="${_command == 'show' && draftMode == false}">
-			<acme:button code="fundraiser.strategy.form.button.tactics"
-				action="/fundraiser/tactic/list?strategyId=${id}"/>
+			<acme:button code="fundraiser.strategy.form.button.tactics" action="/fundraiser/tactic/list?strategyId=${id}"/>
 		</jstl:when>
 
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
-			<acme:button code="fundraiser.strategy.form.button.tactics"
-				action="/fundraiser/tactic/list?strategyId=${id}"/>
+			<acme:button code="fundraiser.strategy.form.button.tactics" action="/fundraiser/tactic/list?strategyId=${id}&draftMode=${draftMode}"/>
 
 			<acme:submit code="fundraiser.strategy.form.button.update"  action="/fundraiser/strategy/update"/>
 			<acme:submit code="fundraiser.strategy.form.button.delete" action="/fundraiser/strategy/delete?id=${id}"/>
