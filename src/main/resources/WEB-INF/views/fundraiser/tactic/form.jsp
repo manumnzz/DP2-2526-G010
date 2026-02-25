@@ -34,6 +34,4 @@
 		</jstl:when>
 	</jstl:choose>
 
-	<acme:button code="fundraiser.tactic.form.button.return"
-		action="/fundraiser/tactic/list?strategyId=${strategyId}"/>
 </acme:form>

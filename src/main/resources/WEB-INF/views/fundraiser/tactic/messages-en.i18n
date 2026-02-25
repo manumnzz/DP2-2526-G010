@@ -16,6 +16,7 @@ fundraiser.tactic.list.label.draftMode = Draft
 
 fundraiser.tactic.list.button.create = Create
 
+fundraiser.tactic.form.title = Tactic form
 fundraiser.tactic.form.label.name = Name:
 fundraiser.tactic.form.label.notes = Notes:
 fundraiser.tactic.form.label.expectedPercentage = Expected percentage:

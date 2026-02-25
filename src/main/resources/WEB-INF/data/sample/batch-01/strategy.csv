@@ -1,3 +1,17 @@
 key,ticker,name,description,start-moment,end-moment,more-info,draft-mode,key:fundraiser
 strategy-01,FR01-STRAT01,Strategy One,Description one,2025/02/01 10:00,2025/06/01 10:00,http://example.com/1,FALSE,fundraiser-01
-strategy-02,FR02-STRAT02,Strategy Two,Description two,2025/03/01 10:00,2025/07/01 10:00,http://example.com/2,TRUE,fundraiser-02
+strategy-02,FR01-STRAT02,Strategy Two,Description two,2026/03/01 10:00,2026/07/01 10:00,http://example.com/2,TRUE,fundraiser-01
+strategy-03,FR01-STRAT03,Q2 Growth Plan,Expand customer acquisition through partnerships and ads,2025/01/05 09:00,2025/04/20 18:00,https://www.investopedia.com/terms/g/growthstrategy.asp,FALSE,fundraiser-01
+strategy-04,FR01-STRAT04,Community Outreach Strategy,Build awareness via local events and ambassadors,2026/05/15 12:00,2026/07/15 12:00,https://www.forbes.com/sites/forbescommunicationscouncil/,TRUE,fundraiser-01
+strategy-05,FR02-STRAT05,Retention Improvement Roadmap,Reduce churn by improving onboarding and support,2025/06/10 10:00,2025/10/10 10:00,https://hbr.org/topic/customer-retention,FALSE,fundraiser-02
+strategy-06,FR02-STRAT06,Product Launch Campaign,Coordinate launch messaging and rollout timeline,2026/09/01 09:30,2026/11/30 19:00,https://www.productplan.com/learn/product-launch-checklist/,TRUE,fundraiser-02
+strategy-07,FR02-STRAT07,Market Expansion 2026,Enter two new regions with localized offers,2025/02/01 09:00,2025/08/01 18:00,https://www.mckinsey.com/capabilities/growth-marketing-and-sales,FALSE,fundraiser-02
+strategy-08,FR02-STRAT08,Long-Term Portfolio Strategy,Balance risk and return with diversified tactics,2027/01/10 08:00,2027/12/15 20:00,https://www.investor.gov/introduction-investing/investing-basics,TRUE,fundraiser-02
+strategy-09,FR01-STRAT09,SEO Recovery Plan,Fix technical SEO issues and rebuild content to regain rankings,2025/08/15 09:00,2025/12/20 18:00,https://developers.google.com/search/docs/fundamentals/seo-starter-guide,FALSE,fundraiser-01
+strategy-10,FR01-STRAT10,Holiday Fundraising Sprint,Run a short end-of-year fundraising push with segmented messaging,2025/12/10 10:00,2026/01/10 20:00,https://www.hubspot.com/email-marketing,FALSE,fundraiser-01
+strategy-11,FR01-STRAT11,B2B Lead Generation Pipeline,Build a predictable pipeline with outreach sequences and demos,2026/03/15 09:30,2026/06/15 18:30,https://www.salesforce.com/resources/articles/lead-generation/,TRUE,fundraiser-01
+strategy-12,FR01-STRAT12,Two-Week Conversion Boost,Improve landing pages and checkout flow with rapid experiments,2025/01/12 08:00,2025/01/26 20:00,https://www.optimizely.com/optimization-glossary/conversion-rate-optimization/,FALSE,fundraiser-01
+strategy-13,FR02-STRAT13,Brand Refresh 2024,Update visual identity and messaging to align with new positioning,2025/03/01 10:00,2025/09/01 18:00,https://www.interaction-design.org/literature/topics/branding,FALSE,fundraiser-02
+strategy-14,FR02-STRAT14,Investor Relations Pack,Prepare investor materials and outreach cadence for next round,2026/10/20 09:00,2027/02/15 19:00,https://www.investopedia.com/terms/i/investorrelations.asp,TRUE,fundraiser-02
+strategy-15,FR02-STRAT15,Customer Success Playbook,Standardize success processes to increase expansion revenue,2025/11/01 09:00,2026/03/01 18:00,https://www.gainsight.com/customer-success/,FALSE,fundraiser-02
+strategy-16,FR02-STRAT16,Micro-Launch in 30 Days,Run a controlled launch to a small audience before scaling,2026/03/03 10:00,2026/04/02 10:00,https://www.atlassian.com/agile/product-management/product-launch,TRUE,fundraiser-02

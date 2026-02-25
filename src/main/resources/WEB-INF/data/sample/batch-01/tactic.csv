@@ -3,3 +3,43 @@ tactic-01,Tactic 1,Notes 1,50.0,SUBTLE,FALSE,strategy-01
 tactic-02,Tactic 2,Notes 2,50.0,AGGRESSIVE,FALSE,strategy-01
 tactic-03,Tactic 3,Notes 3,60.0,TENDER,TRUE,strategy-02
 tactic-04,Tactic 4,Notes 4,40.0,SUBTLE,TRUE,strategy-02
+tactic-05,Partnership Outreach,Identify 10 potential partners and pitch value proposition,35.0,SUBTLE,FALSE,strategy-03
+tactic-06,Paid Social Ads,Run targeted campaigns with weekly A/B testing,40.0,AGGRESSIVE,FALSE,strategy-03
+tactic-07,Referral Program,Launch referral incentives and track conversion funnel,25.0,TENDER,FALSE,strategy-03
+tactic-08,Local Event Booths,Attend two local events per month with demo sessions,50.0,TENDER,TRUE,strategy-04
+tactic-09,Campus Ambassadors,Recruit ambassadors and provide monthly training,30.0,SUBTLE,TRUE,strategy-04
+tactic-10,Newsletter Outreach,Publish biweekly updates with calls-to-action,20.0,SUBTLE,TRUE,strategy-04
+tactic-11,Onboarding Revamp,Shorten onboarding steps and add guided checklist,45.0,TENDER,FALSE,strategy-05
+tactic-12,Support SLA Improvements,Reduce response time with templates and triage rules,30.0,SUBTLE,FALSE,strategy-05
+tactic-13,Churn Interviews,Interview churned users and implement top 3 fixes,25.0,AGGRESSIVE,FALSE,strategy-05
+tactic-14,Launch Press Kit,Prepare press kit and media outreach list,40.0,SUBTLE,TRUE,strategy-06
+tactic-15,Influencer Seeding,Send early access to selected creators,35.0,AGGRESSIVE,TRUE,strategy-06
+tactic-16,Launch Webinar,Host webinar with live demo and Q&A,25.0,TENDER,TRUE,strategy-06
+tactic-17,Regional Pricing Tests,Test localized pricing bundles per region,55.0,AGGRESSIVE,FALSE,strategy-07
+tactic-18,Local Partnerships,Sign 3 distribution partners in new regions,45.0,SUBTLE,FALSE,strategy-07
+tactic-19,Diversification Plan,Allocate exposure across multiple categories with constraints,60.0,SUBTLE,TRUE,strategy-08
+tactic-20,Risk Control Rules,Define stop-loss and periodic rebalancing rules,40.0,AGGRESSIVE,TRUE,strategy-08
+tactic-21,Technical SEO Audit,"Crawl site, fix broken links, redirects and metadata issues",40.0,SUBTLE,FALSE,strategy-09
+tactic-22,Content Update Sprint,Refresh 12 pages and publish 6 new articles targeting key queries,35.0,TENDER,FALSE,strategy-09
+tactic-23,Backlink Outreach,Reach out to industry sites for 15 quality backlinks,25.0,AGGRESSIVE,FALSE,strategy-09
+tactic-24,Segmented Email Blast,Create 4 segments and send tailored fundraising messages,45.0,TENDER,FALSE,strategy-10
+tactic-25,Landing Page Optimization,A/B test donation page headline and CTA placement,30.0,SUBTLE,FALSE,strategy-10
+tactic-26,Retargeting Ads,Run retargeting to previous visitors with 3 creatives,25.0,AGGRESSIVE,FALSE,strategy-10
+tactic-27,Prospect List Building,Compile 200 qualified B2B leads with scoring criteria,40.0,SUBTLE,TRUE,strategy-11
+tactic-28,Outbound Sequences,Write and run 3 outreach sequences with follow-ups,35.0,AGGRESSIVE,TRUE,strategy-11
+tactic-29,Demo & Qualification Script,Standardize demo flow and qualification checklist,25.0,TENDER,TRUE,strategy-11
+tactic-30,Landing Page Copy Rewrite,Rewrite hero section and benefits with clearer value proposition,35.0,TENDER,FALSE,strategy-12
+tactic-31,Checkout Friction Fixes,Remove unnecessary fields and add progress indicator,40.0,SUBTLE,FALSE,strategy-12
+tactic-32,Heatmap Review,Analyze sessions and implement top 3 UX fixes,25.0,AGGRESSIVE,FALSE,strategy-12
+tactic-33,Visual Identity Update,"Update logo usage, colors and typography guidelines",40.0,SUBTLE,FALSE,strategy-13
+tactic-34,Messaging Framework,"Define positioning, pillars and proof points",35.0,TENDER,FALSE,strategy-13
+tactic-35,Website Refresh,Apply new brand to key pages and marketing assets,25.0,AGGRESSIVE,FALSE,strategy-13
+tactic-36,Investor Deck Draft,"Create deck with traction, roadmap and financial highlights",45.0,TENDER,TRUE,strategy-14
+tactic-37,Data Room Prep,Prepare documents and KPIs for due diligence,30.0,SUBTLE,TRUE,strategy-14
+tactic-38,Investor Outreach Plan,Build target list and cadence for outreach and follow-ups,25.0,AGGRESSIVE,TRUE,strategy-14
+tactic-39,Health Scoring,Define customer health metrics and alert thresholds,35.0,SUBTLE,FALSE,strategy-15
+tactic-40,QBR Cadence,Schedule QBRs and build templates with action plans,30.0,TENDER,FALSE,strategy-15
+tactic-41,Expansion Play,Create upsell triggers and in-product prompts,35.0,AGGRESSIVE,FALSE,strategy-15
+tactic-42,Beta User Recruitment,Recruit 30 beta users and set feedback channels,40.0,TENDER,TRUE,strategy-16
+tactic-43,Launch Checklist,"Create checklist with owners,deadlines and dependencies",35.0,SUBTLE,TRUE,strategy-16
+tactic-44,Feedback Iteration Loop,Run weekly review and implement top fixes before scaling,25.0,AGGRESSIVE,TRUE,strategy-16
