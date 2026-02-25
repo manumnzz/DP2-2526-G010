@@ -24,9 +24,9 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
+import acme.constraints.ValidInvention;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
-import acme.features.intentions.InventionRepository;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,6 +34,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidInvention
 @Table(indexes = {
 	@Index(columnList = "draftMode"), //
 	@Index(columnList = "inventor_id, id")
