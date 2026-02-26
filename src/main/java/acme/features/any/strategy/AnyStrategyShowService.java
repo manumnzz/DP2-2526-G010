@@ -4,6 +4,7 @@ package acme.features.any.strategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
@@ -39,15 +40,19 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 
 	@Override
 	public void unbind() {
-		Double expected;
+		Tuple tuple;
 
-		expected = this.repository.sumExpectedPercentageByStrategyId(this.strategy.getId());
+		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 
-		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		int strategyId = this.strategy.getId();
 
-		super.getResponse().addData("monthsActive", this.strategy.getMonthsActive());
-		super.getResponse().addData("expectedPercentage", expected);
+		Double expectedPercentage = this.repository.sumExpectedPercentageByStrategyId(strategyId);
+		Double monthsActive = this.strategy.getMonthsActive();
 
-		super.getResponse().addData("fundraiserId", this.strategy.getFundraiser().getId());
+		tuple.put("expectedPercentage", expectedPercentage);
+		tuple.put("monthsActive", monthsActive);
+		tuple.put("fundraiserId", this.strategy.getFundraiser().getId());
+
+		tuple.put("readonly", true);
 	}
 }

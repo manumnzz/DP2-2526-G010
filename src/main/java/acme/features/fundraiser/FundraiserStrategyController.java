@@ -23,7 +23,6 @@ public class FundraiserStrategyController extends AbstractController<Fundraiser,
 		super.addBasicCommand("update", FundraiserStrategyUpdateService.class);
 		super.addBasicCommand("delete", FundraiserStrategyDeleteService.class);
 
-		// custom command
 		super.addCustomCommand("publish", "update", FundraiserStrategyPublishService.class);
 	}
 }
