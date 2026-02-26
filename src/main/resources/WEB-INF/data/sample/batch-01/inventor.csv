@@ -1,0 +1,4 @@
+key,key:userAccount,bio,kewWords,licensed
+inventor-01,user-account-inventor-01,"Bio de Irene (inventor1).","ai; robotics; materials",true
+inventor-02,user-account-inventor-02,"Bio de Ivan (inventor2).","biotech; sensors; iot",true
+inventor-03,user-account-inventor-03,"Bio de Ines (inventor3).","testing; sample-data",false
