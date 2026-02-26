@@ -1,0 +1,11 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:inventor
+invention-01,IN02-ALPHA01,"Smart Sensor","Descripción de prueba para la invención 1",2030/01/10 10:00,2030/04/10 10:00,https://example.com/inv1,true,inventor-01
+invention-02,IN02-BETA02,"Bio Filter","Descripción de prueba para la invención 2",2030/02/01 12:00,2030/06/01 12:00,https://example.com/inv2,true,inventor-02
+invention-03,IN02-GAMMA03,"Nano Battery","High-density nano battery for portable devices",2030/03/01 09:00,2030/07/01 09:00,https://example.com/inv3,true,inventor-01
+invention-04,IN02-DELTA04,"AI Assistant Drone","Autonomous drone with AI navigation system",2030/04/15 11:00,2030/08/15 11:00,https://example.com/inv4,true,inventor-01
+invention-05,IN02-EPSIL05,"Smart Irrigation","IoT-based irrigation system for agriculture",2030/05/01 10:30,2030/09/01 10:30,https://example.com/inv5,true,inventor-02
+invention-06,IN02-ZETA06,"Medical Scanner","Portable medical imaging scanner",2030/06/10 08:00,2030/10/10 08:00,https://example.com/inv6,true,inventor-02
+invention-07,IN02-ETA07,"Eco Engine","Low-emission engine prototype",2030/07/20 14:00,2030/11/20 14:00,https://example.com/inv7,true,inventor-01
+invention-08,IN02-THETA08,"Water Purifier Pro","Advanced water purification device",2030/08/05 16:00,2030/12/05 16:00,https://example.com/inv8,true,inventor-02
+invention-09,IN02-IOTA09,"Smart Helmet","Helmet with impact detection and alert system",2030/09/01 09:00,2031/01/01 09:00,https://example.com/inv9,true,inventor-01
+invention-10,IN02-KAPPA10,"Green Concrete","Eco-friendly construction material",2030/10/01 10:00,2031/02/01 10:00,https://example.com/inv10,true,inventor-02
