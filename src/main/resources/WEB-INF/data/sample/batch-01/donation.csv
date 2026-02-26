@@ -1,0 +1,4 @@
+key,name,notes,money,kind,key:sponsorship
+donation-01,"Donation A","Initial contribution to kickstart the programme.","EUR 100.00",ALTRUIST,sponsorship-01
+donation-02,"Donation B","Second contribution tied to milestones.","EUR 50.00",REWARDED,sponsorship-01
+donation-03,"Pilot funding","Prototype budget for early validation.","EUR 200.00",CELEBRATED,sponsorship-02

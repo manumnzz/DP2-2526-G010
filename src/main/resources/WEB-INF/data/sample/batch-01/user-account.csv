@@ -9,3 +9,6 @@ user-account-administrator-02,true,"UserIdentity{name: 'Administrator2', surname
 user-account-fundraiser-01,true,"UserIdentity{name: 'Fran', surname: 'Fundraiser', email: 'fundraiser1@acme.com'}",fundraiser1,fundraiser1
 user-account-fundraiser-02,true,"UserIdentity{name: 'Fran', surname: 'Fundraiser', email: 'fundraiser2@acme.com'}",fundraiser2,fundraiser2
 user-account-fundraiser-03,true,"UserIdentity{name: 'Fran', surname: 'Fundraiser', email: 'fundraiser3@acme.com'}",fundraiser3,fundraiser3
+user-account-sponsor-01,true,"UserIdentity{name: 'Sonia', surname: 'Sponsor', email: 'sonia@acme.com'}",sponsor1,sponsor1
+user-account-sponsor-02,true,"UserIdentity{name: 'Sergio', surname: 'Sponsor', email: 'sergio@acme.com'}",sponsor2,sponsor2
+user-account-sponsor-03,true,"UserIdentity{name: 'Silvia', surname: 'Sponsor', email: 'silvia@acme.com'}",sponsor3,sponsor3

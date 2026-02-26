@@ -2,16 +2,18 @@
 package acme.entities.sponsorships;
 
 import java.time.Duration;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
@@ -48,11 +50,13 @@ public class Sponsorship extends AbstractEntity {
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
-	private Moment							startMoment;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date							startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
-	private Moment							endMoment;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date							endMoment;
 
 	@ValidUrl
 	@Column

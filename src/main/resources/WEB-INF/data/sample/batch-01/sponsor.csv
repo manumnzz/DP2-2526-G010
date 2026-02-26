@@ -1,0 +1,4 @@
+key,key:userAccount,address,im,gold
+sponsor-01,user-account-sponsor-01,"Calle Mayor 1, Madrid","https://example.com/im/sponsor1",true
+sponsor-02,user-account-sponsor-02,"Carrer de Mallorca 10, Barcelona","https://example.com/im/sponsor2",false
+sponsor-03,user-account-sponsor-03,"Avenida de la Constitución 3, Sevilla","https://example.com/im/sponsor3",false
