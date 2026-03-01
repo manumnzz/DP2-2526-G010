@@ -1,0 +1,71 @@
+
+package acme.constraints;
+
+import javax.validation.ConstraintValidatorContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import acme.client.components.validation.AbstractValidator;
+import acme.client.components.validation.Validator;
+import acme.entities.campaign.Campaign;
+import acme.entities.campaign.CampaignRepository;
+
+@Validator
+public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign> {
+
+	// Internal state ---------------------------------------------------------
+
+	@Autowired
+	private CampaignRepository repository;
+
+	// AbstractValidator interface --------------------------------------------
+
+
+	@Override
+	protected void initialise(final ValidCampaign annotation) {
+		assert annotation != null;
+	}
+
+	@Override
+	public boolean isValid(final Campaign campaign, final ConstraintValidatorContext context) {
+		assert context != null;
+
+		boolean result;
+
+		if (campaign == null)
+			result = true;
+		else {
+			// Validate: startMoment/endMoment must be a valid time interval
+			{
+				boolean validTimeInterval;
+
+				if (campaign.getStartMoment() != null && campaign.getEndMoment() != null)
+					validTimeInterval = campaign.getStartMoment().before(campaign.getEndMoment());
+				else
+					validTimeInterval = true;
+
+				super.state(context, validTimeInterval, "endMoment", "acme.validation.campaign.invalid-time-interval.message");
+			}
+
+			// Validate: Campaign cannot be published unless it has at least one milestone
+			{
+				boolean hasMinimumMilestones;
+
+				if (!campaign.isDraftMode()) {
+					Integer milestoneCount;
+
+					milestoneCount = this.repository.countMilestonesByCampaignId(campaign.getId());
+					hasMinimumMilestones = milestoneCount != null && milestoneCount > 0;
+				} else
+					hasMinimumMilestones = true;
+
+				super.state(context, hasMinimumMilestones, "*", "acme.validation.campaign.no-milestones.message");
+			}
+
+			result = !super.hasErrors(context);
+		}
+
+		return result;
+	}
+
+}
