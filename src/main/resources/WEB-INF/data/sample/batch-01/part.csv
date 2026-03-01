@@ -1,0 +1,40 @@
+key,name,description,cost,kind,key:invention
+part-001,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-01
+part-002,"Battery Pack","Power supply module","EUR 35.50",MANDATORY,invention-01
+part-003,"Protective Case","External casing","EUR 10.00",OPTIONAL,invention-01
+
+part-004,"Filter Core","Primary filter element","EUR 80.00",CORE,invention-02
+part-005,"Tube Set","Connection tubes kit","EUR 15.00",MANDATORY,invention-02
+part-006,"Extra Cartridge","Spare cartridge","EUR 12.00",OPTIONAL,invention-02
+
+part-007,"Nano Cell","High density nano cell","EUR 210.00",CORE,invention-03
+part-008,"Charging Controller","Charge regulation board","EUR 45.00",MANDATORY,invention-03
+part-009,"Cooling Sleeve","Thermal dissipation sleeve","EUR 18.00",OPTIONAL,invention-03
+
+part-010,"Flight Controller","Main drone control unit","EUR 160.00",CORE,invention-04
+part-011,"Navigation Sensors","GPS + IMU sensor pack","EUR 70.00",MANDATORY,invention-04
+part-012,"Camera Module","Optional camera add-on","EUR 55.00",OPTIONAL,invention-04
+
+part-013,"IoT Hub","Central connectivity module","EUR 95.00",CORE,invention-05
+part-014,"Valve Kit","Electro-valves set","EUR 40.00",MANDATORY,invention-05
+part-015,"Soil Probe","Optional soil moisture probe","EUR 22.00",OPTIONAL,invention-05
+
+part-016,"Imaging Core","Main scanning component","EUR 260.00",CORE,invention-06
+part-017,"Display Unit","Screen + UI controller","EUR 85.00",MANDATORY,invention-06
+part-018,"Carrying Bag","Transport bag","EUR 20.00",OPTIONAL,invention-06
+
+part-019,"Engine Block","Prototype engine block","EUR 320.00",CORE,invention-07
+part-020,"Injection System","Fuel injection module","EUR 140.00",MANDATORY,invention-07
+part-021,"Noise Dampener","Optional muffler add-on","EUR 35.00",OPTIONAL,invention-07
+
+part-022,"Purification Core","Main purification unit","EUR 180.00",CORE,invention-08
+part-023,"Pump System","Water pump module","EUR 60.00",MANDATORY,invention-08
+part-024,"Mineral Add-on","Optional mineralization cartridge","EUR 25.00",OPTIONAL,invention-08
+
+part-025,"Impact Sensor","Impact detection sensor","EUR 45.00",CORE,invention-09
+part-026,"Alert Module","Connectivity + alert module","EUR 30.00",MANDATORY,invention-09
+part-027,"Visor Upgrade","Optional enhanced visor","EUR 28.00",OPTIONAL,invention-09
+
+part-028,"Mixing Agent","Eco binder compound","EUR 90.00",CORE,invention-10
+part-029,"Fiber Reinforcement","Structural fiber reinforcement","EUR 55.00",MANDATORY,invention-10
+part-030,"Color Additive","Optional color additive","EUR 12.00",OPTIONAL,invention-10

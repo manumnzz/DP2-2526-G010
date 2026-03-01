@@ -1,14 +1,12 @@
 
 package acme.entities.strategy;
 
+import java.time.Duration;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Index;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -21,7 +19,9 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
+import acme.constraints.ValidStrategy;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
 import acme.realms.Fundraiser;
@@ -31,10 +31,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(indexes = {
-	@Index(columnList = "draftMode"), //
-	@Index(columnList = "fundraiser_id, id")
-})
+@ValidStrategy
 public class Strategy extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -80,20 +77,23 @@ public class Strategy extends AbstractEntity {
 
 	@Transient
 	public Double getMonthsActive() {
+
 		Double result = null;
 
-		if (this.startMoment != null && this.endMoment != null) {
-			long diffInMillis = this.endMoment.getTime() - this.startMoment.getTime();
-			long diffInDays = TimeUnit.MILLISECONDS.toDays(diffInMillis);
-			result = Math.round(diffInDays / 30 * 10.0) / 10.0;
-		}
+		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
+		result = duration.toDays() / 30.0;
 
 		return result;
 	}
 
+
+	@Transient
+	private transient StrategyRepository repository;
+
+
 	@Transient
 	public Double getExpectedPercentage() {
-		return 0.0;
+		return this.repository == null ? 0.0 : this.repository.computeExpectedPercentage(this.getId());
 	}
 
 	// Relationships ----------------------------------------------------------
