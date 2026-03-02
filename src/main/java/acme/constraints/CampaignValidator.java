@@ -35,7 +35,6 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 		if (campaign == null)
 			result = true;
 		else {
-			// Validate: startMoment/endMoment must be a valid time interval
 			{
 				boolean validTimeInterval;
 
@@ -47,7 +46,6 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 				super.state(context, validTimeInterval, "endMoment", "acme.validation.campaign.invalid-time-interval.message");
 			}
 
-			// Validate: Campaign cannot be published unless it has at least one milestone
 			{
 				boolean hasMinimumMilestones;
 
