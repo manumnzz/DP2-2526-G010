@@ -1,0 +1,67 @@
+key,title,achievements,effort,kind,key:campaign
+milestone-01,"Initial Planning","Defined campaign objectives and target audience",10.0,TEASER,campaign-01
+milestone-02,"Content Creation","Produced all visual and written content for launch",15.0,TEASER,campaign-01
+milestone-03,"Channel Setup","Configured all distribution channels and platforms",8.0,ENGAGING,campaign-01
+milestone-04,"First Outreach","Sent initial communications to target segments",12.0,ENGAGING,campaign-01
+milestone-05,"Lead Capture","Collected first batch of leads from campaign",20.0,CONVERSION,campaign-01
+milestone-06,"Audience Research","Analyzed demographics and behavioral data",9.0,TEASER,campaign-02
+milestone-07,"Brand Messaging","Defined tone and key messages for youth audience",11.0,TEASER,campaign-02
+milestone-08,"Social Media Launch","Published first posts across all social platforms",14.0,ENGAGING,campaign-02
+milestone-09,"Influencer Collaboration","Partnered with three micro-influencers",18.0,ENGAGING,campaign-02
+milestone-10,"Sign-up Drive","Achieved first 500 registrations",22.0,CONVERSION,campaign-02
+milestone-11,"Environmental Audit","Assessed current ocean pollution impact data",7.0,TEASER,campaign-03
+milestone-12,"Partner Onboarding","Onboarded five NGO partners for the campaign",13.0,TEASER,campaign-03
+milestone-13,"Public Event","Organized beach cleanup event with 200 attendees",16.0,ENGAGING,campaign-03
+milestone-14,"Media Coverage","Secured coverage in three national outlets",10.0,ENGAGING,campaign-03
+milestone-15,"Donation Round","Raised first funding milestone for ocean projects",25.0,CONVERSION,campaign-03
+milestone-16,"Digital Gap Analysis","Identified underserved communities lacking access",8.0,TEASER,campaign-04
+milestone-17,"Resource Kit","Developed educational materials for digital literacy",12.0,TEASER,campaign-04
+milestone-18,"Workshop Series","Delivered first set of digital inclusion workshops",17.0,ENGAGING,campaign-04
+milestone-19,"Community Feedback","Gathered feedback from 300 workshop participants",9.0,ENGAGING,campaign-04
+milestone-20,"Program Enrollment","Enrolled 150 individuals in digital training program",21.0,CONVERSION,campaign-04
+milestone-21,"Food Data Collection","Mapped food insecurity hotspots in target cities",6.0,TEASER,campaign-05
+milestone-22,"Volunteer Recruitment","Recruited 80 volunteers for distribution network",11.0,TEASER,campaign-05
+milestone-23,"Food Drive Launch","Launched first city-wide food collection drive",15.0,ENGAGING,campaign-05
+milestone-24,"Shelter Partnerships","Established partnerships with 10 local shelters",13.0,ENGAGING,campaign-05
+milestone-25,"Meals Distributed","Delivered 1000 meals to food-insecure families",19.0,CONVERSION,campaign-05
+milestone-26,"Stigma Survey","Published baseline survey on mental health stigma",7.0,TEASER,campaign-06
+milestone-27,"Spokesperson Training","Trained five advocates for public speaking engagements",10.0,TEASER,campaign-06
+milestone-28,"Awareness Week","Organized a week-long awareness campaign online",14.0,ENGAGING,campaign-06
+milestone-29,"Help Line Promotion","Increased calls to mental health helpline by 30%",11.0,ENGAGING,campaign-06
+milestone-30,"Therapy Access","Facilitated access to therapy for 200 individuals",23.0,CONVERSION,campaign-06
+milestone-31,"City Assessment","Evaluated sustainability metrics of five pilot cities",9.0,TEASER,campaign-07
+milestone-32,"Policy Brief","Published recommendations for urban green policy",12.0,TEASER,campaign-07
+milestone-33,"Green Summit","Hosted summit with 15 city representatives",16.0,ENGAGING,campaign-07
+milestone-34,"Tree Planting Drive","Coordinated planting of 2000 trees in urban areas",14.0,ENGAGING,campaign-07
+milestone-35,"City Commitment","Secured green pledges from three municipalities",20.0,CONVERSION,campaign-07
+milestone-36,"Accident Analysis","Compiled road accident data for target age group",8.0,TEASER,campaign-08
+milestone-37,"School Outreach","Delivered road safety talks in 20 schools",13.0,ENGAGING,campaign-08
+milestone-38,"Ad Campaign","Launched video ads on digital and outdoor media",17.0,ENGAGING,campaign-08
+milestone-39,"License Test Pilots","Partnered with driving schools for safety modules",15.0,CONVERSION,campaign-08
+milestone-40,"Pledge Campaign","Collected 5000 safe driving pledges from young drivers",22.0,CONVERSION,campaign-08
+milestone-bl-01,"D","C",1.0,TEASER,campaign-09
+milestone-bl-02,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","Achievement with title at max header length",5.0,ENGAGING,campaign-09
+milestone-bl-03,"Title with min achievement","B",8.0,CONVERSION,campaign-09
+milestone-bl-04,"Title with max achievement","BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",12.0,TEASER,campaign-09
+milestone-bl-05,"Effort at zero boundary","Effort is exactly zero as minimum allowed value",0.0,TEASER,campaign-10
+milestone-bl-06,"Effort very large","Effort set to a very large value to test upper boundary",9999.99,ENGAGING,campaign-10
+milestone-bl-07,"Effort decimal precision","Effort with two decimal places to test precision",0.01,CONVERSION,campaign-10
+milestone-bl-08,"Kind TEASER test","Testing TEASER kind explicitly as boundary enum value",10.0,TEASER,campaign-09
+milestone-bl-09,"Kind ENGAGING test","Testing ENGAGING kind explicitly as boundary enum value",10.0,ENGAGING,campaign-10
+milestone-bl-10,"Kind CONVERSION test","Testing CONVERSION kind explicitly as boundary enum value",10.0,CONVERSION,campaign-09
+milestone-bl-11,"Multilingual title 中文","Achievement in Chinese: 完成了所有目标和里程碑",15.0,TEASER,campaign-10
+milestone-bl-12,"Hito en amhárico","የተሳካ ዘመቻ ውጤት ለማህበረሰብ ጥቅም",10.0,ENGAGING,campaign-09
+milestone-bl-13,"Effort 0.01 near zero","Effort just above zero to test near-minimum boundary",0.01,CONVERSION,campaign-10
+milestone-bl-14,"Same effort as another","Effort identical to existing milestone to test non-unique",10.0,TEASER,campaign-09
+milestone-bl-15,"Special chars in title","Achievement with special chars: ¡¿€£¥§©®™",7.5,ENGAGING,campaign-10
+milestone-bl-16,"T̶̢̧̬͖̣͎̩͉͇̫̠͖̘̾͊͒͐͗̐͑̓͗͒̕̕͠ͅȩ̸̢͚̥̩̥͇̦̦̩͓͙̠͉̠̬̉̑͝ẍ̷̧̛̤͍͔͓","Zalgo text boundary test for Unicode combining characters",5.0,TEASER,campaign-09
+milestone-sql-01,"' OR '1'='1","Classic SQL injection: ' OR '1'='1",10.0,TEASER,campaign-01
+milestone-sql-02,"'; DROP TABLE milestones; --","SQL injection with DROP TABLE",15.0,ENGAGING,campaign-02
+milestone-sql-03,"' UNION SELECT null, null, null, null, null FROM dual; --","Union-based SQL injection",12.0,CONVERSION,campaign-03
+milestone-sql-04,"'; EXEC xp_cmdshell('dir'); --","SQL injection with command execution",8.0,TEASER,campaign-04
+milestone-sql-05,"' OR 1=1; --","Another variant of tautology injection",9.0,ENGAGING,campaign-05
+milestone-sql-06,"\'; DROP TABLE users; --","Escaped quote injection",11.0,CONVERSION,campaign-06
+milestone-sql-07,"' OR '1'='1' AND '😈'='😈","SQL injection with emojis",7.5,TEASER,campaign-07
+milestone-sql-08,"' OR SLEEP(5)=0; --","Time-based SQL injection",13.0,ENGAGING,campaign-08
+milestone-sql-09,"' AND 1=CONVERT(int, @@version); --","Error-based SQL injection",14.0,CONVERSION,campaign-09
+milestone-sql-10,"'; UPDATE milestones SET title='hacked' WHERE key='milestone-01'; --","SQL injection with update",16.0,TEASER,campaign-10
