@@ -1,0 +1,24 @@
+# Spokesperson Milestone list
+spokesperson.milestone.list.title = Listado de hitos
+spokesperson.milestone.list.label.title = Título
+spokesperson.milestone.list.label.effort = Esfuerzo (horas)
+spokesperson.milestone.list.label.kind = Tipo
+spokesperson.milestone.list.label.campaign = Campaña
+
+spokesperson.milestone.list.button.create = Crear hito
+
+# Spokesperson Milestone form
+spokesperson.milestone.form.title = Formulario de hito
+spokesperson.milestone.form.label.title = Título:
+spokesperson.milestone.form.label.achievements = Logros:
+spokesperson.milestone.form.label.effort = Esfuerzo (horas):
+spokesperson.milestone.form.label.kind = Tipo:
+
+spokesperson.milestone.form.button.create = Crear
+spokesperson.milestone.form.button.update = Actualizar
+spokesperson.milestone.form.button.delete = Eliminar
+
+# Kind enum values
+spokesperson.milestone.form.kind.TEASER = Teaser
+spokesperson.milestone.form.kind.ENGAGING = Participativo
+spokesperson.milestone.form.kind.CONVERSION = Conversión
