@@ -1,0 +1,16 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
+campaign-err-01,invalid-ticker,"Bad Ticker","Ticker does not match pattern XX00-XXXXX",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err1,true,spokesperson-err-01
+campaign-err-02,ca02-ABCDE,"Lowercase prefix","Ticker prefix must be uppercase letters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err2,true,spokesperson-err-02
+campaign-err-03,ER03-AB,"Short suffix","Ticker suffix has fewer than 5 characters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err3,true,spokesperson-err-03
+campaign-err-04,ER04-ABCDEFGHIJK,"Long suffix","Ticker suffix has more than 10 characters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err4,true,spokesperson-err-04
+campaign-err-05,ER05-ABCDE," ","Name is blank so ValidHeader NotBlank should fail",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err5,true,spokesperson-err-01
+campaign-err-06,ER06-ABCDE,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","Name exceeds 76 characters which is over ValidHeader max of 75",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err6,true,spokesperson-err-01
+campaign-err-07,ER07-ABCDE,"Valid Name"," ",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err7,true,spokesperson-err-02
+campaign-err-08,ER08-ABCDE,"Valid Name","BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB!",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err8,true,spokesperson-err-03
+campaign-err-09,ER09-ABCDE,"Valid Name","startMoment is in the past",2020/01/01 00:00,2030/06/01 00:00,https://example.com/err9,true,spokesperson-err-04
+campaign-err-10,ER10-ABCDE,"Valid Name","endMoment is in the past",2030/01/01 00:00,2020/06/01 00:00,https://example.com/err10,true,spokesperson-err-02
+campaign-err-11,ER11-ABCDE,"Valid Name","endMoment is before startMoment violating time interval",2030/06/01 00:00,2030/01/01 00:00,https://example.com/err11,true,spokesperson-err-01
+campaign-err-12,ER12-ABCDE,"Valid Name","endMoment equals startMoment so interval is not valid",2030/06/01 00:00,2030/06/01 00:00,https://example.com/err12,true,spokesperson-err-02
+campaign-err-13,ER13-ABCDE,"Valid Name","moreInfo is not a valid URL",2030/01/01 00:00,2030/06/01 00:00,not-a-valid-url,true,spokesperson-err-03
+campaign-err-14,ER14-ABCDE,"Valid Name","moreInfo has no schema so ValidUrl should reject it",2030/01/01 00:00,2030/06/01 00:00,example.com/noschema,true,spokesperson-err-04
+campaign-err-15,ER15-ABCDE,"Valid Name","draftMode false with no milestones linked to this campaign",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err15,false,spokesperson-err-01
