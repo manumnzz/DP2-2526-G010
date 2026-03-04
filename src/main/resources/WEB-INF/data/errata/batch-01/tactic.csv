@@ -1,0 +1,19 @@
+key,name,notes,expected-percentage,kind,draft-mode,key:strategy
+
+# name invalid
+tactic-err-01,,Notes ok,50.0,SUBTLE,FALSE,strategy-01
+tactic-err-02,"NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",Notes ok,50.0,SUBTLE,FALSE,strategy-01
+tactic-err-03,"   ",Notes ok,50.0,SUBTLE,FALSE,strategy-01
+
+# notes invalid
+tactic-err-04,Valid Name,,50.0,SUBTLE,FALSE,strategy-01
+tactic-err-05,Valid Name,"   ",50.0,SUBTLE,FALSE,strategy-01
+tactic-err-06,Valid Name,"TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",50.0,SUBTLE,FALSE,strategy-01
+
+# score invalid
+tactic-err-07,Valid Name,Notes ok,-0.01,SUBTLE,FALSE,strategy-01
+tactic-err-08,Valid Name,Notes ok,100.01,SUBTLE,FALSE,strategy-01
+tactic-err-09,Valid Name,Notes ok,50.123,SUBTLE,FALSE,strategy-01
+
+# strategy FK missing
+tactic-err-10,Valid Name,Notes ok,50.0,SUBTLE,FALSE,

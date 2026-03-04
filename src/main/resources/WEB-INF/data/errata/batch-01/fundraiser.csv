@@ -1,0 +1,25 @@
+key,key:userAccount,bank,statement,agent
+
+# SUPPORT (valid for FK resolution)
+fundraiser-01,user-account-fundraiser-01,Bank One,Statement ok,true
+
+# ERRATA
+
+# all fields missing
+fundraiser-err-00,,,,
+
+# userAccount missing
+fundraiser-err-01,,Bank One,Statement ok,true
+
+# bank invalid
+fundraiser-err-02,user-account-fundraiser-01,,Statement ok,true
+fundraiser-err-03,user-account-fundraiser-01,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",Statement ok,true
+fundraiser-err-04,user-account-fundraiser-01,"   ",Statement ok,true
+
+# statement invalid
+fundraiser-err-05,user-account-fundraiser-01,Bank One,,true
+fundraiser-err-06,user-account-fundraiser-01,Bank One,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",true
+fundraiser-err-07,user-account-fundraiser-01,Bank One,"   ",true
+
+# agent missing
+fundraiser-err-08,user-account-fundraiser-01,Bank One,Statement ok,

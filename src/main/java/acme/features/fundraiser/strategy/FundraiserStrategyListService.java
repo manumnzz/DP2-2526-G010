@@ -1,5 +1,5 @@
 
-package acme.features.fundraiser;
+package acme.features.fundraiser.strategy;
 
 import java.util.Collection;
 

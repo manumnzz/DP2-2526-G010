@@ -8,7 +8,7 @@
 # purposes. The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.fundraiser.form.title = Hazte recaudador
+any.fundraiser.form.title = Recaudador
 
 any.fundraiser.form.label.bank = Banco:
 any.fundraiser.form.label.statement = Declaración:
