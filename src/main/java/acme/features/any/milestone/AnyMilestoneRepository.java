@@ -1,3 +1,4 @@
+
 package acme.features.any.milestone;
 
 import java.util.Collection;
@@ -20,5 +21,8 @@ public interface AnyMilestoneRepository extends AbstractRepository {
 
 	@Query("select m from Milestone m where m.campaign.id = :campaignId")
 	Collection<Milestone> findMilestonesByCampaignId(int campaignId);
+
+	@Query("select m from Milestone m")
+	Collection<Milestone> findMilestonesFromPublishedCampaigns();
 
 }

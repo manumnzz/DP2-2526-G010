@@ -18,28 +18,29 @@ public class AnyMilestoneListService extends AbstractService<Any, Milestone> {
 	private AnyMilestoneRepository	repository;
 
 	private Collection<Milestone>	milestones;
-	private int						campaignId;
 
-
-	@Override
-	public void load() {
-		this.campaignId = super.getRequest().getData("campaignId", int.class);
-		this.milestones = this.repository.findMilestonesByCampaignId(this.campaignId);
-	}
 
 	@Override
 	public void authorise() {
 		boolean status;
+		int campaignId;
 		Campaign campaign;
 
-		campaign = this.repository.findCampaignById(this.campaignId);
+		campaignId = super.getRequest().getData("campaignId", int.class);
+		campaign = this.repository.findCampaignById(campaignId);
 		status = campaign != null && !campaign.isDraftMode();
 		super.setAuthorised(status);
 	}
 
 	@Override
-	public void unbind() {
-		super.unbindObjects(this.milestones, "title", "kind", "effort");
+	public void load() {
+		int campaignId;
+		campaignId = super.getRequest().getData("campaignId", int.class);
+		this.milestones = this.repository.findMilestonesByCampaignId(campaignId);
 	}
 
+	@Override
+	public void unbind() {
+		super.unbindObjects(this.milestones, "title", "effort", "kind");
+	}
 }
