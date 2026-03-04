@@ -22,8 +22,26 @@ public class SpokespersonMilestoneListService extends AbstractService<Spokespers
 
 
 	@Override
+	public void authorise() {
+		boolean status = false;
+		int campaignId;
+		Campaign c;
+		Spokesperson sp;
+
+		campaignId = super.getRequest().getData("campaignId", int.class);
+		c = this.repository.findCampaignById(campaignId);
+
+		if (c != null) {
+			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
+			status = sp != null && c.getSpokesperson().getId() == sp.getId();
+		}
+		super.setAuthorised(status);
+	}
+
+	@Override
 	public void load() {
-		int campaignId = super.getRequest().getData("campaignId", int.class);
+		int campaignId;
+		campaignId = super.getRequest().getData("campaignId", int.class);
 		this.campaign = this.repository.findCampaignById(campaignId);
 
 		if (this.campaign != null)
@@ -31,21 +49,9 @@ public class SpokespersonMilestoneListService extends AbstractService<Spokespers
 	}
 
 	@Override
-	public void authorise() {
-		boolean status = false;
-
-		if (this.campaign != null) {
-			int userAccountId = super.getRequest().getPrincipal().getAccountId();
-			Spokesperson spokesperson = this.repository.findSpokespersonByUserAccountId(userAccountId);
-
-			status = this.campaign.getSpokesperson().getId() == spokesperson.getId();
-		}
-
-		super.setAuthorised(status);
-	}
-
-	@Override
 	public void unbind() {
 		super.unbindObjects(this.milestones, "title", "kind", "effort");
+		super.getResponse().addGlobal("campaignId", this.campaign.getId());
 	}
+
 }

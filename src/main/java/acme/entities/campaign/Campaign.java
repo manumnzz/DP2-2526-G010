@@ -74,7 +74,7 @@ public class Campaign extends AbstractEntity {
 
 
 	@Transient
-	public double monthsActive() {
+	public double getMonthsActive() {
 		double result;
 		Duration duration;
 		duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);

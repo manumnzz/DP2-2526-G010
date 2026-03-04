@@ -46,7 +46,7 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 
 		effort = this.repository.computeCampaignEffort(this.campaign.getId());
 		tuple.put("effort", effort == null ? 0.0 : effort);
-		tuple.put("monthsActive", this.campaign.monthsActive());
+		tuple.put("monthsActive", this.campaign.getMonthsActive());
 		tuple.put("spokespersonId", this.campaign.getSpokesperson().getId());
 		tuple.put("spokesperson.userAccount.identity.fullName", this.campaign.getSpokesperson().getUserAccount().getIdentity().getFullName());
 		tuple.put("readonly", true);

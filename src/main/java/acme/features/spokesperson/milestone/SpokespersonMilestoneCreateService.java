@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
-import acme.datatypes.MilestoneKind; // Ajusta el paquete según tu enum
+import acme.datatypes.MilestoneKind;
 import acme.entities.campaign.Campaign;
 import acme.entities.milestone.Milestone;
 import acme.realms.Spokesperson;
@@ -23,26 +23,35 @@ public class SpokespersonMilestoneCreateService extends AbstractService<Spokespe
 
 
 	@Override
-	public void load() {
-		int campaignId = super.getRequest().getData("campaignId", int.class);
-		this.campaign = this.repository.findCampaignById(campaignId);
-
-		this.milestone = new Milestone();
-		this.milestone.setCampaign(this.campaign);
-	}
-
-	@Override
 	public void authorise() {
 		boolean status = false;
+		int campaignId;
+		Campaign c;
+		Spokesperson sp;
 
-		if (this.campaign != null) {
-			int userAccountId = super.getRequest().getPrincipal().getAccountId();
-			Spokesperson spokesperson = this.repository.findSpokespersonByUserAccountId(userAccountId);
+		try {
+			campaignId = super.getRequest().getData("campaignId", int.class);
+			c = this.repository.findCampaignById(campaignId);
 
-			status = this.campaign.isDraftMode() && this.campaign.getSpokesperson().getId() == spokesperson.getId();
+			if (c != null) {
+				sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
+				status = c.isDraftMode() && sp != null && c.getSpokesperson().getId() == sp.getId();
+			}
+		} catch (Exception e) {
+			status = false;
 		}
 
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void load() {
+		int campaignId;
+
+		campaignId = super.getRequest().getData("campaignId", int.class);
+		this.campaign = this.repository.findCampaignById(campaignId);
+		this.milestone = new Milestone();
+		this.milestone.setCampaign(this.campaign);
 	}
 
 	@Override
@@ -62,11 +71,16 @@ public class SpokespersonMilestoneCreateService extends AbstractService<Spokespe
 
 	@Override
 	public void unbind() {
-		SelectChoices kinds = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
-		Tuple tuple = super.unbindObject(this.milestone, "title", "achievements", "effort", "kind");
+		Tuple tuple;
+		SelectChoices kinds;
 
+		kinds = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
+		tuple = super.unbindObject(this.milestone, "title", "achievements", "effort", "kind");
 		tuple.put("kinds", kinds);
 		tuple.put("campaignId", this.campaign.getId());
 		tuple.put("readonly", false);
+
+		super.getResponse().addData(tuple);
 	}
+
 }
