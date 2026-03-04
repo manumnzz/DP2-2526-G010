@@ -12,42 +12,44 @@ import acme.entities.campaign.Campaign;
 @Service
 public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 
-	// Internal state ---------------------------------------------------------
-
 	@Autowired
 	private AnyCampaignRepository	repository;
 
 	private Campaign				campaign;
 
-	// AbstractService interface ----------------------------------------------
 
+	@Override
+	public void authorise() {
+		boolean status;
+		int id;
+		Campaign c;
+
+		id = super.getRequest().getData("id", int.class);
+		c = this.repository.findCampaignById(id);
+		status = c != null && !c.isDraftMode();
+		super.setAuthorised(status);
+	}
 
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.campaign = this.repository.findCampaignById(id);
 	}
 
 	@Override
-	public void authorise() {
-		boolean status;
-
-		status = this.campaign != null && !this.campaign.isDraftMode();
-		super.setAuthorised(status);
-	}
-
-	@Override
 	public void unbind() {
 		Tuple tuple;
+		Double effort;
 
-		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 
-		tuple.put("effort", this.campaign.getEffort());
+		effort = this.repository.computeCampaignEffort(this.campaign.getId());
+		tuple.put("effort", effort == null ? 0.0 : effort);
 		tuple.put("monthsActive", this.campaign.monthsActive());
 		tuple.put("spokespersonId", this.campaign.getSpokesperson().getId());
-
+		tuple.put("spokesperson.userAccount.identity.fullName", this.campaign.getSpokesperson().getUserAccount().getIdentity().getFullName());
 		tuple.put("readonly", true);
 	}
+
 }

@@ -13,20 +13,11 @@ import acme.entities.campaign.Campaign;
 @Service
 public class AnyCampaignListService extends AbstractService<Any, Campaign> {
 
-	// Internal state ---------------------------------------------------------
-
 	@Autowired
 	private AnyCampaignRepository	repository;
 
 	private Collection<Campaign>	campaigns;
 
-	// AbstractService interface ----------------------------------------------
-
-
-	@Override
-	public void load() {
-		this.campaigns = this.repository.findPublishedCampaigns();
-	}
 
 	@Override
 	public void authorise() {
@@ -34,8 +25,12 @@ public class AnyCampaignListService extends AbstractService<Any, Campaign> {
 	}
 
 	@Override
+	public void load() {
+		this.campaigns = this.repository.findPublishedCampaigns();
+	}
+
+	@Override
 	public void unbind() {
 		super.unbindObjects(this.campaigns, "ticker", "name", "startMoment", "endMoment");
 	}
-
 }

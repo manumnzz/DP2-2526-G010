@@ -1,3 +1,4 @@
+
 package acme.features.any.campaign;
 
 import java.util.Collection;
@@ -11,10 +12,13 @@ import acme.entities.campaign.Campaign;
 @Repository
 public interface AnyCampaignRepository extends AbstractRepository {
 
-	@Query("select c from Campaign c where c.draftMode = false")
+	@Query("select c from Campaign c join fetch c.spokesperson where c.draftMode = false")
 	Collection<Campaign> findPublishedCampaigns();
 
 	@Query("select c from Campaign c where c.id = :id")
 	Campaign findCampaignById(int id);
+
+	@Query("select coalesce(sum(m.effort), 0) from Milestone m where m.campaign.id = :campaignId")
+	Double computeCampaignEffort(int campaignId);
 
 }
