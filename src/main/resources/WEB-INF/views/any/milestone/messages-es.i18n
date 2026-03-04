@@ -1,0 +1,19 @@
+# Any Milestone list
+any.milestone.list.title = Listado de hitos
+any.milestone.list.label.title = Título
+any.milestone.list.label.effort = Esfuerzo (horas)
+any.milestone.list.label.kind = Tipo
+any.milestone.list.label.campaign = Campaña
+
+# Any Milestone form
+any.milestone.form.title = Detalle de hito
+any.milestone.form.label.title = Título:
+any.milestone.form.label.achievements = Logros:
+any.milestone.form.label.effort = Esfuerzo (horas):
+any.milestone.form.label.kind = Tipo:
+any.milestone.form.label.campaign = Campaña:
+
+# Kind enum values
+any.milestone.form.kind.TEASER = Teaser
+any.milestone.form.kind.ENGAGING = Participativo
+any.milestone.form.kind.CONVERSION = Conversión
