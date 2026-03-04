@@ -21,23 +21,27 @@ public class SpokespersonCampaignUpdateService extends AbstractService<Spokesper
 
 
 	@Override
-	public void load() {
-		int id = super.getRequest().getData("id", int.class);
-		this.campaign = this.repository.findCampaignById(id);
-	}
-
-	@Override
 	public void authorise() {
 		boolean status = false;
+		int id;
+		Campaign c;
+		Spokesperson sp;
 
-		if (this.campaign != null) {
-			int userAccountId = super.getRequest().getPrincipal().getAccountId();
-			Spokesperson spokesperson = this.repository.findSpokespersonByUserAccountId(userAccountId);
+		id = super.getRequest().getData("id", int.class);
+		c = this.repository.findCampaignById(id);
 
-			status = this.campaign.isDraftMode() && this.campaign.getSpokesperson().getId() == spokesperson.getId();
+		if (c != null) {
+			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
+			status = sp != null && c.isDraftMode() && c.getSpokesperson().getId() == sp.getId();
 		}
 
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void load() {
+		int id = super.getRequest().getData("id", int.class);
+		this.campaign = this.repository.findCampaignById(id);
 	}
 
 	@Override
@@ -48,11 +52,9 @@ public class SpokespersonCampaignUpdateService extends AbstractService<Spokesper
 	@Override
 	public void validate() {
 		super.validateObject(this.campaign);
-
 		if (!super.getResponse().getErrors().hasErrors("startMoment") && !super.getResponse().getErrors().hasErrors("endMoment")) {
 			Date start = this.campaign.getStartMoment();
 			Date end = this.campaign.getEndMoment();
-
 			if (start != null && end != null && !start.before(end))
 				super.state(false, "endMoment", "spokesperson.campaign.form.error.end-before-start");
 		}
@@ -68,4 +70,5 @@ public class SpokespersonCampaignUpdateService extends AbstractService<Spokesper
 		Tuple tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 		tuple.put("readonly", !this.campaign.isDraftMode());
 	}
+
 }
