@@ -18,6 +18,7 @@ public class SpokespersonMilestoneListService extends AbstractService<Spokespers
 	private SpokespersonMilestoneRepository	repository;
 
 	private Campaign						campaign;
+
 	private Collection<Milestone>			milestones;
 
 
@@ -35,12 +36,14 @@ public class SpokespersonMilestoneListService extends AbstractService<Spokespers
 			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
 			status = sp != null && c.getSpokesperson().getId() == sp.getId();
 		}
+
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
 		int campaignId;
+
 		campaignId = super.getRequest().getData("campaignId", int.class);
 		this.campaign = this.repository.findCampaignById(campaignId);
 
@@ -52,6 +55,7 @@ public class SpokespersonMilestoneListService extends AbstractService<Spokespers
 	public void unbind() {
 		super.unbindObjects(this.milestones, "title", "kind", "effort");
 		super.getResponse().addGlobal("campaignId", this.campaign.getId());
+		super.getResponse().addGlobal("draftMode", this.campaign.isDraftMode());
 	}
 
 }
