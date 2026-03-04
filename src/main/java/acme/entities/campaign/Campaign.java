@@ -13,8 +13,6 @@ import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
@@ -74,10 +72,6 @@ public class Campaign extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-	@Transient
-	@Autowired
-	private CampaignRepository	repository;
-
 
 	@Transient
 	public double monthsActive() {
@@ -87,13 +81,15 @@ public class Campaign extends AbstractEntity {
 		result = duration.toDays() / 30.0;
 		return result;
 	}
+
+
+	@Transient
+	private transient CampaignRepository repository;
+
+
 	@Transient
 	public Double getEffort() {
-		Double result;
-
-		result = this.repository.computeCampaignEffort(this.getId());
-
-		return result == null ? 0.0 : result;
+		return this.repository == null ? 0.0 : this.repository.computeCampaignEffort(this.getId());
 	}
 
 	// Relationships ----------------------------------------------------------

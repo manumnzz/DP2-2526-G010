@@ -35,35 +35,18 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 		if (campaign == null)
 			result = true;
 		else {
-			{
-				boolean validTimeInterval;
+			boolean validTimeInterval;
 
-				if (campaign.getStartMoment() != null && campaign.getEndMoment() != null)
-					validTimeInterval = campaign.getStartMoment().before(campaign.getEndMoment());
-				else
-					validTimeInterval = true;
+			if (campaign.getStartMoment() != null && campaign.getEndMoment() != null)
+				validTimeInterval = campaign.getStartMoment().before(campaign.getEndMoment());
+			else
+				validTimeInterval = true;
 
-				super.state(context, validTimeInterval, "endMoment", "acme.validation.campaign.invalid-time-interval.message");
-			}
-
-			{
-				boolean hasMinimumMilestones;
-
-				if (!campaign.isDraftMode()) {
-					Integer milestoneCount;
-
-					milestoneCount = this.repository.countMilestonesByCampaignId(campaign.getId());
-					hasMinimumMilestones = milestoneCount != null && milestoneCount > 0;
-				} else
-					hasMinimumMilestones = true;
-
-				super.state(context, hasMinimumMilestones, "*", "acme.validation.campaign.no-milestones.message");
-			}
+			super.state(context, validTimeInterval, "endMoment", "acme.validation.campaign.invalid-time-interval.message");
 
 			result = !super.hasErrors(context);
 		}
 
 		return result;
 	}
-
 }
