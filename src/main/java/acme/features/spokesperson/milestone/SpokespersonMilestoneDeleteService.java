@@ -46,12 +46,10 @@ public class SpokespersonMilestoneDeleteService extends AbstractService<Spokespe
 
 	@Override
 	public void bind() {
-		// delete no necesita bind
 	}
 
 	@Override
 	public void validate() {
-		// delete no necesita validación adicional
 	}
 
 	@Override
@@ -65,7 +63,8 @@ public class SpokespersonMilestoneDeleteService extends AbstractService<Spokespe
 		SelectChoices kinds;
 
 		kinds = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
-		tuple = super.unbindObject(this.milestone, "title", "achievements", "effort", "kind");
+		tuple = super.unbindObject(this.milestone, "title", "achievements", "effort");
+		tuple.put("kind", kinds.getSelected().getKey());
 		tuple.put("kinds", kinds);
 		tuple.put("campaignId", this.milestone.getCampaign().getId());
 		tuple.put("draftMode", this.milestone.getCampaign().isDraftMode());

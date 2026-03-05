@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
-import acme.datatypes.MilestoneKind; // Ajusta el import según tu paquete real
+import acme.datatypes.MilestoneKind;
 import acme.entities.milestone.Milestone;
 import acme.realms.Spokesperson;
 
@@ -21,37 +21,43 @@ public class SpokespersonMilestoneShowService extends AbstractService<Spokespers
 
 
 	@Override
-	public void load() {
-		int id = super.getRequest().getData("id", int.class);
-		this.milestone = this.repository.findMilestoneById(id);
-	}
-
-	@Override
 	public void authorise() {
 		boolean status = false;
+		int id;
+		Milestone m;
+		Spokesperson sp;
 
-		if (this.milestone != null) {
-			int userAccountId = super.getRequest().getPrincipal().getAccountId();
-			Spokesperson spokesperson = this.repository.findSpokespersonByUserAccountId(userAccountId);
+		id = super.getRequest().getData("id", int.class);
+		m = this.repository.findMilestoneById(id);
 
-			status = this.milestone.getCampaign().getSpokesperson().getId() == spokesperson.getId();
+		if (m != null) {
+			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
+			status = sp != null && m.getCampaign().getSpokesperson().getId() == sp.getId();
 		}
-
 		super.setAuthorised(status);
 	}
 
 	@Override
-	public void unbind() {
-		SelectChoices choices;
-		Tuple tuple;
-
-		choices = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
-
-		tuple = super.unbindObject(this.milestone, "title", "achievements", "effort");
-		tuple.put("kind", choices.getSelected().getKey());
-		tuple.put("kinds", choices);
-
-		tuple.put("campaignId", this.milestone.getCampaign().getId());
-		tuple.put("readonly", !this.milestone.getCampaign().isDraftMode());
+	public void load() {
+		int id;
+		id = super.getRequest().getData("id", int.class);
+		this.milestone = this.repository.findMilestoneById(id);
 	}
+
+	@Override
+	public void unbind() {
+		Tuple tuple;
+		SelectChoices kinds;
+
+		kinds = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
+		tuple = super.unbindObject(this.milestone, "title", "achievements", "effort");
+		tuple.put("kind", kinds.getSelected().getKey());
+		tuple.put("kinds", kinds);
+		tuple.put("campaignId", this.milestone.getCampaign().getId());
+		tuple.put("draftMode", this.milestone.getCampaign().isDraftMode()); // ← clave
+		tuple.put("readonly", !this.milestone.getCampaign().isDraftMode());
+
+		super.getResponse().addData(tuple);
+	}
+
 }
