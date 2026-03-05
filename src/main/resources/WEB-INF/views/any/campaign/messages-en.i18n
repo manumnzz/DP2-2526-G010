@@ -1,0 +1,22 @@
+# Any Campaign list
+any.campaign.list.title = Listing of campaigns
+any.campaign.list.label.ticker = Ticker
+any.campaign.list.label.name = Name
+any.campaign.list.label.startMoment = Start moment
+any.campaign.list.label.endMoment = End moment
+any.campaign.list.label.spokesperson = Spokesperson
+
+# Any Campaign form
+any.campaign.form.title = Campaign details
+any.campaign.form.label.ticker = Ticker:
+any.campaign.form.label.name = Name:
+any.campaign.form.label.description = Description:
+any.campaign.form.label.startMoment = Start moment:
+any.campaign.form.label.endMoment = End moment:
+any.campaign.form.label.moreInfo = More info:
+any.campaign.form.label.effort = Total effort (hours):
+any.campaign.form.label.monthsActive = Active months:
+any.campaign.form.label.spokesperson = Spokesperson:
+
+any.campaign.form.button.milestones = View milestones
+any.campaign.form.button.spokesperson = View spokesperson
