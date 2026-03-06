@@ -18,37 +18,29 @@ public class SpokespersonMilestoneListService extends AbstractService<Spokespers
 	private SpokespersonMilestoneRepository	repository;
 
 	private Campaign						campaign;
-
 	private Collection<Milestone>			milestones;
 
 
 	@Override
-	public void authorise() {
-		boolean status = false;
-		int campaignId;
-		Campaign c;
-		Spokesperson sp;
-
-		campaignId = super.getRequest().getData("campaignId", int.class);
-		c = this.repository.findCampaignById(campaignId);
-
-		if (c != null) {
-			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
-			status = sp != null && c.getSpokesperson().getId() == sp.getId();
-		}
-
-		super.setAuthorised(status);
-	}
-
-	@Override
 	public void load() {
 		int campaignId;
-
 		campaignId = super.getRequest().getData("campaignId", int.class);
 		this.campaign = this.repository.findCampaignById(campaignId);
 
 		if (this.campaign != null)
 			this.milestones = this.repository.findMilestonesByCampaignId(campaignId);
+	}
+
+	@Override
+	public void authorise() {
+		boolean status = false;
+		Spokesperson sp;
+
+		if (this.campaign != null) {
+			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
+			status = sp != null && this.campaign.getSpokesperson().getId() == sp.getId();
+		}
+		super.setAuthorised(status);
 	}
 
 	@Override

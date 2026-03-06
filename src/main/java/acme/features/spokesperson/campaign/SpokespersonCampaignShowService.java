@@ -19,23 +19,6 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 
 
 	@Override
-	public void authorise() {
-		boolean status = false;
-		int id;
-		Campaign c;
-		Spokesperson sp;
-
-		id = super.getRequest().getData("id", int.class);
-		c = this.repository.findCampaignById(id);
-
-		if (c != null) {
-			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
-			status = sp != null && c.getSpokesperson().getId() == sp.getId();
-		}
-		super.setAuthorised(status);
-	}
-
-	@Override
 	public void load() {
 		int id;
 		id = super.getRequest().getData("id", int.class);
@@ -43,15 +26,28 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 	}
 
 	@Override
+	public void authorise() {
+		boolean status = false;
+		Spokesperson sp;
+
+		if (this.campaign != null) {
+			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
+			status = sp != null && this.campaign.getSpokesperson().getId() == sp.getId();
+		}
+		super.setAuthorised(status);
+	}
+
+	@Override
 	public void unbind() {
 		Tuple tuple;
 
 		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
-
 		tuple.put("monthsActive", this.campaign.getMonthsActive());
 		tuple.put("effort", this.campaign.getEffort());
 		tuple.put("id", this.campaign.getId());
 		tuple.put("readonly", !this.campaign.isDraftMode());
+
+		super.getResponse().addData(tuple);
 	}
 
 }
