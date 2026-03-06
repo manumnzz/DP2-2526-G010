@@ -20,17 +20,18 @@ public class AnyCampaignListService extends AbstractService<Any, Campaign> {
 
 
 	@Override
-	public void authorise() {
-		super.setAuthorised(true);
+	public void load() {
+		this.campaigns = this.repository.findPublishedCampaigns();
 	}
 
 	@Override
-	public void load() {
-		this.campaigns = this.repository.findPublishedCampaigns();
+	public void authorise() {
+		super.setAuthorised(true);
 	}
 
 	@Override
 	public void unbind() {
 		super.unbindObjects(this.campaigns, "ticker", "name", "startMoment", "endMoment");
 	}
+
 }

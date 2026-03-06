@@ -19,22 +19,17 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 
 
 	@Override
-	public void authorise() {
-		boolean status;
-		int id;
-		Campaign c;
-
-		id = super.getRequest().getData("id", int.class);
-		c = this.repository.findCampaignById(id);
-		status = c != null && !c.isDraftMode();
-		super.setAuthorised(status);
-	}
-
-	@Override
 	public void load() {
 		int id;
 		id = super.getRequest().getData("id", int.class);
 		this.campaign = this.repository.findCampaignById(id);
+	}
+
+	@Override
+	public void authorise() {
+		boolean status;
+		status = this.campaign != null && !this.campaign.isDraftMode();
+		super.setAuthorised(status);
 	}
 
 	@Override
@@ -50,6 +45,8 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 		tuple.put("spokespersonId", this.campaign.getSpokesperson().getId());
 		tuple.put("spokesperson.userAccount.identity.fullName", this.campaign.getSpokesperson().getUserAccount().getIdentity().getFullName());
 		tuple.put("readonly", true);
+
+		super.getResponse().addData(tuple);
 	}
 
 }

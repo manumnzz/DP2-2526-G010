@@ -4,6 +4,7 @@ package acme.features.any.spokesperson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.realms.Spokesperson;
@@ -18,18 +19,6 @@ public class AnySpokespersonShowService extends AbstractService<Any, Spokesperso
 
 
 	@Override
-	public void authorise() {
-		boolean status;
-		int id;
-		Spokesperson sp;
-
-		id = super.getRequest().getData("id", int.class);
-		sp = this.repository.findSpokespersonById(id);
-		status = sp != null;
-		super.setAuthorised(status);
-	}
-
-	@Override
 	public void load() {
 		int id;
 		id = super.getRequest().getData("id", int.class);
@@ -37,8 +26,17 @@ public class AnySpokespersonShowService extends AbstractService<Any, Spokesperso
 	}
 
 	@Override
+	public void authorise() {
+		boolean status;
+		status = this.spokesperson != null;
+		super.setAuthorised(status);
+	}
+
+	@Override
 	public void unbind() {
-		super.unbindObject(this.spokesperson, "cv", "achievements", "licensed");
+		Tuple tuple;
+		tuple = super.unbindObject(this.spokesperson, "cv", "achievements", "licensed");
+		super.getResponse().addData(tuple);
 	}
 
 }
