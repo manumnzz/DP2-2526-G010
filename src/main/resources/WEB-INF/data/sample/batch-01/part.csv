@@ -12,7 +12,7 @@ part-008,"Charging Controller","Charge regulation board","EUR 45.00",MANDATORY,i
 part-009,"Cooling Sleeve","Thermal dissipation sleeve","EUR 18.00",OPTIONAL,invention-03
 
 part-010,"Flight Controller","Main drone control unit","EUR 160.00",CORE,invention-04
-part-011,"Navigation Sensors","GPS + IMU sensor pack","EUR 70.00",MANDATORY,invention-04
+part-011,"Navigation Sensors","GPS and IMU sensor pack","EUR 70.00",MANDATORY,invention-04
 part-012,"Camera Module","Optional camera add-on","EUR 55.00",OPTIONAL,invention-04
 
 part-013,"IoT Hub","Central connectivity module","EUR 95.00",CORE,invention-05
@@ -20,8 +20,8 @@ part-014,"Valve Kit","Electro-valves set","EUR 40.00",MANDATORY,invention-05
 part-015,"Soil Probe","Optional soil moisture probe","EUR 22.00",OPTIONAL,invention-05
 
 part-016,"Imaging Core","Main scanning component","EUR 260.00",CORE,invention-06
-part-017,"Display Unit","Screen + UI controller","EUR 85.00",MANDATORY,invention-06
-part-018,"Carrying Bag","Transport bag","EUR 20.00",OPTIONAL,invention-06
+part-017,"Display Unit","Screen and UI controller","EUR 85.00",MANDATORY,invention-06
+part-018,"Carrying Bag","Transport bag accessory","EUR 20.00",OPTIONAL,invention-06
 
 part-019,"Engine Block","Prototype engine block","EUR 320.00",CORE,invention-07
 part-020,"Injection System","Fuel injection module","EUR 140.00",MANDATORY,invention-07
@@ -32,9 +32,31 @@ part-023,"Pump System","Water pump module","EUR 60.00",MANDATORY,invention-08
 part-024,"Mineral Add-on","Optional mineralization cartridge","EUR 25.00",OPTIONAL,invention-08
 
 part-025,"Impact Sensor","Impact detection sensor","EUR 45.00",CORE,invention-09
-part-026,"Alert Module","Connectivity + alert module","EUR 30.00",MANDATORY,invention-09
+part-026,"Alert Module","Connectivity and alert module","EUR 30.00",MANDATORY,invention-09
 part-027,"Visor Upgrade","Optional enhanced visor","EUR 28.00",OPTIONAL,invention-09
 
 part-028,"Mixing Agent","Eco binder compound","EUR 90.00",CORE,invention-10
 part-029,"Fiber Reinforcement","Structural fiber reinforcement","EUR 55.00",MANDATORY,invention-10
 part-030,"Color Additive","Optional color additive","EUR 12.00",OPTIONAL,invention-10
+
+part-bl-01,"A","B","EUR 0.01",CORE,invention-bl-11
+part-bl-02,"Boundary Part Name","Minimum practical description boundary","EUR 0.00",MANDATORY,invention-bl-11
+part-bl-03,"Unicode 😈 Part","Description with unicode characters for testing","EUR 1.00",OPTIONAL,invention-bl-11
+part-bl-04,"Very Expensive Part","Large cost boundary case","EUR 999999.99",CORE,invention-bl-11
+part-bl-05,"Decimal Precision Part","Cost with decimal precision boundary","EUR 10.01",MANDATORY,invention-bl-11
+part-bl-06,"CORE kind test","Explicit enum CORE validation","EUR 5.00",CORE,invention-bl-11
+part-bl-07,"MANDATORY kind test","Explicit enum MANDATORY validation","EUR 5.00",MANDATORY,invention-bl-11
+part-bl-08,"OPTIONAL kind test","Explicit enum OPTIONAL validation","EUR 5.00",OPTIONAL,invention-bl-11
+part-bl-09,"No URL Related Part","Part attached to invention without URL","EUR 7.50",CORE,invention-bl-09
+part-bl-10,"Short Interval Part","Part attached to one-minute interval invention","EUR 8.00",MANDATORY,invention-bl-08
+part-bl-11,"Far Future Part","Part attached to far future invention","EUR 9.00",CORE,invention-bl-07
+part-bl-12,"Same Day Part","Part attached to same-day moments invention","EUR 6.00",MANDATORY,invention-bl-14
+part-bl-13,"Long URL Part","Part attached to long URL invention","EUR 4.00",OPTIONAL,invention-bl-15
+part-bl-14,"Ticker Min Suffix Part","Part attached to min ticker suffix invention","EUR 3.00",CORE,invention-bl-12
+part-bl-15,"Ticker Max Suffix Part","Part attached to max ticker suffix invention","EUR 3.50",MANDATORY,invention-bl-13
+
+part-sql-01,"' OR '1'='1","Classic SQL injection tautology in part name","EUR 10.00",CORE,invention-sql-01
+part-sql-02,"'; DROP TABLE parts; --","DROP TABLE payload in part name","EUR 15.00",MANDATORY,invention-sql-02
+part-sql-03,"' UNION SELECT * FROM users; --","Union-based payload in part name","EUR 12.00",OPTIONAL,invention-sql-03
+part-sql-04,"admin' --","Comment injection payload in part name","EUR 8.00",CORE,invention-sql-04
+part-sql-05,"'; EXEC xp_cmdshell('dir'); --","Command execution payload in part name","EUR 9.00",MANDATORY,invention-sql-05

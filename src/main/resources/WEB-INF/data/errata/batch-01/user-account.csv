@@ -1,3 +1,9 @@
 key,enabled,identity,password,username
+user-account-inventor-err-01,true,"UserIdentity{name:'Error', surname:'Inventor1', email:'inventor.err1-acme.com'}",inventorErr1,inventorErr1
+user-account-inventor-err-02,true,"UserIdentity{name:'Error', surname:'Inventor2', email:'inventor.err2-acme.com'}",inventorErr2,inventorErr2
+user-account-inventor-err-03,true,"UserIdentity{name:'Error', surname:'Inventor3', email:'inventor.err3-acme.com'}",inventorErr3,inventorErr3
+user-account-inventor-err-04,true,"UserIdentity{name:'Error', surname:'Inventor4', email:'inventor.err4-acme.com'}",inventorErr4,inventorErr4
+user-account-inventor-err-05,true,"UserIdentity{name:'Error', surname:'Inventor5', email:'inventor.err5-acme.com'}",inventorErr5,inventorErr5
+user-account-inventor-err-06,true,"UserIdentity{name:'Error', surname:'Inventor6', email:'inventor.err6-acme.com'}",inventorErr6,inventorErr6
 user-account-fundraiser-01,true,"UserIdentity{name: '', surname: '', email: ''}","",""
 user-account-spokesperson-err,false,"UserIdentity{name: '', surname: '', email: ''}","",""
