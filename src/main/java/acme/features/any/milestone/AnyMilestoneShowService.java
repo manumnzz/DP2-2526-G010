@@ -14,40 +14,38 @@ import acme.entities.milestone.Milestone;
 @Service
 public class AnyMilestoneShowService extends AbstractService<Any, Milestone> {
 
-    @Autowired
-    private AnyMilestoneRepository repository;
+	@Autowired
+	private AnyMilestoneRepository	repository;
 
-    private Milestone milestone;
+	private Milestone				milestone;
 
-    @Override
-    public void authorise() {
-        boolean status;
-        int id;
-        Milestone milestone;
 
-        id = super.getRequest().getData("id", int.class);
-        milestone = this.repository.findMilestoneById(id);
-        status = milestone != null && !milestone.getCampaign().isDraftMode();
-        super.setAuthorised(status);
-    }
+	@Override
+	public void load() {
+		int id;
+		id = super.getRequest().getData("id", int.class);
+		this.milestone = this.repository.findMilestoneById(id);
+	}
 
-    @Override
-    public void load() {
-        int id;
-        id = super.getRequest().getData("id", int.class);
-        this.milestone = this.repository.findMilestoneById(id);
-    }
+	@Override
+	public void authorise() {
+		boolean status;
+		status = this.milestone != null && !this.milestone.getCampaign().isDraftMode();
+		super.setAuthorised(status);
+	}
 
-    @Override
-    public void unbind() {
-        Tuple tuple;
-        SelectChoices choices;
+	@Override
+	public void unbind() {
+		Tuple tuple;
+		SelectChoices choices;
 
-        choices = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
+		choices = SelectChoices.from(MilestoneKind.class, this.milestone.getKind());
+		tuple = super.unbindObject(this.milestone, "title", "achievements", "effort");
+		tuple.put("kind", choices.getSelected().getKey());
+		tuple.put("kinds", choices);
+		tuple.put("campaign.ticker", this.milestone.getCampaign().getTicker());
 
-        tuple = super.unbindObject(this.milestone, "title", "achievements", "effort", "campaign");
-        tuple.put("kind", choices.getSelected().getKey());
-        tuple.put("kinds", choices);
-    }
+		super.getResponse().addData(tuple);
+	}
 
 }

@@ -19,37 +19,33 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 
 
 	@Override
-	public void authorise() {
-		boolean status = false;
-		int id;
-		Campaign c;
-		Spokesperson sp;
-
-		id = super.getRequest().getData("id", int.class);
-		c = this.repository.findCampaignById(id);
-
-		if (c != null) {
-			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
-			status = sp != null && c.isDraftMode() && c.getSpokesperson().getId() == sp.getId();
-		}
-
-		super.setAuthorised(status);
-	}
-
-	@Override
 	public void load() {
-		int id = super.getRequest().getData("id", int.class);
+		int id;
+		id = super.getRequest().getData("id", int.class);
 		this.campaign = this.repository.findCampaignById(id);
 	}
 
 	@Override
+	public void authorise() {
+		boolean status = false;
+		Spokesperson sp;
+
+		if (this.campaign != null) {
+			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
+			status = sp != null && this.campaign.isDraftMode() && this.campaign.getSpokesperson().getId() == sp.getId();
+		}
+		super.setAuthorised(status);
+	}
+
+	@Override
 	public void bind() {
-		// No bind on publish
 	}
 
 	@Override
 	public void validate() {
-		int count = this.repository.countMilestonesByCampaignId(this.campaign.getId());
+		int count;
+
+		count = this.repository.countMilestonesByCampaignId(this.campaign.getId());
 		super.state(count > 0, "*", "spokesperson.campaign.form.error.no-milestones");
 
 		if (this.campaign.getStartMoment() != null && this.campaign.getEndMoment() != null)
@@ -65,9 +61,14 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 	@Override
 	public void unbind() {
 		Tuple tuple;
-		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "effort");
+
+		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		tuple.put("monthsActive", this.campaign.getMonthsActive());
+		tuple.put("effort", this.campaign.getEffort());
 		tuple.put("id", this.campaign.getId());
 		tuple.put("readonly", true);
+
+		super.getResponse().addData(tuple);
 	}
 
 }

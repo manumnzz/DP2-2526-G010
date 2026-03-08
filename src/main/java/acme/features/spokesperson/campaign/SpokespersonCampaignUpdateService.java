@@ -21,27 +21,22 @@ public class SpokespersonCampaignUpdateService extends AbstractService<Spokesper
 
 
 	@Override
-	public void authorise() {
-		boolean status = false;
+	public void load() {
 		int id;
-		Campaign c;
-		Spokesperson sp;
-
 		id = super.getRequest().getData("id", int.class);
-		c = this.repository.findCampaignById(id);
-
-		if (c != null) {
-			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
-			status = sp != null && c.isDraftMode() && c.getSpokesperson().getId() == sp.getId();
-		}
-
-		super.setAuthorised(status);
+		this.campaign = this.repository.findCampaignById(id);
 	}
 
 	@Override
-	public void load() {
-		int id = super.getRequest().getData("id", int.class);
-		this.campaign = this.repository.findCampaignById(id);
+	public void authorise() {
+		boolean status = false;
+		Spokesperson sp;
+
+		if (this.campaign != null) {
+			sp = this.repository.findSpokespersonByUserAccountId(super.getRequest().getPrincipal().getAccountId());
+			status = sp != null && this.campaign.isDraftMode() && this.campaign.getSpokesperson().getId() == sp.getId();
+		}
+		super.setAuthorised(status);
 	}
 
 	@Override
@@ -51,10 +46,14 @@ public class SpokespersonCampaignUpdateService extends AbstractService<Spokesper
 
 	@Override
 	public void validate() {
+		Date start;
+		Date end;
+
 		super.validateObject(this.campaign);
+
 		if (!super.getResponse().getErrors().hasErrors("startMoment") && !super.getResponse().getErrors().hasErrors("endMoment")) {
-			Date start = this.campaign.getStartMoment();
-			Date end = this.campaign.getEndMoment();
+			start = this.campaign.getStartMoment();
+			end = this.campaign.getEndMoment();
 			if (start != null && end != null && !start.before(end))
 				super.state(false, "endMoment", "spokesperson.campaign.form.error.end-before-start");
 		}
@@ -67,8 +66,15 @@ public class SpokespersonCampaignUpdateService extends AbstractService<Spokesper
 
 	@Override
 	public void unbind() {
-		Tuple tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
-		tuple.put("readonly", !this.campaign.isDraftMode());
+		Tuple tuple;
+
+		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		tuple.put("monthsActive", this.campaign.getMonthsActive());
+		tuple.put("effort", this.campaign.getEffort());
+		tuple.put("id", this.campaign.getId());
+		tuple.put("readonly", false);
+
+		super.getResponse().addData(tuple);
 	}
 
 }
