@@ -1,4 +1,23 @@
 key,key:userAccount,bio,kewWords,licensed
-inventor-01,user-account-inventor-01,"Bio de Irene (inventor1).","ai; robotics; materials",true
-inventor-02,user-account-inventor-02,"Bio de Ivan (inventor2).","biotech; sensors; iot",true
-inventor-03,user-account-inventor-03,"Bio de Ines (inventor3).","testing; sample-data",false
+inventor-01,user-account-inventor-01,"Inventor specialised in smart sensors and embedded systems","sensors, embedded, automation",true
+inventor-02,user-account-inventor-02,"Inventor focused on sustainability, healthcare and industrial innovation","health, green-tech, robotics",false
+inventor-03,user-account-inventor-03,"Inventor working on advanced materials, batteries and energy efficiency","materials, batteries, energy",true
+
+inventor-bl-01,user-account-inventor-04,"A","B",true
+inventor-bl-02,user-account-inventor-05,"Inventor with minimum meaningful biography text","keyword",false
+inventor-bl-03,user-account-inventor-06,"Inventor focused on renewable energy systems and embedded devices","iot",true
+inventor-bl-04,user-account-inventor-07,"😈","innovation, unicode",false
+inventor-bl-05,user-account-inventor-08,"Biografía con caracteres internacionales: ñ, á, ü, ç","energía, sensores, salud",true
+inventor-bl-06,user-account-inventor-09,"خبرة في الابتكار الصناعي والأنظمة الذكية","روبوتات، استدامة، طب",true
+inventor-bl-07,user-account-inventor-10,"発明家としてエネルギー効率と新素材を研究しています","材料, 電池, 効率",false
+inventor-bl-08,user-account-inventor-11,"Bio with numbers 1234567890 and symbols +-*/=","keywords 5g, ai, iot",true
+inventor-bl-09,user-account-inventor-12,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB","robotics, ai",true
+inventor-bl-10,user-account-inventor-13,"Valid inventor bio","KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",false
+inventor-bl-11,user-account-inventor-14,"Leading and trailing spaces kept under control","space, trimming, validation",true
+inventor-bl-12,user-account-inventor-15,"Experienced inventor in sustainable engineering","single-keyword",false
+
+inventor-sql-01,user-account-inventor-16,"' OR '1'='1","robotics, ai",true
+inventor-sql-02,user-account-inventor-17,"'; DROP TABLE inventor; --","biosecurity, data",false
+inventor-sql-03,user-account-inventor-18,"Normal bio","' UNION SELECT * FROM users; --",true
+inventor-sql-04,user-account-inventor-19,"admin' --","keywords",false
+inventor-sql-05,user-account-inventor-20,"'; EXEC xp_cmdshell('dir'); --","systems, embedded",true

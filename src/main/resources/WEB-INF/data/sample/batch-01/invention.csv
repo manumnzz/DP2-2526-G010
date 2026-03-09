@@ -1,11 +1,33 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:inventor
-invention-01,IN02-ALPHA01,"Smart Sensor","Descripción de prueba para la invención 1",2030/01/10 10:00,2030/04/10 10:00,https://example.com/inv1,true,inventor-01
-invention-02,IN02-BETA02,"Bio Filter","Descripción de prueba para la invención 2",2030/02/01 12:00,2030/06/01 12:00,https://example.com/inv2,true,inventor-02
-invention-03,IN02-GAMMA03,"Nano Battery","High-density nano battery for portable devices",2030/03/01 09:00,2030/07/01 09:00,https://example.com/inv3,true,inventor-01
-invention-04,IN02-DELTA04,"AI Assistant Drone","Autonomous drone with AI navigation system",2030/04/15 11:00,2030/08/15 11:00,https://example.com/inv4,true,inventor-01
-invention-05,IN02-EPSIL05,"Smart Irrigation","IoT-based irrigation system for agriculture",2030/05/01 10:30,2030/09/01 10:30,https://example.com/inv5,true,inventor-02
-invention-06,IN02-ZETA06,"Medical Scanner","Portable medical imaging scanner",2030/06/10 08:00,2030/10/10 08:00,https://example.com/inv6,true,inventor-02
-invention-07,IN02-ETA07,"Eco Engine","Low-emission engine prototype",2030/07/20 14:00,2030/11/20 14:00,https://example.com/inv7,true,inventor-01
-invention-08,IN02-THETA08,"Water Purifier Pro","Advanced water purification device",2030/08/05 16:00,2030/12/05 16:00,https://example.com/inv8,true,inventor-02
-invention-09,IN02-IOTA09,"Smart Helmet","Helmet with impact detection and alert system",2030/09/01 09:00,2031/01/01 09:00,https://example.com/inv9,true,inventor-01
-invention-10,IN02-KAPPA10,"Green Concrete","Eco-friendly construction material",2030/10/01 10:00,2031/02/01 10:00,https://example.com/inv10,true,inventor-02
+invention-01,IN01-ALPHA1,"Smart Sensor","Advanced sensing device for industrial monitoring",2030/01/10 10:00,2030/04/10 10:00,https://example.com/inv1,false,inventor-01
+invention-02,IN02-BETA22,"Bio Filter","Biological filtration system for water treatment",2030/02/01 12:00,2030/06/01 12:00,https://example.com/inv2,false,inventor-02
+invention-03,IN03-GAMMA3,"Nano Battery","High-density nano battery for portable devices",2030/03/01 09:00,2030/07/01 09:00,https://example.com/inv3,false,inventor-01
+invention-04,IN04-DELTA4,"AI Assistant Drone","Autonomous drone with AI navigation system",2030/04/15 11:00,2030/08/15 11:00,https://example.com/inv4,false,inventor-01
+invention-05,IN05-EPSIL5,"Smart Irrigation","IoT-based irrigation system for agriculture",2030/05/01 10:30,2030/09/01 10:30,https://example.com/inv5,false,inventor-02
+invention-06,IN06-ZETA66,"Medical Scanner","Portable medical imaging scanner for field diagnostics",2030/06/10 08:00,2030/10/10 08:00,https://example.com/inv6,false,inventor-02
+invention-07,IN07-ETA777,"Eco Engine","Low-emission engine prototype for urban vehicles",2030/07/20 14:00,2030/11/20 14:00,https://example.com/inv7,false,inventor-01
+invention-08,IN08-THETA8,"Water Purifier Pro","Advanced water purification device for domestic use",2030/08/05 16:00,2030/12/05 16:00,https://example.com/inv8,false,inventor-02
+invention-09,IN09-IOTA99,"Smart Helmet","Helmet with impact detection and emergency alert system",2030/09/01 09:00,2031/01/01 09:00,https://example.com/inv9,false,inventor-01
+invention-10,IN10-KAPPA0,"Green Concrete","Eco-friendly construction material with reduced emissions",2030/10/01 10:00,2031/02/01 10:00,https://example.com/inv10,false,inventor-02
+
+invention-bl-01,BL01-ABCDE,"A","A",2030/01/02 00:01,2030/01/02 00:02,,true,inventor-bl-01
+invention-bl-02,BL02-ABCDEFGHIJ,"1","Boundary description test",2030/01/02 00:01,2030/01/02 00:02,https://example.com/bl2,true,inventor-bl-02
+invention-bl-03,BL03-XXXXX,"Prototype Alpha Boundary Name","Description near lower practical boundary",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl3,true,inventor-bl-03
+invention-bl-04,BL04-YYYYY,"😈","Unicode name test with valid text description",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl4,true,inventor-bl-04
+invention-bl-05,BL05-ZZZZZ,"Boundary Long Description","This description is intentionally written near the maximum safe size for the column while remaining valid, meaningful, and short enough to be stored correctly in the sample database without causing insertion errors.",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl5,true,inventor-bl-05
+invention-bl-06,BL06-START1,"Start just in future","Invention starting one minute after the reference moment",2030/01/01 00:01,2030/06/01 00:00,https://example.com/bl6,true,inventor-bl-06
+invention-bl-07,BL07-ENDFAR,"Far future end","Invention ending very far in the future as a boundary case",2030/01/01 00:00,2200/12/31 23:59,https://example.com/bl7,true,inventor-bl-07
+invention-bl-08,BL08-CLOSE1,"One minute interval","Invention where start and end are one minute apart",2030/01/01 00:00,2030/01/01 00:01,https://example.com/bl8,true,inventor-bl-08
+invention-bl-09,BL09-NOURL,"No moreInfo URL","Invention with no optional URL provided",2030/03/01 00:00,2030/09/01 00:00,,true,inventor-bl-09
+invention-bl-10,BL10-DRAFT1,"Draft invention","Draft invention used to avoid relational publication constraints",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl10,true,inventor-bl-10
+invention-bl-11,BL11-PUB01,"Published invention","Published invention that will have at least one part assigned",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl11,false,inventor-01
+invention-bl-12,BL12-TCKR5,"Ticker min suffix","Ticker with exactly five characters in suffix section",2030/01/01 00:00,2030/07/01 00:00,https://example.com/bl12,true,inventor-bl-03
+invention-bl-13,BL13-TCKRMAX10,"Ticker max suffix","Ticker with exactly ten alphanumeric characters in suffix part",2030/01/01 00:00,2030/07/01 00:00,https://example.com/bl13,true,inventor-bl-04
+invention-bl-14,BL14-SAME01,"Same day moments","Start and end on the same day but at different times",2030/06/15 08:00,2030/06/15 23:59,https://example.com/bl14,true,inventor-bl-05
+invention-bl-15,BL15-LONGUR,"Long URL test","Invention with a very long but valid URL",2030/02/01 00:00,2030/08/01 00:00,https://example.com/this/is/a/very/long/url/path/to/test/the/valid/url/annotation/boundary,true,inventor-bl-06
+
+invention-sql-01,SQ01-INJ01,"' OR '1'='1","Classic SQL injection in invention name",2030/01/01 00:00,2030/06/01 00:00,https://example.com/sql1,true,inventor-sql-01
+invention-sql-02,SQ02-INJ02,"'; DROP TABLE users; --","SQL injection with DROP TABLE payload",2030/02/01 00:00,2030/07/01 00:00,https://example.com/sql2,true,inventor-sql-02
+invention-sql-03,SQ03-INJ03,"' UNION SELECT * FROM passwords; --","Union-based SQL injection payload",2030/03/01 00:00,2030/08/01 00:00,https://example.com/sql3,true,inventor-sql-03
+invention-sql-04,SQ04-INJ04,"admin' --","Comment injection payload",2030/04/01 00:00,2030/09/01 00:00,https://example.com/sql4,true,inventor-sql-04
+invention-sql-05,SQ05-INJ05,"'; EXEC xp_cmdshell('dir'); --","Command execution style injection payload",2030/05/01 00:00,2030/10/01 00:00,https://example.com/sql5,true,inventor-sql-05
