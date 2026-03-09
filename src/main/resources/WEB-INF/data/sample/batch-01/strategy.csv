@@ -15,3 +15,32 @@ strategy-13,FR02-STRAT13,Brand Refresh 2024,Update visual identity and messaging
 strategy-14,FR02-STRAT14,Investor Relations Pack,Prepare investor materials and outreach cadence for next round,2026/10/20 09:00,2027/02/15 19:00,https://www.investopedia.com/terms/i/investorrelations.asp,TRUE,fundraiser-02
 strategy-15,FR02-STRAT15,Customer Success Playbook,Standardize success processes to increase expansion revenue,2025/11/01 09:00,2026/03/01 18:00,https://www.gainsight.com/customer-success/,FALSE,fundraiser-02
 strategy-16,FR02-STRAT16,Micro-Launch in 30 Days,Run a controlled launch to a small audience before scaling,2026/03/03 10:00,2026/04/02 10:00,https://www.atlassian.com/agile/product-management/product-launch,TRUE,fundraiser-02
+# base / boundary valid cases
+strategy-17,FR03-ABCDE,L,Short description,2025/02/01 10:00,2025/03/01 10:00,,FALSE,fundraiser-01
+strategy-18,FR03-ABCDEF,Lo,Another short description,2025/02/02 10:00,2025/03/02 10:00,http://example.org,FALSE,fundraiser-01
+strategy-19,FR03-ABCDEFG,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tem",Valid long text within limits,2025/02/03 10:00,2025/04/03 10:00,https://example.org/path,FALSE,fundraiser-01
+# multilingual / special text still valid under your constraints
+strategy-20,FR03-ABCDE1,โลเร็ม อิปซัม,Texto válido con caracteres unicode,2025/02/04 10:00,2025/05/04 10:00,https://example.org/a,FALSE,fundraiser-01
+strategy-21,FR03-ABCDE2,لوريم إيبسوم,Descripción válida en árabe,2025/02/05 10:00,2025/05/05 10:00,https://example.org/a/b,FALSE,fundraiser-01
+strategy-22,FR03-ABCDE3,洛伦·伊普森,描述文本有效,2025/02/06 10:00,2025/05/06 10:00,http://example.org/a/b?x=1&y=2,FALSE,fundraiser-01
+strategy-23,FR03-ABCDE4,<marquee>Visible text</marquee>,<script>alert('demo');</script>,2025/02/07 10:00,2025/05/07 10:00,http://example.org/path#anchor,FALSE,fundraiser-01
+strategy-24,FR03-ABCDE5,' or 'A'='A,' or 'B'='B,2025/02/08 10:00,2025/05/08 10:00,http://example.org?,FALSE,fundraiser-01
+# ticker valid boundaries (5 to 10 chars after hyphen)
+strategy-25,FR04-ABCDE,Min suffix length valid,Description ok,2025/02/09 10:00,2025/06/09 10:00,http://example.com/min,FALSE,fundraiser-02
+strategy-26,FR04-ABCDEF,Length 6 suffix valid,Description ok,2025/02/10 10:00,2025/06/10 10:00,http://example.com/6,FALSE,fundraiser-02
+strategy-27,FR04-ABCDEFG,Length 7 suffix valid,Description ok,2025/02/11 10:00,2025/06/11 10:00,http://example.com/7,FALSE,fundraiser-02
+strategy-28,FR04-ABCDEFGH,Length 8 suffix valid,Description ok,2025/02/12 10:00,2025/06/12 10:00,http://example.com/8,FALSE,fundraiser-02
+strategy-29,FR04-ABCDEFGHI,Length 9 suffix valid,Description ok,2025/02/13 10:00,2025/06/13 10:00,http://example.com/9,FALSE,fundraiser-02
+strategy-30,FR04-ABCDEFGHIJ,Max suffix length valid,Description ok,2025/02/14 10:00,2025/06/14 10:00,http://example.com/10,FALSE,fundraiser-02
+# valid URLs and optional moreInfo
+strategy-31,FR05-ABCDE,Optional URL empty,Description with empty URL,2025/02/15 10:00,2025/06/15 10:00,,FALSE,fundraiser-02
+strategy-32,FR05-ABCDEF,Simple HTTP URL,Description ok,2025/02/16 10:00,2025/06/16 10:00,http://a.org,FALSE,fundraiser-02
+strategy-33,FR05-ABCDEFG,Simple HTTPS URL,Description ok,2025/02/17 10:00,2025/06/17 10:00,https://a.b,FALSE,fundraiser-02
+strategy-34,FR05-ABCDEFGH,Deep path URL,Description ok,2025/02/18 10:00,2025/06/18 10:00,http://example.org/a/b,FALSE,fundraiser-02
+strategy-35,FR05-ABCDEFGHI,URL with query,Description ok,2025/02/19 10:00,2025/06/19 10:00,http://example.org?a=1&b=2,FALSE,fundraiser-02
+strategy-36,FR05-ABCDEFGHIJ,URL with anchor,Description ok,2025/02/20 10:00,2025/06/20 10:00,http://example.org/doc.html#section,FALSE,fundraiser-02
+# future moments valid
+strategy-37,FR06-ABCDE,Immediate future window,Valid description,2025/01/08 00:01,2025/01/09 00:01,http://example.com/future,FALSE,fundraiser-01
+strategy-38,FR06-ABCDEF,Medium future window,Valid description,2025/06/01 09:00,2025/12/01 18:00,http://example.com/medium,FALSE,fundraiser-01
+strategy-39,FR06-ABCDEFG,Far future window,Valid description,2026/01/01 08:00,2026/12/31 20:00,http://example.com/far,FALSE,fundraiser-02
+strategy-40,FR06-ABCDEFGH,Very far future window,Valid description,2027/01/01 08:00,2027/06/01 20:00,http://example.com/very-far,FALSE,fundraiser-02
