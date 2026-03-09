@@ -1,0 +1,16 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:inventor
+invention-err-01,invalid-ticker,"Bad Ticker","Ticker does not match the expected pattern",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err1,true,inventor-err-01
+invention-err-02,in02-ABCDE,"Lowercase prefix","Ticker prefix must be uppercase",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err2,true,inventor-err-02
+invention-err-03,ER03-AB,"Short suffix","Ticker suffix has fewer than five characters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err3,true,inventor-err-03
+invention-err-04,ER04-ABCDEFGHIJK,"Long suffix","Ticker suffix has more than ten characters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err4,true,inventor-err-04
+invention-err-05,ER05-ABCDE,"Valid Name"," ",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err5,true,inventor-err-05
+invention-err-06,ER06-ABCDE,"Valid Name","BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err6,true,inventor-err-06
+invention-err-07,ER07-ABCDE,"Past start","Start moment is in the past",2020/01/01 00:00,2030/06/01 00:00,https://example.com/err7,true,inventor-err-01
+invention-err-08,ER08-ABCDE,"Past end","End moment is in the past",2030/01/01 00:00,2020/06/01 00:00,https://example.com/err8,true,inventor-err-02
+invention-err-09,ER09-ABCDE,"Wrong interval","End moment is before start moment",2030/06/01 00:00,2030/01/01 00:00,https://example.com/err9,true,inventor-err-03
+invention-err-10,ER10-ABCDE,"Equal moments","End moment equals start moment",2030/06/01 00:00,2030/06/01 00:00,https://example.com/err10,true,inventor-err-04
+invention-err-11,ER11-ABCDE,"Bad URL","URL is not valid",2030/01/01 00:00,2030/06/01 00:00,not-a-valid-url,true,inventor-err-05
+invention-err-12,ER12-ABCDE,"Missing schema URL","URL has no schema",2030/01/01 00:00,2030/06/01 00:00,example.com/noschema,true,inventor-err-06
+invention-err-13,ER13-ABCDE,"Valid Name"," ",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err13,false,inventor-err-01
+invention-err-14,ER14-ABCDE," ","Blank name and blank description should fail",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err14,true,inventor-err-02
+invention-err-15,ER15-ABCDE,"' OR '1'='1"," ",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err15,true,inventor-err-03

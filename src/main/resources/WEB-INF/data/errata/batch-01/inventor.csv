@@ -1,0 +1,7 @@
+key,key:userAccount,bio,kewWords,licensed
+inventor-err-01,user-account-inventor-err-01," ","robotics, ai, health",true
+inventor-err-02,user-account-inventor-err-02,"Experienced inventor in sustainable engineering"," ",false
+inventor-err-03,user-account-inventor-err-03,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB","robotics, ai",true
+inventor-err-04,user-account-inventor-err-04,"Valid inventor bio"," ",false
+inventor-err-05,user-account-inventor-err-05,"admin' --"," ",true
+inventor-err-06,user-account-inventor-err-06," ","'; DROP TABLE inventor; --",false
