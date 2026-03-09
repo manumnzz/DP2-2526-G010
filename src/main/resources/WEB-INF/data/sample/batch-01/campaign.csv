@@ -1,31 +1,62 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
-campaign-01,CA01-ALPHA1,"Global Awareness","International campaign to raise awareness on climate change",2030/01/10 10:00,2030/04/10 10:00,https://example.com/camp1,false,spokesperson-01
-campaign-02,CA02-BETA22,"Youth Voices","Campaign empowering youth participation in public debate",2030/02/01 12:00,2030/06/01 12:00,https://example.com/camp2,false,spokesperson-02
-campaign-03,CA03-GAMMA3,"Clean Oceans","Awareness and action campaign against ocean pollution",2030/03/01 09:00,2030/07/01 09:00,https://example.com/camp3,false,spokesperson-03
-campaign-04,CA04-DELTA4,"Digital Inclusion","Promoting equal access to digital technologies worldwide",2030/04/15 11:00,2030/08/15 11:00,https://example.com/camp4,false,spokesperson-01
-campaign-05,CA05-EPSIL5,"Fam Zero","Campanya contra la inseguretat alimentària a les zones urbanes",2030/05/01 10:30,2030/09/01 10:30,https://example.com/camp5,false,spokesperson-02
-campaign-06,CA06-ZETA66,"ዜሮ ረሃብ","በከተማ አካባቢዎች የምግብ እጦትን ለመከላከል የሚደረግ ዘመቻ",2030/06/10 08:00,2030/10/10 08:00,https://example.com/camp6,false,spokesperson-03
-campaign-07,CA07-ETA777,"เมืองสีเขียว","แคมเปญสร้างความตระหนักด้านการพัฒนาเมืองอย่างยั่งยืน",2030/07/20 14:00,2030/11/20 14:00,https://example.com/camp7,false,spokesperson-01
-campaign-08,CA08-THETA8,"安全道路","针对年轻驾驶员的道路安全运动",2030/08/05 16:00,2030/12/05 16:00,https://example.com/camp8,false,spokesperson-02
-campaign-09,CA09-IOTA99,"平等な権利","職場でのジェンダー平等を促進するキャンペーン",2030/09/01 09:00,2031/01/01 09:00,https://example.com/camp9,false,spokesperson-03
-campaign-10,CA10-KAPPA0,"מנהיגי העתיד","קמפיין פיתוח מנהיגות לאנשי מקצוע מתהווים",2030/10/01 10:00,2031/02/01 10:00,https://example.com/camp10,false,spokesperson-01
+campaign-00,CA00-BASE0,"Base Campaign","Base campaign entity for boundary testing purposes",2030/01/01 00:00,2030/06/01 00:00,https://example.com/base,true,spokesperson-01
 campaign-bl-01,BL01-ABCDE,"A","A",2025/01/02 00:01,2025/01/02 00:02,,false,spokesperson-01
-campaign-bl-02,BL02-ABCDEFGHIJ,"1","B",2025/01/02 00:01,2025/01/02 00:02,https://example.com/bl2,false,spokesperson-02
-campaign-bl-03,BL03-XXXXX,"Campaign name of exactly seventy-five characters for header test!!!!!!!!","Description of exactly one character boundary",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl3,false,spokesperson-03
-campaign-bl-04,BL04-YYYYY,"D","This description has exactly one character as minimum boundary test value x",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl4,false,spokesperson-01
-campaign-bl-05,BL05-ZZZZZ,"😈","This description is intentionally crafted to reach the maximum allowed length for the ValidText annotation which is two hundred and fifty-five characters long and this sentence is written to fill all of that space right up to the very last allowed char!!",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl5,false,spokesperson-02
-campaign-bl-06,BL06-START1,"Start just in future","Campaign starting just one minute after current moment",2025/01/01 00:01,2025/06/01 00:00,https://example.com/bl6,false,spokesperson-03
-campaign-bl-07,BL07-ENDFAR,"Far future end","Campaign ending very far in the future boundary test",2030/01/01 00:00,2200/12/31 23:59,https://example.com/bl7,false,spokesperson-01
-campaign-bl-08,BL08-CLOSE1,"One minute interval","Campaign where start and end are one minute apart",2030/01/01 00:00,2030/01/01 00:01,https://example.com/bl8,false,spokesperson-02
-campaign-bl-09,BL09-NOURL,"No moreInfo URL","Campaign with no optional moreInfo URL provided at all",2030/03/01 00:00,2030/09/01 00:00,,false,spokesperson-03
-campaign-bl-10,BL10-DRAFT1,"Draft mode false","Campaign in draft mode does not require milestones to be valid",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl10,false,spokesperson-01
-campaign-bl-11,BL11-PUB01,"Published campaign","Campaign with draftMode false must have at least one milestone",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl11,false,spokesperson-02
-campaign-bl-12,BL12-TCKR5,"Ticker min suffix","Ticker with exactly five characters in the suffix part",2030/01/01 00:00,2030/07/01 00:00,https://example.com/bl12,false,spokesperson-03
-campaign-bl-13,BL13-TCKRMAX10,"Ticker max suffix","Ticker with exactly ten alphanumeric characters in the suffix part",2030/01/01 00:00,2030/07/01 00:00,https://example.com/bl13,false,spokesperson-01
-campaign-bl-14,BL14-SAME01,"Same day moments","Campaign where start and end fall on the same day but different time",2030/06/15 08:00,2030/06/15 23:59,https://example.com/bl14,false,spokesperson-02
-campaign-bl-15,BL15-LONGUR,"Long URL test","Campaign with a very long but valid moreInfo URL to test URL boundary",2030/02/01 00:00,2030/08/01 00:00,https://example.com/this/is/a/very/long/url/path/to/test/the/valid/url/annotation/boundary,false,spokesperson-03
+campaign-bl-02,BL02-ABCDEFGHIJ,"1","B",2025/01/02 00:01,2025/01/02 00:02,https://example.com/bl2,true,spokesperson-02
+campaign-bl-03,BL03-ABCDEF,"Ticker suffix 6","Ticker suffix with six alphanumeric characters boundary test",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl3,true,spokesperson-01
+campaign-bl-04,BL04-ABCDEFGHI,"Ticker suffix 9","Ticker suffix with nine alphanumeric characters boundary test",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl4,true,spokesperson-02
+campaign-bl-05,BL05-NAME01,"A","Name with exactly one character minimum boundary test value",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl5,true,spokesperson-01
+campaign-bl-06,BL06-NAME02,"AB","Name with exactly two characters min plus one boundary test",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl6,true,spokesperson-02
+campaign-bl-07,BL07-NAME74,"Campaign name of exactly seventy-four characters boundary test!!!!!!!","Name 74 chars boundary test description",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl7,false,spokesperson-01
+campaign-bl-08,BL08-NAME75,"Campaign name of exactly seventy-five characters for header test!!!!!!!!","Name 75 chars boundary test description",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl8,false,spokesperson-02
+campaign-bl-09,BL09-UNITHAI,เมืองสีเขียว,"Unicode Thai name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl9,false,spokesperson-01
+campaign-bl-10,BL10-UNIARAB,لوريم إيبسوم,"Unicode Arabic name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl10,false,spokesperson-02
+campaign-bl-11,BL11-UNICHIN,洛伦·伊普森,"Unicode Chinese name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl11,false,spokesperson-01
+campaign-bl-12,BL12-UNIEMOJ,"😈","Unicode emoji name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl12,false,spokesperson-02
+campaign-bl-13,BL13-XSSMAR,"<marquee>Hacked</marquee>","XSS marquee tag in name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl13,false,spokesperson-01
+campaign-bl-14,BL14-XSSSCR,"<script>alert('Hacked!');</script>","XSS script tag in name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl14,false,spokesperson-02
+campaign-bl-15,BL15-DESC01,"Description one char","X",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl15,false,spokesperson-01
+campaign-bl-16,BL16-DESC02,"Description two chars","XY",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl16,false,spokesperson-02
+campaign-bl-17,BL17-DESC254,"Description 254 chars","This description is intentionally crafted to reach near the maximum allowed length for the ValidText annotation which is two hundred and fifty-five characters and this text is written to fill up to two hundred and fifty-four characters exactly test!!!!",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl17,false,spokesperson-01
+campaign-bl-18,BL18-DESC255,"Description 255 chars","This description is intentionally crafted to reach the maximum allowed length for the ValidText annotation which is two hundred and fifty-five characters long and this sentence is written to fill all of that space right up to the very last allowed char!!",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl18,false,spokesperson-02
+campaign-bl-19,BL19-DUNTHAI,"Description unicode Thai",โลเร็ม อิปซัม,2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl19,false,spokesperson-01
+campaign-bl-20,BL20-DUNARAB,"Description unicode Arabic",لوريم إيبسوم,2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl20,false,spokesperson-02
+campaign-bl-21,BL21-DUNCHIN,"Description unicode Chinese",洛伦·伊普森,2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl21,false,spokesperson-01
+campaign-bl-22,BL22-DXSSMAR,"XSS marquee in description","<marquee>Hacked</marquee>",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl22,false,spokesperson-02
+campaign-bl-23,BL23-DXSSSCR,"XSS script in description","<script>alert('Hacked!');</script>",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl23,false,spokesperson-01
+campaign-bl-24,BL24-START1,"Start just future","Campaign starting just one minute after base moment",2025/01/01 00:01,2030/06/01 00:00,https://example.com/bl24,false,spokesperson-02
+campaign-bl-25,BL25-STARTFAR,"Start far future","Campaign starting very far in the future boundary test",2199/12/31 23:58,2200/12/31 23:59,https://example.com/bl25,false,spokesperson-01
+campaign-bl-26,BL26-ENDMIN,"One minute interval","Campaign where start and end are one minute apart",2030/01/01 00:00,2030/01/01 00:01,https://example.com/bl26,false,spokesperson-02
+campaign-bl-27,BL27-ENDFAR,"Far future end","Campaign ending very far in the future boundary test",2030/01/01 00:00,2200/12/31 23:59,https://example.com/bl27,false,spokesperson-01
+campaign-bl-28,BL28-SAMEDAY,"Same day moments","Campaign where start and end fall on the same day but different time",2030/06/15 08:00,2030/06/15 23:59,https://example.com/bl28,false,spokesperson-02
+campaign-bl-29,BL29-NOURL1,"No moreInfo absent","Campaign with no optional moreInfo URL provided at all",2030/03/01 00:00,2030/09/01 00:00,,false,spokesperson-01
+campaign-bl-30,BL30-URLMIN,"Minimal valid URL","Campaign with minimal valid moreInfo URL boundary test",2030/03/01 00:00,2030/09/01 00:00,https://a.org,false,spokesperson-02
+campaign-bl-31,BL31-URLPTH,"URL with path","Campaign with path in moreInfo URL boundary test",2030/03/01 00:00,2030/09/01 00:00,http://example.org/a/b,false,spokesperson-01
+campaign-bl-32,BL32-URLQRY,"URL with query","Campaign with query params in moreInfo URL boundary test",2030/03/01 00:00,2030/09/01 00:00,http://example.org?a=1&b=2,false,spokesperson-02
+campaign-bl-33,BL33-URLFRAG,"URL with fragment","Campaign with fragment anchor in moreInfo URL boundary test",2030/03/01 00:00,2030/09/01 00:00,http://www.example.org/path/page.html#section,false,spokesperson-01
+campaign-bl-34,BL34-URLLONG,"Long URL test","Campaign with a very long but valid moreInfo URL to test URL boundary",2030/02/01 00:00,2030/08/01 00:00,https://example.com/this/is/a/very/long/url/path/to/test/the/valid/url/annotation/boundary,false,spokesperson-02
+campaign-bl-35,BL35-DRAFTF,"Draft mode false","Published campaign draftMode false boundary test",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl35,false,spokesperson-01
+campaign-bl-36,BL36-SPOKE1,"Spokesperson one","Campaign assigned to spokesperson one boundary test",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl36,false,spokesperson-01
+campaign-bl-37,BL37-SPOKE2,"Spokesperson two","Campaign assigned to spokesperson two boundary test",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl37,false,spokesperson-02
+campaign-bl-38,BL38-DEMOJI,"Emoji description","🔥💀🌍🚀😱🎯👾🌈⚡🦄",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl38,false,spokesperson-01
+campaign-bl-39,BL39-NZALGO,"C̷̣͝r̵̰̈é̵͜e̷͎͑p̷̲̽ÿ̸́","Zalgo text in name boundary test description value here",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl39,false,spokesperson-02
+campaign-bl-40,BL40-DZALGO,"Zalgo in description","C̷̣͝r̵̰̈é̵͜e̷͎͑p̷̲̽ÿ̸́ ̸̢͝v̷̰̈o̵͎͑i̷̲̽d̸̕ ̷̣͝s̵̰̈p̵͜r̷͎͑ȅ̷̲á̸ḍ̷͝s̵̰̈",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl40,false,spokesperson-01
 campaign-sql-01,SQ01-INJ01,"' OR '1'='1","Classic SQL injection: ' OR '1'='1",2030/01/01 00:00,2030/06/01 00:00,https://example.com/sql1,false,spokesperson-01
 campaign-sql-02,SQ02-INJ02,"'; DROP TABLE users; --","SQL injection with DROP TABLE",2030/02/01 00:00,2030/07/01 00:00,https://example.com/sql2,false,spokesperson-02
-campaign-sql-03,SQ03-INJ03,"' UNION SELECT * FROM passwords; --","Union-based SQL injection",2030/03/01 00:00,2030/08/01 00:00,https://example.com/sql3,false,spokesperson-03
+campaign-sql-03,SQ03-INJ03,"' UNION SELECT * FROM passwords; --","Union-based SQL injection",2030/03/01 00:00,2030/08/01 00:00,https://example.com/sql3,false,spokesperson-02
 campaign-sql-04,SQ04-INJ04,"admin' --","Comment injection",2030/04/01 00:00,2030/09/01 00:00,https://example.com/sql4,false,spokesperson-01
 campaign-sql-05,SQ05-INJ05,"'; EXEC xp_cmdshell('dir'); --","SQL injection with command execution",2030/05/01 00:00,2030/10/01 00:00,https://example.com/sql5,false,spokesperson-02
+campaign-sql-06,SQ06-DINJ1,"SQL desc OR injection","' OR '1'='1",2030/06/01 00:00,2030/11/01 00:00,https://example.com/sql6,false,spokesperson-01
+campaign-sql-07,SQ07-DINJ2,"SQL desc DROP TABLE","'; DROP TABLE users; --",2030/06/01 00:00,2030/11/01 00:00,https://example.com/sql7,false,spokesperson-02
+campaign-sql-08,SQ08-DINJ3,"SQL desc UNION SELECT","' UNION SELECT * FROM passwords; --",2030/07/01 00:00,2030/12/01 00:00,https://example.com/sql8,false,spokesperson-01
+campaign-sql-09,SQ09-DINJ4,"SQL desc comment","admin' --",2030/07/01 00:00,2030/12/01 00:00,https://example.com/sql9,false,spokesperson-02
+campaign-sql-10,SQ10-DINJ5,"SQL desc xp_cmdshell","'; EXEC xp_cmdshell('dir'); --",2030/08/01 00:00,2031/01/01 00:00,https://example.com/sql10,false,spokesperson-01
+campaign-01,CA01-ALPHA1,"Global Awareness","International campaign to raise awareness on climate change",2030/01/10 10:00,2030/04/10 10:00,https://example.com/camp1,false,spokesperson-01
+campaign-02,CA02-BETA22,"Youth Voices","Campaign empowering youth participation in public debate",2030/02/01 12:00,2030/06/01 12:00,https://example.com/camp2,false,spokesperson-02
+campaign-03,CA03-GAMMA3,"Clean Oceans","Awareness and action campaign against ocean pollution",2030/03/01 09:00,2030/07/01 09:00,https://example.com/camp3,false,spokesperson-01
+campaign-04,CA04-DELTA4,"Digital Inclusion","Promoting equal access to digital technologies worldwide",2030/04/15 11:00,2030/08/15 11:00,https://example.com/camp4,false,spokesperson-01
+campaign-05,CA05-EPSIL5,"Fam Zero","Campanya contra la inseguretat alimentària a les zones urbanes",2030/05/01 10:30,2030/09/01 10:30,https://example.com/camp5,false,spokesperson-02
+campaign-06,CA06-ZETA66,"ዜሮ ረሃብ","በከተማ አካባቢዎች የምግብ እጦትን ለመከላከል የሚደረግ ዘመቻ",2030/06/10 08:00,2030/10/10 08:00,https://example.com/camp6,true,spokesperson-02
+campaign-07,CA07-ETA777,"เมืองสีเขียว","แคมเปญสร้างความตระหนักด้านการพัฒนาเมืองอย่างยั่งยืน",2030/07/20 14:00,2030/11/20 14:00,https://example.com/camp7,true,spokesperson-01
+campaign-08,CA08-THETA8,"安全道路","针对年轻驾驶员的道路安全运动",2030/08/05 16:00,2030/12/05 16:00,https://example.com/camp8,true,spokesperson-02
+campaign-09,CA09-IOTA99,"平等な権利","職場でのジェンダー平等を促進するキャンペーン",2030/09/01 09:00,2031/01/01 09:00,https://example.com/camp9,true,spokesperson-01
+campaign-10,CA10-KAPPA0,"מנהיגי העתיד","קמפיין פיתוח מנהיגות לאנשי מקצוע מתהווים",2030/10/01 10:00,2031/02/01 10:00,https://example.com/camp10,true,spokesperson-01
