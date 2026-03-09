@@ -17,7 +17,7 @@ public interface SpokespersonCampaignRepository extends AbstractRepository {
 	@Query("select c from Campaign c where c.spokesperson.id = :spokespersonId")
 	Collection<Campaign> findCampaignsBySpokespersonId(int spokespersonId);
 
-	@Query("select c from Campaign c where c.id = :id")
+	@Query("select c from Campaign c join fetch c.spokesperson s where c.id = :id")
 	Campaign findCampaignById(int id);
 
 	@Query("select c from Campaign c where c.ticker = :ticker")

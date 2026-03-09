@@ -2,20 +2,3 @@ key,key:userAccount,cv,achievements,licensed
 spokesperson-01,user-account-spokesperson-01,"Licenciado en Comunicación, 10 años de experiencia en relaciones públicas y medios de comunicación","Premio Nacional de Comunicación 2021, Portavoz destacado del año 2022",true
 spokesperson-02,user-account-spokesperson-02,"新闻学硕士，企业传播与危机管理专家。","2020年卓越传播奖，危机传播认证",true
 spokesperson-03,user-account-spokesperson-03,"የዓለም አቀፍ ግንኙነት ድግሪ፣ የተቋም ግንኙነት እና ፕሮቶኮል ባለሙያ።","የ2023 የግንኙነት ብቃት ሜዳሊያ፣ በዓለም አቀፍ የቃል አቀባዮች ማኅበር የተረጋገጠ ተናጋሪ",false
-spokesperson-04,user-account-spokesperson-04,"a","XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",true
-spokesperson-05,user-account-spokesperson-05,"YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY","b",false
-spokesperson-06,user-account-spokesperson-06,"😀😁😂🤣😃😄😅😆😉😊😋😎😍😘","Reconocimiento por comunicación inclusiva con emojis 🌟🎉",true
-spokesperson-07,user-account-spokesperson-07,"Caracteres especiales ASCII: !#$%&()*+-./:;<=>?@[\]^_{|}~","Logros con caracteres especiales: ¡¿€£¥§©®™¶·ºª°",true
-spokesperson-08,user-account-spokesperson-08,"leading and trailing spaces","Achievement with spaces",false
-spokesperson-09,user-account-spokesperson-09,"CV multilingüe: English, 中文, العربية, עברית, 日本語","Logros: 🌍 Global, 国际, عالمي, בינלאומי, 国際的",true
-spokesperson-10,user-account-spokesperson-10,"https://ejemplo.com/cv/muy/largo/pero/dentro/de/255/caracteres/esto/es/una/prueba/de/limite/para/ver/si/la/url/cabe/en/el/campo","URL en achievements: https://example.com/logro",true
-spokesperson-11,user-account-spokesperson-11,"Experiencia en gestión de crisis y comunicación digital","Certificado en portavocía por la asociación internacional",false
-spokesperson-12,user-account-spokesperson-12,"CV con números: 1234567890 y símbolos +-*/=","Achievements: 10 años de experiencia, 5 premios, 100+ conferencias",true
-spokesperson-13,user-account-spokesperson-13,"ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ","1",true
-spokesperson-14,user-account-spokesperson-14,"1","WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",false
-spokesperson-15,user-account-spokesperson-15,"Sin información","Sin logros registrados",true
-spokesperson-sql-01,user-account-spokesperson-16,"' OR '1'='1","Tautology injection test",true
-spokesperson-sql-02,user-account-spokesperson-17,"'; DROP TABLE users; --","SQL injection with DROP TABLE",true
-spokesperson-sql-03,user-account-spokesperson-18,"' UNION SELECT null, table_name FROM information_schema.tables; --","Union-based injection",true
-spokesperson-sql-04,user-account-spokesperson-19,"admin' --","Comment injection",true
-spokesperson-sql-05,user-account-spokesperson-20,"'; EXEC xp_cmdshell('dir'); --","Command execution injection (SQL Server style)",true
