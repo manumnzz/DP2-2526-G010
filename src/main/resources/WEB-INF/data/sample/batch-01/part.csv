@@ -1,62 +1,121 @@
 key,name,description,cost,kind,key:invention
-part-001,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-01
-part-002,"Battery Pack","Power supply module","EUR 35.50",MANDATORY,invention-01
-part-003,"Protective Case","External casing","EUR 10.00",OPTIONAL,invention-01
+# base entity
+part-000,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-00
 
-part-004,"Filter Core","Primary filter element","EUR 80.00",CORE,invention-02
-part-005,"Tube Set","Connection tubes kit","EUR 15.00",MANDATORY,invention-02
-part-006,"Extra Cartridge","Spare cartridge","EUR 12.00",OPTIONAL,invention-02
+# name - standard variations
+part-001,A,"Main sensing unit","EUR 120.00",CORE,invention-00
+part-002,AB,"Main sensing unit","EUR 120.00",CORE,invention-00
+part-003,"Core","Main sensing unit","EUR 120.00",CORE,invention-00
+part-004,"Battery Pack","Main sensing unit","EUR 120.00",CORE,invention-00
+part-005,"Navigation Sensors","Main sensing unit","EUR 120.00",CORE,invention-00
+part-006,"โลเร็ม อิปซัม","Main sensing unit","EUR 120.00",CORE,invention-00
+part-007,"لوريم إيبسوم","Main sensing unit","EUR 120.00",CORE,invention-00
+part-008,"洛伦·伊普森","Main sensing unit","EUR 120.00",CORE,invention-00
+part-009,"Very Long Part Name For Boundary Testing","Main sensing unit","EUR 120.00",CORE,invention-04
+part-010,"<marquee>Case</marquee>","Main sensing unit","EUR 120.00",CORE,invention-04
 
-part-007,"Nano Cell","High density nano cell","EUR 210.00",CORE,invention-03
-part-008,"Charging Controller","Charge regulation board","EUR 45.00",MANDATORY,invention-03
-part-009,"Cooling Sleeve","Thermal dissipation sleeve","EUR 18.00",OPTIONAL,invention-03
+# description - standard variations
+part-011,"Sensor Core",A,"EUR 120.00",CORE,invention-04
+part-012,"Sensor Core",AB,"EUR 120.00",CORE,invention-06
+part-013,"Sensor Core","Primary sensing block","EUR 120.00",CORE,invention-06
+part-014,"Sensor Core","Compact energy delivery module","EUR 120.00",CORE,invention-07
+part-015,"Sensor Core","Protective enclosure for external use","EUR 120.00",CORE,invention-07
+part-016,"Sensor Core","โลเร็ม อิปซัม","EUR 120.00",CORE,invention-07
+part-017,"Sensor Core","لوريم إيبسوم","EUR 120.00",CORE,invention-08
+part-018,"Sensor Core","洛伦·伊普森","EUR 120.00",CORE,invention-08
+part-019,"Sensor Core","Detailed text used to test ordinary length constraints in the sample records","EUR 120.00",CORE,invention-09
+part-020,"Sensor Core","<script>alert('x')</script>","EUR 120.00",CORE,invention-09
 
-part-010,"Flight Controller","Main drone control unit","EUR 160.00",CORE,invention-04
-part-011,"Navigation Sensors","GPS and IMU sensor pack","EUR 70.00",MANDATORY,invention-04
-part-012,"Camera Module","Optional camera add-on","EUR 55.00",OPTIONAL,invention-04
+# cost - standard variations
+part-021,"Sensor Core","Main sensing unit","EUR 0.00",CORE,invention-10
+part-022,"Sensor Core","Main sensing unit","EUR 0.01",CORE,invention-10
+part-023,"Sensor Core","Main sensing unit","EUR 1.00",CORE,invention-11
+part-024,"Sensor Core","Main sensing unit","EUR 9.99",CORE,invention-11
+part-025,"Sensor Core","Main sensing unit","EUR 10.00",CORE,invention-12
+part-026,"Sensor Core","Main sensing unit","EUR 99.99",CORE,invention-12
+part-027,"Sensor Core","Main sensing unit","EUR 100.00",CORE,invention-13
+part-028,"Sensor Core","Main sensing unit","EUR 999.99",CORE,invention-13
+part-029,"Sensor Core","Main sensing unit","EUR 1000.00",CORE,invention-14
+part-030,"Sensor Core","Main sensing unit","EUR 9999.99",CORE,invention-14
 
-part-013,"IoT Hub","Central connectivity module","EUR 95.00",CORE,invention-05
-part-014,"Valve Kit","Electro-valves set","EUR 40.00",MANDATORY,invention-05
-part-015,"Soil Probe","Optional soil moisture probe","EUR 22.00",OPTIONAL,invention-05
+# kind - standard variations
+part-031,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-15
+part-032,"Sensor Core","Main sensing unit","EUR 120.00",MANDATORY,invention-15
+part-033,"Sensor Core","Main sensing unit","EUR 120.00",OPTIONAL,invention-15
+part-034,"Battery Pack","Main sensing unit","EUR 120.00",CORE,invention-16
+part-035,"Battery Pack","Main sensing unit","EUR 120.00",MANDATORY,invention-16
+part-036,"Battery Pack","Main sensing unit","EUR 120.00",OPTIONAL,invention-16
 
-part-016,"Imaging Core","Main scanning component","EUR 260.00",CORE,invention-06
-part-017,"Display Unit","Screen and UI controller","EUR 85.00",MANDATORY,invention-06
-part-018,"Carrying Bag","Transport bag accessory","EUR 20.00",OPTIONAL,invention-06
+# invention - standard variations
+part-037,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-17
+part-038,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-18
+part-039,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-19
+part-040,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-20
+part-041,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-21
+part-042,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-22
+part-043,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-23
+part-044,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-24
+part-045,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-25
 
-part-019,"Engine Block","Prototype engine block","EUR 320.00",CORE,invention-07
-part-020,"Injection System","Fuel injection module","EUR 140.00",MANDATORY,invention-07
-part-021,"Noise Dampener","Optional muffler add-on","EUR 35.00",OPTIONAL,invention-07
+# extra single-attribute variations to reach 50
+part-046,"Filter Core","Main sensing unit","EUR 120.00",CORE,invention-17
+part-047,"Sensor Core","Auxiliary support component","EUR 120.00",CORE,invention-18
+part-048,"Sensor Core","Main sensing unit","EUR 250.00",CORE,invention-19
+part-049,"Sensor Core","Main sensing unit","EUR 120.00",MANDATORY,invention-20
 
-part-022,"Purification Core","Main purification unit","EUR 180.00",CORE,invention-08
-part-023,"Pump System","Water pump module","EUR 60.00",MANDATORY,invention-08
-part-024,"Mineral Add-on","Optional mineralization cartridge","EUR 25.00",OPTIONAL,invention-08
+# additional realistic population
+part-050,"Control Board","Embedded control unit","EUR 180.00",CORE,invention-21
+part-051,"Telemetry Module","Wireless data transmission unit","EUR 75.00",MANDATORY,invention-21
+part-052,"Mounting Frame","Mechanical support structure","EUR 42.00",OPTIONAL,invention-21
 
-part-025,"Impact Sensor","Impact detection sensor","EUR 45.00",CORE,invention-09
-part-026,"Alert Module","Connectivity and alert module","EUR 30.00",MANDATORY,invention-09
-part-027,"Visor Upgrade","Optional enhanced visor","EUR 28.00",OPTIONAL,invention-09
+part-053,"Filter Chamber","Primary filtration body","EUR 140.00",CORE,invention-22
+part-054,"Pressure Valve","Flow regulation valve","EUR 28.00",MANDATORY,invention-22
+part-055,"Maintenance Kit","Replacement service accessories","EUR 22.00",OPTIONAL,invention-22
 
-part-028,"Mixing Agent","Eco binder compound","EUR 90.00",CORE,invention-10
-part-029,"Fiber Reinforcement","Structural fiber reinforcement","EUR 55.00",MANDATORY,invention-10
-part-030,"Color Additive","Optional color additive","EUR 12.00",OPTIONAL,invention-10
+part-056,"Power Cell","High density energy cell","EUR 210.00",CORE,invention-23
+part-057,"Charge Regulator","Battery regulation controller","EUR 55.00",MANDATORY,invention-23
+part-058,"Cooling Jacket","Thermal protection sleeve","EUR 30.00",OPTIONAL,invention-23
 
-part-bl-01,"A","B","EUR 0.01",CORE,invention-bl-11
-part-bl-02,"Boundary Part Name","Minimum practical description boundary","EUR 0.00",MANDATORY,invention-bl-11
-part-bl-03,"Unicode 😈 Part","Description with unicode characters for testing","EUR 1.00",OPTIONAL,invention-bl-11
-part-bl-04,"Very Expensive Part","Large cost boundary case","EUR 999999.99",CORE,invention-bl-11
-part-bl-05,"Decimal Precision Part","Cost with decimal precision boundary","EUR 10.01",MANDATORY,invention-bl-11
-part-bl-06,"CORE kind test","Explicit enum CORE validation","EUR 5.00",CORE,invention-bl-11
-part-bl-07,"MANDATORY kind test","Explicit enum MANDATORY validation","EUR 5.00",MANDATORY,invention-bl-11
-part-bl-08,"OPTIONAL kind test","Explicit enum OPTIONAL validation","EUR 5.00",OPTIONAL,invention-bl-11
-part-bl-09,"No URL Related Part","Part attached to invention without URL","EUR 7.50",CORE,invention-bl-09
-part-bl-10,"Short Interval Part","Part attached to one-minute interval invention","EUR 8.00",MANDATORY,invention-bl-08
-part-bl-11,"Far Future Part","Part attached to far future invention","EUR 9.00",CORE,invention-bl-07
-part-bl-12,"Same Day Part","Part attached to same-day moments invention","EUR 6.00",MANDATORY,invention-bl-14
-part-bl-13,"Long URL Part","Part attached to long URL invention","EUR 4.00",OPTIONAL,invention-bl-15
-part-bl-14,"Ticker Min Suffix Part","Part attached to min ticker suffix invention","EUR 3.00",CORE,invention-bl-12
-part-bl-15,"Ticker Max Suffix Part","Part attached to max ticker suffix invention","EUR 3.50",MANDATORY,invention-bl-13
+part-059,"Flight Core","Autonomous navigation processor","EUR 260.00",CORE,invention-24
+part-060,"GPS Array","Satellite positioning sensors","EUR 68.00",MANDATORY,invention-24
+part-061,"Optical Camera","Auxiliary imaging component","EUR 90.00",OPTIONAL,invention-24
+part-062,"Rotor Shield","Blade protection cover","EUR 24.00",OPTIONAL,invention-24
 
-part-sql-01,"' OR '1'='1","Classic SQL injection tautology in part name","EUR 10.00",CORE,invention-sql-01
-part-sql-02,"'; DROP TABLE parts; --","DROP TABLE payload in part name","EUR 15.00",MANDATORY,invention-sql-02
-part-sql-03,"' UNION SELECT * FROM users; --","Union-based payload in part name","EUR 12.00",OPTIONAL,invention-sql-03
-part-sql-04,"admin' --","Comment injection payload in part name","EUR 8.00",CORE,invention-sql-04
-part-sql-05,"'; EXEC xp_cmdshell('dir'); --","Command execution payload in part name","EUR 9.00",MANDATORY,invention-sql-05
+part-063,"Water Pump","Main water propulsion unit","EUR 95.00",CORE,invention-25
+part-064,"Valve Controller","Electronic valve controller","EUR 40.00",MANDATORY,invention-25
+part-065,"Humidity Probe","Ground humidity sensor","EUR 18.50",OPTIONAL,invention-25
+
+part-066,"Scan Engine","Imaging capture engine","EUR 300.00",CORE,invention-26
+part-067,"Display Panel","Diagnostic display module","EUR 88.00",MANDATORY,invention-26
+part-068,"Transport Handle","Portable carry support","EUR 16.00",OPTIONAL,invention-26
+
+part-069,"Engine Core","Combustion prototype block","EUR 350.00",CORE,invention-27
+part-070,"Injection Kit","Fuel injection subsystem","EUR 135.00",MANDATORY,invention-27
+part-071,"Noise Shield","Acoustic reduction shell","EUR 32.00",OPTIONAL,invention-27
+
+part-072,"Purifier Core","Primary purification chamber","EUR 190.00",CORE,invention-28
+part-073,"Pump Driver","Pump control electronics","EUR 58.00",MANDATORY,invention-28
+part-074,"Mineral Cartridge","Optional mineral balancing unit","EUR 21.00",OPTIONAL,invention-28
+
+part-075,"Impact Unit","Impact detection sensor","EUR 47.00",CORE,invention-29
+part-076,"Alert Beacon","Emergency communication unit","EUR 36.00",MANDATORY,invention-29
+part-077,"Visor Plus","Enhanced optical visor","EUR 29.00",OPTIONAL,invention-29
+
+part-078,"Binder Compound","Eco binding mixture","EUR 98.00",CORE,invention-30
+part-079,"Fiber Mesh","Structural reinforcement mesh","EUR 62.00",MANDATORY,invention-30
+part-080,"Pigment Additive","Decorative color additive","EUR 14.00",OPTIONAL,invention-30
+
+part-081,"Sensor Matrix","Multi-point sensor array","EUR 170.00",CORE,invention-31
+part-082,"Power Bus","Internal power distribution bus","EUR 39.00",MANDATORY,invention-31
+
+part-083,"Nano Capsule","Compact storage capsule","EUR 125.00",CORE,invention-32
+part-084,"Safety Relay","Circuit protection relay","EUR 26.00",MANDATORY,invention-32
+
+part-085,"Tracking Beacon","Location tracking module","EUR 44.00",CORE,invention-33
+part-086,"Signal Booster","Range amplification component","EUR 31.00",MANDATORY,invention-33
+
+part-087,"Mixing Tank","Primary mixing container","EUR 115.00",CORE,invention-34
+part-088,"Flow Meter","Fluid monitoring meter","EUR 27.00",MANDATORY,invention-34
+
+part-089,"Control Relay","Switching relay module","EUR 23.00",CORE,invention-35
+part-090,"Service Port","Maintenance access interface","EUR 19.00",OPTIONAL,invention-35
