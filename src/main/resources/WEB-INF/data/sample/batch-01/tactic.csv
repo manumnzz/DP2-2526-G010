@@ -6,9 +6,9 @@ tactic-04,Tactic 4,Notes 4,40.0,SUBTLE,TRUE,strategy-02
 tactic-05,Partnership Outreach,Identify 10 potential partners and pitch value proposition,35.0,SUBTLE,FALSE,strategy-03
 tactic-06,Paid Social Ads,Run targeted campaigns with weekly A/B testing,40.0,AGGRESSIVE,FALSE,strategy-03
 tactic-07,Referral Program,Launch referral incentives and track conversion funnel,25.0,TENDER,FALSE,strategy-03
-tactic-08,Local Event Booths,Attend two local events per month with demo sessions,50.0,TENDER,TRUE,strategy-04
-tactic-09,Campus Ambassadors,Recruit ambassadors and provide monthly training,30.0,SUBTLE,TRUE,strategy-04
-tactic-10,Newsletter Outreach,Publish biweekly updates with calls-to-action,20.0,SUBTLE,TRUE,strategy-04
+tactic-08,Local Event Booths,Attend two local events per month with demo sessions,50.0,TENDER,FALSE,strategy-03
+tactic-09,Campus Ambassadors,Recruit ambassadors and provide monthly training,30.0,SUBTLE,FALSE,strategy-03
+tactic-10,Newsletter Outreach,Publish biweekly updates with calls-to-action,20.0,SUBTLE,FALSE,strategy-05
 tactic-11,Onboarding Revamp,Shorten onboarding steps and add guided checklist,45.0,TENDER,FALSE,strategy-05
 tactic-12,Support SLA Improvements,Reduce response time with templates and triage rules,30.0,SUBTLE,FALSE,strategy-05
 tactic-13,Churn Interviews,Interview churned users and implement top 3 fixes,25.0,AGGRESSIVE,FALSE,strategy-05
@@ -17,8 +17,8 @@ tactic-15,Influencer Seeding,Send early access to selected creators,35.0,AGGRESS
 tactic-16,Launch Webinar,Host webinar with live demo and Q&A,25.0,TENDER,TRUE,strategy-06
 tactic-17,Regional Pricing Tests,Test localized pricing bundles per region,55.0,AGGRESSIVE,FALSE,strategy-07
 tactic-18,Local Partnerships,Sign 3 distribution partners in new regions,45.0,SUBTLE,FALSE,strategy-07
-tactic-19,Diversification Plan,Allocate exposure across multiple categories with constraints,60.0,SUBTLE,TRUE,strategy-08
-tactic-20,Risk Control Rules,Define stop-loss and periodic rebalancing rules,40.0,AGGRESSIVE,TRUE,strategy-08
+tactic-19,Diversification Plan,Allocate exposure across multiple categories with constraints,60.0,SUBTLE,FALSE,strategy-07
+tactic-20,Risk Control Rules,Define stop-loss and periodic rebalancing rules,40.0,AGGRESSIVE,FALSE,strategy-09
 tactic-21,Technical SEO Audit,"Crawl site, fix broken links, redirects and metadata issues",40.0,SUBTLE,FALSE,strategy-09
 tactic-22,Content Update Sprint,Refresh 12 pages and publish 6 new articles targeting key queries,35.0,TENDER,FALSE,strategy-09
 tactic-23,Backlink Outreach,Reach out to industry sites for 15 quality backlinks,25.0,AGGRESSIVE,FALSE,strategy-09
@@ -43,3 +43,37 @@ tactic-41,Expansion Play,Create upsell triggers and in-product prompts,35.0,AGGR
 tactic-42,Beta User Recruitment,Recruit 30 beta users and set feedback channels,40.0,TENDER,TRUE,strategy-16
 tactic-43,Launch Checklist,"Create checklist with owners,deadlines and dependencies",35.0,SUBTLE,TRUE,strategy-16
 tactic-44,Feedback Iteration Loop,Run weekly review and implement top fixes before scaling,25.0,AGGRESSIVE,TRUE,strategy-16
+# header valid boundaries,"","","","","",""
+tactic-45,L,Short note,0.00,SUBTLE,FALSE,strategy-17
+tactic-46,Lo,Another short note,0.01,AGGRESSIVE,FALSE,strategy-17
+tactic-47,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tem",Header near max length,99.99,TENDER,FALSE,strategy-18
+# notes valid boundaries
+tactic-48,Unicode Name,L,25.00,SUBTLE,FALSE,strategy-18
+tactic-49,Arabic Name,Lo,50.00,AGGRESSIVE,FALSE,strategy-19
+tactic-50,Chinese Name,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",75.00,TENDER,FALSE,strategy-19
+# multilingual / special strings still valid
+tactic-51,โลเร็ม อิปซัม,Texto válido en tailandés,35.50,SUBTLE,FALSE,strategy-20
+tactic-52,لوريم إيبسوم,Descripción válida en árabe,40.25,AGGRESSIVE,FALSE,strategy-21
+tactic-53,洛伦·伊普森,描述文本有效,60.75,TENDER,FALSE,strategy-22
+tactic-54,<marquee>Visible text</marquee>,<script>alert('demo');</script>,15.00,SUBTLE,FALSE,strategy-23
+tactic-55,' or 'A'='A,' or 'B'='B,20.50,AGGRESSIVE,FALSE,strategy-24
+# score valid boundaries
+tactic-56,Minimum Score,Boundary minimum,0.00,SUBTLE,FALSE,strategy-25
+tactic-57,Above Minimum,Boundary minimum plus epsilon,0.01,AGGRESSIVE,FALSE,strategy-25
+tactic-58,Middle Score,Exact middle value,50.00,TENDER,FALSE,strategy-26
+tactic-59,Upper Boundary,Boundary maximum minus epsilon,99.99,SUBTLE,FALSE,strategy-26
+tactic-60,Maximum Score,Boundary maximum,100.00,AGGRESSIVE,FALSE,strategy-27
+# enum coverage
+tactic-61,Subtle Case,Kind subtle coverage,30.00,SUBTLE,FALSE,strategy-28
+tactic-62,Aggressive Case,Kind aggressive coverage,45.00,AGGRESSIVE,FALSE,strategy-29
+tactic-63,Tender Case,Kind tender coverage,55.00,TENDER,FALSE,strategy-30
+# draftMode coverage
+tactic-64,Published Tactic,Draft false sample,10.00,SUBTLE,FALSE,strategy-31
+tactic-65,Draft Tactic,Draft true sample,90.00,AGGRESSIVE,FALSE,strategy-31
+# relation coverage across more strategies
+tactic-66,URL Empty Strategy,Linked to strategy with empty moreInfo,22.00,TENDER,FALSE,strategy-31
+tactic-67,Simple URL Strategy,Linked to strategy with simple URL,33.00,SUBTLE,FALSE,strategy-32
+tactic-68,HTTPS Strategy,Linked to HTTPS strategy,44.00,AGGRESSIVE,FALSE,strategy-33
+tactic-69,Path URL Strategy,Linked to deep path strategy,55.00,TENDER,FALSE,strategy-34
+tactic-70,Query URL Strategy,Linked to query URL strategy,66.00,SUBTLE,FALSE,strategy-35
+tactic-71,Anchor URL Strategy,Linked to anchor URL strategy,77.00,AGGRESSIVE,FALSE,strategy-36
