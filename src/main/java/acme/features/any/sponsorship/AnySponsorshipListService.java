@@ -42,7 +42,6 @@ public class AnySponsorshipListService extends AbstractService<Any, Sponsorship>
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.sponsorships, "ticker", "name", "startMoment", "endMoment", "moreInfo");
-
+		super.unbindObjects(this.sponsorships, "ticker", "name", "startMoment", "endMoment");
 	}
 }

@@ -24,6 +24,7 @@
 
 		<acme:menu-option code="master.menu.any" access="true">
 			<acme:menu-suboption code="master.menu.any.list-strategies" action="/any/strategy/list"/>
+			<acme:menu-suboption code="master.menu.any.list-sponsorship" action="/any/sponsorship/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">

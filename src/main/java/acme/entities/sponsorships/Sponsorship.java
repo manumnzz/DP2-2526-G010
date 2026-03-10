@@ -20,12 +20,14 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
+import acme.constraints.ValidSponsorship;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
 
+@ValidSponsorship
 @Entity
 @Getter
 @Setter
