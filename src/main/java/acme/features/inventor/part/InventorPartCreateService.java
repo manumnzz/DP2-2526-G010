@@ -60,7 +60,7 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 			&& invention != null
 			&& invention.isDraftMode()
 			&& invention.getInventor() != null
-			&& invention.getInventor().getId() == inventor.getId();
+			&& invention.getInventor().getId() == inventor.getId();	
 
 		super.setAuthorised(status);
 	}
