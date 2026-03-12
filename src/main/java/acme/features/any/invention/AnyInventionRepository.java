@@ -1,4 +1,4 @@
-package acme.features.any.inventon;
+package acme.features.any.invention;
 
 import java.util.Collection;
 import java.util.Date;
@@ -21,6 +21,10 @@ public interface AnyInventionRepository extends AbstractRepository {
 	
 	@Query("select i from Inventor i")
 	Collection<Inventor> findAllInventors();
+
+	
+	@Query("select i from Invention i where i.draftMode = false")
+	Collection<Invention> findPublicInventions();
 	
 	
 

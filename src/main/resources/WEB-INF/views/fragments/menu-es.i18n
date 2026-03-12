@@ -35,11 +35,18 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 master.menu.any = Público
 master.menu.any.list-strategies = Listar estrategias
+master.menu.any.list-inventions = Listar invenciones
+master.menu.any.list-parts = Listar piezas
 
 # master.menu.fundraiser ######################################################
 
 master.menu.fundraiser = Recaudador
 master.menu.fundraiser.list-my-strategies = Mis estrategias
+
+# master.menu.inventor ######################################################
+
+master.menu.inventor = Inventores
+master.menu.inventor.list-my-inventions = Mis invenciones
 
 # master.menu.user-account ####################################################
 
