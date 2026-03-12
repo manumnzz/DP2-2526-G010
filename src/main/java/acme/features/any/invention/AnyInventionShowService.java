@@ -1,4 +1,4 @@
-package acme.features.any.inventon;
+package acme.features.any.invention;
 
 import java.util.Collection;
 

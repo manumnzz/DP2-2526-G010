@@ -1,4 +1,4 @@
-package acme.features.any.inventon;
+package acme.features.any.part;
 
 import javax.annotation.PostConstruct;
 
@@ -7,10 +7,10 @@ import org.springframework.stereotype.Controller;
 
 import acme.client.components.principals.Any;
 import acme.client.controllers.AbstractController;
-import acme.entities.inventions.Invention;
+import acme.entities.inventions.Part;
 
 @Controller
-public class AnyInventionController extends AbstractController<Any, Invention> {
+public class AnyPartController extends AbstractController<Any, Part>{
 	
 	// Constructors -----------------------------------------------------------
 
@@ -18,8 +18,7 @@ public class AnyInventionController extends AbstractController<Any, Invention> {
 		protected void initialise() {
 			super.setMediaType(MediaType.TEXT_HTML);
 			
-			super.addBasicCommand("list", AnyInventionListService.class);
-			super.addBasicCommand("show", AnyInventionShowService.class);
+			super.addBasicCommand("list", AnyPartListService.class);
+			super.addBasicCommand("show", AnyPartShowService.class);
 		}
-
-}
+}	
