@@ -25,10 +25,16 @@
 		<acme:menu-option code="master.menu.any" access="true">
 			<acme:menu-suboption code="master.menu.any.list-campaigns" action="/any/campaign/list"/>
 			<acme:menu-suboption code="master.menu.any.list-strategies" action="/any/strategy/list"/>
+			<acme:menu-suboption code="master.menu.any.list-inventions" action="/any/invention/list"/>
+			<acme:menu-suboption code="master.menu.any.list-parts" action="/any/part/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
 			<acme:menu-suboption code="master.menu.fundraiser.list-my-strategies" action="/fundraiser/strategy/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
+			<acme:menu-suboption code="master.menu.inventor.list-my-inventions" action="/inventor/invention/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
