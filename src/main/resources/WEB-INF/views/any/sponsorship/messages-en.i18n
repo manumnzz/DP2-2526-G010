@@ -1,0 +1,16 @@
+any.sponsorship.list.label.ticker = Ticker
+any.sponsorship.list.label.name = Name
+any.sponsorship.list.label.startMoment = Start moment
+any.sponsorship.list.label.endMoment = End moment
+
+any.sponsorship.form.label.ticker = Ticker
+any.sponsorship.form.label.name = Name
+any.sponsorship.form.label.description = Description
+any.sponsorship.form.label.startMoment = Start moment
+any.sponsorship.form.label.endMoment = End moment
+any.sponsorship.form.label.moreInfo = More info
+any.sponsorship.form.label.monthsActive = Months active
+any.sponsorship.form.label.totalMoney = Total money
+
+any.sponsorship.form.button.donations = Donations
+any.sponsorship.form.button.sponsor = Sponsor profile

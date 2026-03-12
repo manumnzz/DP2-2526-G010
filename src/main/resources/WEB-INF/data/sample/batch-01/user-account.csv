@@ -49,3 +49,6 @@ user-account-spokesperson-17,true,"UserIdentity{name: 'SQL', surname: 'Injection
 user-account-spokesperson-18,true,"UserIdentity{name: 'SQL', surname: 'Injection3', email: 'sql3@acme.com'}",spokesperson18,spokesperson18
 user-account-spokesperson-19,true,"UserIdentity{name: 'SQL', surname: 'Injection4', email: 'sql4@acme.com'}",spokesperson19,spokesperson19
 user-account-spokesperson-20,true,"UserIdentity{name: 'SQL', surname: 'Injection5', email: 'sql5@acme.com'}",spokesperson20,spokesperson20
+user-account-sponsor-01,true,"UserIdentity{name: 'Sonia', surname: 'Sponsor', email: 'sonia@acme.com'}",sponsor1,sponsor1
+user-account-sponsor-02,true,"UserIdentity{name: 'Sergio', surname: 'Sponsor', email: 'sergio@acme.com'}",sponsor2,sponsor2
+user-account-sponsor-03,true,"UserIdentity{name: 'Silvia', surname: 'Sponsor', email: 'silvia@acme.com'}",sponsor3,sponsor3
