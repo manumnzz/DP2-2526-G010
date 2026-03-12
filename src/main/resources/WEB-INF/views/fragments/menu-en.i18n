@@ -37,6 +37,7 @@ master.menu.any = Public
 master.menu.any.list-strategies = List strategies
 master.menu.any.list-inventions = List inventions
 master.menu.any.list-parts = List parts
+master.menu.any.list-sponsorship= List sponsorships
 
 # master.menu.fundraiser ######################################################
 
