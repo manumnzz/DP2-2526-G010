@@ -1,23 +1,12 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:sponsor
-# --- TICKER suffix length MIN-Δ (4) and MAX+Δ (11) ---
 err-spons-01,SP21-ABCD,Bad ticker,Too short suffix.,2026/06/01 10:00,2026/09/01 10:00,https://example.com/e/1,false,sponsor-01
 err-spons-02,SP22-ABCDEFGHIJK,Bad ticker,Too long suffix.,2026/06/02 10:00,2026/09/02 10:00,https://example.com/e/2,false,sponsor-01
-
-# --- NAME MIN-Δ (empty) and MAX+Δ (256 chars) ---
 err-spons-03,SP23-ABCDE,,Blank name.,2026/06/03 10:00,2026/09/03 10:00,https://example.com/e/3,false,sponsor-01
 err-spons-04,SP24-ABCDE,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Name too long (256).,2026/06/04 10:00,2026/09/04 10:00,https://example.com/e/4,false,sponsor-01
-
-# --- DESCRIPTION MIN-Δ (empty) and MAX+Δ (256 chars) ---
 err-spons-05,SP25-ABCDE,Bad description,,2026/06/05 10:00,2026/09/05 10:00,https://example.com/e/5,false,sponsor-01
 err-spons-06,SP26-ABCDE,Bad description,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,2026/06/06 10:00,2026/09/06 10:00,https://example.com/e/6,false,sponsor-01
-
-# --- MOMENTS: past and invalid period ---
 err-spons-07,SP27-ABCDE,Past start,Start must be future.,2025/01/01 00:00,2026/09/01 10:00,https://example.com/e/7,false,sponsor-01
 err-spons-08,SP28-ABCDE,Bad period,End before start.,2026/09/01 10:00,2026/06/01 10:00,https://example.com/e/8,false,sponsor-01
-
-# --- URL invalid ---
 err-spons-09,SP29-ABCDE,Bad URL,Invalid URL.,2026/06/07 10:00,2026/09/07 10:00,notaurl,false,sponsor-01
-
-# --- Missing sponsor / missing draftMode ---
 err-spons-10,SP30-ABCDE,Missing sponsor,Sponsor is mandatory.,2026/06/08 10:00,2026/09/08 10:00,https://example.com/e/10,false,
 err-spons-11,SP31-ABCDE,Missing draftMode,Boolean is mandatory.,2026/06/09 10:00,2026/09/09 10:00,https://example.com/e/11,,sponsor-01

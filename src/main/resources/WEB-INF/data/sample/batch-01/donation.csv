@@ -1,17 +1,15 @@
-key,name,notes,money,kind,key:sponsorship
-# --- MONEY amount: MIN=0.00 / MID=500000.00 / MAX=1000000.00 (EUR) ---
-donation-01,Base donation,Base notes.,EUR 0.00,ALTRUIST,sponsorship-01
-donation-02,Base donation,Base notes.,EUR 500000.00,REWARDED,sponsorship-01
-donation-03,Base donation,Base notes.,EUR 1000000.00,CELEBRATED,sponsorship-01
-# --- NAME length: MIN=1 / MID / MAX=255 ---
-donation-04,A,Base notes.,EUR 10.00,ALTRUIST,sponsorship-03
-donation-05,Name in the middle,Base notes.,EUR 10.00,REWARDED,sponsorship-03
-donation-06,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Base notes.,EUR 10.00,CELEBRATED,sponsorship-03
-# --- NOTES length: MIN=1 / MID / MAX=255 ---
-donation-07,Base donation,B,EUR 10.00,ALTRUIST,sponsorship-05
-donation-08,Base donation,Notes in the middle.,EUR 10.00,REWARDED,sponsorship-05
-donation-09,Base donation,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,EUR 10.00,CELEBRATED,sponsorship-05
-# --- KIND coverage (already,but ensure each appears at least once more) ---
-donation-10,Kind altruist,Base notes.,EUR 1.00,ALTRUIST,sponsorship-07
-donation-11,Kind rewarded,Base notes.,EUR 1.00,REWARDED,sponsorship-07
-donation-12,Kind celebrated,Base notes.,EUR 1.00,CELEBRATED,sponsorship-07
+key,name,notes,money,kind,draftMode,key:sponsorship
+donation-01,Base donation,Base notes.,EUR 0.00,ALTRUIST,false,sponsorship-01
+donation-02,Base donation,Base notes.,EUR 500000.00,REWARDED,false,sponsorship-01
+donation-03,Base donation,Base notes.,EUR 1000000.00,CELEBRATED,false,sponsorship-01
+donation-04,A,Base notes.,EUR 10.00,ALTRUIST,false,sponsorship-03
+donation-05,Name in the middle,Base notes.,EUR 10.00,REWARDED,false,sponsorship-03
+donation-06,Short header name,Base notes.,EUR 10.00,CELEBRATED,false,sponsorship-03
+donation-07,Base donation,B,EUR 10.00,ALTRUIST,false,sponsorship-05
+donation-08,Base donation,Notes in the middle.,EUR 10.00,REWARDED,false,sponsorship-05
+donation-09,Base donation,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,EUR 10.00,CELEBRATED,false,sponsorship-05
+donation-10,Kind altruist,Base notes.,EUR 1.00,ALTRUIST,false,sponsorship-07
+donation-11,Kind rewarded,Base notes.,EUR 1.00,REWARDED,false,sponsorship-07
+donation-12,Kind celebrated,Base notes.,EUR 1.00,CELEBRATED,false,sponsorship-07
+donation-21,Draft donation 1,Donation in draft for testing.,EUR 20.00,ALTRUIST,true,sponsorship-21
+donation-22,Draft donation 2,Donation in draft for testing.,EUR 25.00,REWARDED,true,sponsorship-22
