@@ -39,11 +39,14 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 
 	@Override
 	public void bind() {
+		super.bindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
 
 	@Override
 	public void validate() {
 		int count;
+
+		super.validateObject(this.campaign);
 
 		count = this.repository.countMilestonesByCampaignId(this.campaign.getId());
 		super.state(count > 0, "*", "spokesperson.campaign.form.error.no-milestones");
@@ -66,8 +69,7 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 		tuple.put("monthsActive", this.campaign.getMonthsActive());
 		tuple.put("effort", this.campaign.getEffort());
 		tuple.put("id", this.campaign.getId());
-		tuple.put("readonly", true);
-
+		tuple.put("readonly", !this.campaign.isDraftMode());
 		super.getResponse().addData(tuple);
 	}
 

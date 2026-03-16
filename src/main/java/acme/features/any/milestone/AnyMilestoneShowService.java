@@ -23,8 +23,12 @@ public class AnyMilestoneShowService extends AbstractService<Any, Milestone> {
 	@Override
 	public void load() {
 		int id;
-		id = super.getRequest().getData("id", int.class);
-		this.milestone = this.repository.findMilestoneById(id);
+		try {
+			id = super.getRequest().getData("id", int.class);
+			this.milestone = this.repository.findMilestoneById(id);
+		} catch (Exception e) {
+			this.milestone = null;
+		}
 	}
 
 	@Override

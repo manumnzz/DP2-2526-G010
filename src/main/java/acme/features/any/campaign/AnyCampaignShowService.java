@@ -21,8 +21,12 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 	@Override
 	public void load() {
 		int id;
-		id = super.getRequest().getData("id", int.class);
-		this.campaign = this.repository.findCampaignById(id);
+		try {
+			id = super.getRequest().getData("id", int.class);
+			this.campaign = this.repository.findCampaignById(id);
+		} catch (Exception e) {
+			this.campaign = null;
+		}
 	}
 
 	@Override
