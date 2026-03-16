@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
 import acme.entities.tactic.Tactic;
@@ -52,18 +53,19 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 		int count = this.repository.countTacticsByStrategyId(this.strategy.getId());
 		super.state(count > 0, "*", "fundraiser.strategy.error.no-tactics");
 
-		if (!super.getResponse().getErrors().hasErrors("startMoment") && this.strategy.getStartMoment() != null) {
-			Date now = new Date();
-			super.state(this.strategy.getStartMoment().after(now), "startMoment", "fundraiser.strategy.error.start-future");
-		}
+		Date now = MomentHelper.getCurrentMoment();
 
-		if (!super.getResponse().getErrors().hasErrors("endMoment") && this.strategy.getEndMoment() != null) {
-			Date now = new Date();
-			super.state(this.strategy.getEndMoment().after(now), "endMoment", "fundraiser.strategy.error.end-future");
-		}
+		if (!super.getResponse().getErrors().hasErrors("startMoment") && this.strategy.getStartMoment() != null)
+			super.state(MomentHelper.isAfter(this.strategy.getStartMoment(), now), "startMoment", "fundraiser.strategy.error.start-future");
+
+		if (!super.getResponse().getErrors().hasErrors("endMoment") && this.strategy.getEndMoment() != null)
+			super.state(MomentHelper.isAfter(this.strategy.getEndMoment(), now), "endMoment", "fundraiser.strategy.error.end-future");
 
 		if (this.strategy.getStartMoment() != null && this.strategy.getEndMoment() != null)
-			super.state(this.strategy.getStartMoment().before(this.strategy.getEndMoment()), "endMoment", "fundraiser.strategy.error.start-before-end");
+			super.state(MomentHelper.isAfter(this.strategy.getEndMoment(), this.strategy.getStartMoment()), "endMoment", "fundraiser.strategy.error.start-before-end");
+
+		Double expectedPercentage = this.repository.computeExpectedPercentage(this.strategy.getId());
+		super.state(expectedPercentage != null && expectedPercentage <= 100.0, "*", "fundraiser.strategy.error.expected-percentage");
 	}
 
 	@Override
@@ -83,7 +85,11 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 		Tuple tuple;
 
 		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		tuple.put("monthsActive", this.strategy.getMonthsActive());
+		tuple.put("expectedPercentage", this.repository.computeExpectedPercentage(this.strategy.getId()));
 		tuple.put("id", this.strategy.getId());
-		tuple.put("readonly", true);
+		tuple.put("readonly", false);
+
+		super.getResponse().addData(tuple);
 	}
 }

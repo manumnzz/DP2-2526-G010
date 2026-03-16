@@ -44,3 +44,7 @@ strategy-37,FR06-ABCDE,Immediate future window,Valid description,2025/01/08 00:0
 strategy-38,FR06-ABCDEF,Medium future window,Valid description,2025/06/01 09:00,2025/12/01 18:00,http://example.com/medium,FALSE,fundraiser-01
 strategy-39,FR06-ABCDEFG,Far future window,Valid description,2026/01/01 08:00,2026/12/31 20:00,http://example.com/far,FALSE,fundraiser-02
 strategy-40,FR06-ABCDEFGH,Very far future window,Valid description,2027/01/01 08:00,2027/06/01 20:00,http://example.com/very-far,FALSE,fundraiser-02
+# boundary valid moments with server current moment and framework min/max,"","","","",""
+strategy-41,FR07-ABCDE,Min effective valid start,Valid description,2000/01/01 00:01,2000/01/02 00:02,http://example.com/min-effective,FALSE,fundraiser-01
+strategy-42,FR07-ABCDEF,Near maximum valid,Valid description,2200/12/30 23:58,2200/12/31 23:59,http://example.com/max-valid,FALSE,fundraiser-01
+strategy-43,FR07-ABCDEFG,Same day future valid,Valid description,2025/01/01 00:01,2025/01/01 00:02,http://example.com/same-day,FALSE,fundraiser-02
