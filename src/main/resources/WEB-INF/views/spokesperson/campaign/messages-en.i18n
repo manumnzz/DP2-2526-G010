@@ -22,3 +22,9 @@ spokesperson.campaign.form.button.update = Update
 spokesperson.campaign.form.button.delete = Delete
 spokesperson.campaign.form.button.publish = Publish
 spokesperson.campaign.form.button.milestones = Milestones
+
+spokesperson.campaign.form.error.no-milestones = The campaign must have at least one milestone to be published.
+spokesperson.campaign.form.error.start-before-end = The start moment must be before the end moment.
+spokesperson.campaign.form.error.end-before-start = The end moment must be after the start moment.
+spokesperson.campaign.form.error.start-future = The start moment must be in the future.
+spokesperson.campaign.form.error.end-future = The end moment must be in the future.
