@@ -77,6 +77,10 @@ public class Campaign extends AbstractEntity {
 	public double getMonthsActive() {
 		double result;
 		Duration duration;
+
+		if (this.startMoment == null || this.endMoment == null)
+			return 0.0;
+
 		duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 		result = duration.toDays() / 30.0;
 		return result;
