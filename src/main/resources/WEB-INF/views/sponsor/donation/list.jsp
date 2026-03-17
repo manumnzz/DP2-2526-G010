@@ -17,4 +17,3 @@
 	<acme:button code="sponsor.donation.list.button.create" action="/sponsor/donation/create?sponsorshipId=${param.sponsorshipId}"/>
 </jstl:if>
 
-<acme:button code="sponsor.donation.list.button.return" action="/sponsor/sponsorship/show?id=${param.sponsorshipId}"/>

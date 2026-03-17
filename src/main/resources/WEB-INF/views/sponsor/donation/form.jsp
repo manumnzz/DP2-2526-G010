@@ -16,10 +16,9 @@
 			;
 		</jstl:when>
 
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && readonly == false}">		
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && readonly == false}">		
 			<acme:submit code="sponsor.donation.form.button.update"  action="/sponsor/donation/update"/>
 			<acme:submit code="sponsor.donation.form.button.delete"  action="/sponsor/donation/delete?id=${id}"/>
-			<acme:submit code="sponsor.donation.form.button.publish" action="/sponsor/donation/publish"/>
 		</jstl:when>
 
 		<jstl:when test="${_command == 'create'}">
