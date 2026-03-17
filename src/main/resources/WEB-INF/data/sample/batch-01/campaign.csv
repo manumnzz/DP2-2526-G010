@@ -1,5 +1,5 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
-campaign-00,CA00-BASE0,"Base Campaign","Base campaign entity for boundary testing purposes",2030/01/01 00:00,2030/06/01 00:00,https://example.com/base,true,spokesperson-01
+campaign-00,CA00-BASE0,"Base Campaign","Base campaign entity for boundary testing purposes",2000/01/01 00:00,2200/12/31 23:59,https://example.com/base,true,spokesperson-01
 campaign-bl-01,BL01-ABCDE,"A","A",2025/01/02 00:01,2025/01/02 00:02,,false,spokesperson-01
 campaign-bl-02,BL02-ABCDEFGHIJ,"1","B",2025/01/02 00:01,2025/01/02 00:02,https://example.com/bl2,true,spokesperson-02
 campaign-bl-03,BL03-ABCDEF,"Ticker suffix 6","Ticker suffix with six alphanumeric characters boundary test",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl3,true,spokesperson-01
@@ -25,8 +25,8 @@ campaign-bl-22,BL22-DXSSMAR,"XSS marquee in description","<marquee>Hacked</marqu
 campaign-bl-23,BL23-DXSSSCR,"XSS script in description","<script>alert('Hacked!');</script>",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl23,false,spokesperson-01
 campaign-bl-24,BL24-START1,"Start just future","Campaign starting just one minute after base moment",2025/01/01 00:01,2030/06/01 00:00,https://example.com/bl24,false,spokesperson-02
 campaign-bl-25,BL25-STARTFAR,"Start far future","Campaign starting very far in the future boundary test",2199/12/31 23:58,2200/12/31 23:59,https://example.com/bl25,false,spokesperson-01
-campaign-bl-26,BL26-ENDMIN,"One minute interval","Campaign where start and end are one minute apart",2030/01/01 00:00,2030/01/01 00:01,https://example.com/bl26,false,spokesperson-02
-campaign-bl-27,BL27-ENDFAR,"Far future end","Campaign ending very far in the future boundary test",2030/01/01 00:00,2200/12/31 23:59,https://example.com/bl27,false,spokesperson-01
+campaign-bl-26,BL26-ENDMIN,"One minute interval","Campaign where start and end are one minute apart",2025/01/01 00:00,2025/01/01 00:01,https://example.com/bl26,false,spokesperson-02
+campaign-bl-27,BL27-ENDFAR,"Far future end","Campaign ending very far in the future boundary test",2025/01/01 00:00,2200/12/31 23:59,https://example.com/bl27,false,spokesperson-01
 campaign-bl-28,BL28-SAMEDAY,"Same day moments","Campaign where start and end fall on the same day but different time",2030/06/15 08:00,2030/06/15 23:59,https://example.com/bl28,false,spokesperson-02
 campaign-bl-29,BL29-NOURL1,"No moreInfo absent","Campaign with no optional moreInfo URL provided at all",2030/03/01 00:00,2030/09/01 00:00,,false,spokesperson-01
 campaign-bl-30,BL30-URLMIN,"Minimal valid URL","Campaign with minimal valid moreInfo URL boundary test",2030/03/01 00:00,2030/09/01 00:00,https://a.org,false,spokesperson-02
@@ -39,7 +39,7 @@ campaign-bl-36,BL36-SPOKE1,"Spokesperson one","Campaign assigned to spokesperson
 campaign-bl-37,BL37-SPOKE2,"Spokesperson two","Campaign assigned to spokesperson two boundary test",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl37,false,spokesperson-02
 campaign-bl-38,BL38-DEMOJI,"Emoji description","🔥💀🌍🚀😱🎯👾🌈⚡🦄",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl38,false,spokesperson-01
 campaign-bl-39,BL39-NZALGO,"C̷̣͝r̵̰̈é̵͜e̷͎͑p̷̲̽ÿ̸́","Zalgo text in name boundary test description value here",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl39,false,spokesperson-02
-campaign-bl-40,BL40-DZALGO,"Zalgo in description","C̷̣͝r̵̰̈é̵͜e̷͎͑p̷̲̽ÿ̸́ ̸̢͝v̷̰̈o̵͎͑i̷̲̽d̸̕ ̷̣͝s̵̰̈p̵͜r̷͎͑ȅ̷̲á̸ḍ̷͝s̵̰̈",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl40,false,spokesperson-01
+campaign-bl-40,BL40-DZALGO,"Zalgo in description","C̷̣͝r̵̰̈é̵͜e̷͎͑p̷̲̽ÿ̸́ ̸̢͝v̷̰̈o̵͎͑i̷̲̽d̸̕ ̷̣͝s̵̰̈p̵͜r̷͎͑ȅ̷̲á̸ḍ̷͝s̵̰̈",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl40,false,spokesperson-01
 campaign-sql-01,SQ01-INJ01,"' OR '1'='1","Classic SQL injection: ' OR '1'='1",2030/01/01 00:00,2030/06/01 00:00,https://example.com/sql1,false,spokesperson-01
 campaign-sql-02,SQ02-INJ02,"'; DROP TABLE users; --","SQL injection with DROP TABLE",2030/02/01 00:00,2030/07/01 00:00,https://example.com/sql2,false,spokesperson-02
 campaign-sql-03,SQ03-INJ03,"' UNION SELECT * FROM passwords; --","Union-based SQL injection",2030/03/01 00:00,2030/08/01 00:00,https://example.com/sql3,false,spokesperson-02
@@ -55,8 +55,8 @@ campaign-02,CA02-BETA22,"Youth Voices","Campaign empowering youth participation 
 campaign-03,CA03-GAMMA3,"Clean Oceans","Awareness and action campaign against ocean pollution",2030/03/01 09:00,2030/07/01 09:00,https://example.com/camp3,false,spokesperson-01
 campaign-04,CA04-DELTA4,"Digital Inclusion","Promoting equal access to digital technologies worldwide",2030/04/15 11:00,2030/08/15 11:00,https://example.com/camp4,false,spokesperson-01
 campaign-05,CA05-EPSIL5,"Fam Zero","Campanya contra la inseguretat alimentària a les zones urbanes",2030/05/01 10:30,2030/09/01 10:30,https://example.com/camp5,false,spokesperson-02
-campaign-06,CA06-ZETA66,"ዜሮ ረሃብ","በከተማ አካባቢዎች የምግብ እጦትን ለመከላከል የሚደረግ ዘመቻ",2030/06/10 08:00,2030/10/10 08:00,https://example.com/camp6,true,spokesperson-02
-campaign-07,CA07-ETA777,"เมืองสีเขียว","แคมเปญสร้างความตระหนักด้านการพัฒนาเมืองอย่างยั่งยืน",2030/07/20 14:00,2030/11/20 14:00,https://example.com/camp7,true,spokesperson-01
-campaign-08,CA08-THETA8,"安全道路","针对年轻驾驶员的道路安全运动",2030/08/05 16:00,2030/12/05 16:00,https://example.com/camp8,true,spokesperson-02
-campaign-09,CA09-IOTA99,"平等な権利","職場でのジェンダー平等を促進するキャンペーン",2030/09/01 09:00,2031/01/01 09:00,https://example.com/camp9,true,spokesperson-01
-campaign-10,CA10-KAPPA0,"מנהיגי העתיד","קמפיין פיתוח מנהיגות לאנשי מקצוע מתהווים",2030/10/01 10:00,2031/02/01 10:00,https://example.com/camp10,true,spokesperson-01
+campaign-06,CA06-ZETA66,"ዜሮ ረሃብ","በከተማ አካባቢዎች የምግብ እጦትን ለመከላከል የሚደረግ ዘመቻ",2030/06/10 08:00,2030/10/10 08:00,https://example.com/camp6,false,spokesperson-02
+campaign-07,CA07-ETA777,"เมืองสีเขียว","แคมเปญสร้างความตระหนักด้านการพัฒนาเมืองอย่างยั่งยืน",2030/07/20 14:00,2030/11/20 14:00,https://example.com/camp7,false,spokesperson-01
+campaign-08,CA08-THETA8,"安全道路","针对年轻驾驶员的道路安全运动",2030/08/05 16:00,2030/12/05 16:00,https://example.com/camp8,false,spokesperson-02
+campaign-09,CA09-IOTA99,"平等な権利","職場でのジェンダー平等を促進するキャンペーン",2030/09/01 09:00,2031/01/01 09:00,https://example.com/camp9,false,spokesperson-01
+campaign-10,CA10-KAPPA0,"מנהיגי העתיד","קמפיין פיתוח מנהיגות לאנשי מקצוע מתהווים",2030/10/01 10:00,2031/02/01 10:00,https://example.com/camp10,false,spokesperson-01
