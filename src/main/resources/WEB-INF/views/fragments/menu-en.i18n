@@ -51,6 +51,11 @@ master.menu.inventor.list-my-inventions = My inventions
 
 # master.menu.user-account ####################################################
 
+master.menu.sponsor = Sponsor
+master.menu.sponsor.list-my-sponsorships = My sponsorship
+
+# master.menu.user-account ####################################################
+
 master.menu.user-account = Account
 master.menu.user-account.general-profile = General profile
 master.menu.user-account.become-provider = Become a provider
@@ -59,6 +64,8 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
 master.menu.user-account.become-fundraiser = Become a fundraiser
 master.menu.user-account.fundraiser-profile = Fundraiser profile
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor-profile = Sponsor profile
 master.menu.any.list-campaigns = Campaigns
 master.menu.any.list-milestones = Milestones
 master.menu.spokesperson = Spokesperson

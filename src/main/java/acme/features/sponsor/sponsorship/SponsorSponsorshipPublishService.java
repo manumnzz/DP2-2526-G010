@@ -49,6 +49,8 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 
 	@Override
 	public void validate() {
+		super.validateObject(this.sponsorship);
+
 		int count = this.repository.countDonationsBySponsorshipId(this.sponsorship.getId());
 		super.state(count > 0, "*", "sponsor.sponsorship.error.no-donations");
 

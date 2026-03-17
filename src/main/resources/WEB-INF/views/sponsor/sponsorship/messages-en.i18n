@@ -14,6 +14,7 @@ sponsor.sponsorship.form.label.endMoment = End moment
 sponsor.sponsorship.form.label.moreInfo = More info
 sponsor.sponsorship.form.label.monthsActive = Months active
 sponsor.sponsorship.form.label.totalMoney = Total money
+sponsor.donation.form.label.draftMode = draftMode
 
 sponsor.sponsorship.form.button.create = Create
 sponsor.sponsorship.form.button.return = Return
@@ -24,8 +25,10 @@ sponsor.sponsorship.form.button.update = Update
 sponsor.sponsorship.form.button.delete = Delete
 sponsor.sponsorship.form.button.publish = Publish
 
-sponsor.sponsorship.form.error.no-donations = You must add at least one donation before publishing.
-sponsor.sponsorship.error.no-donations = You must add at least one donation before publishing.
 sponsor.sponsorship.error.start-future = The start moment must be in the future.
 sponsor.sponsorship.error.end-future = The end moment must be in the future.
 sponsor.sponsorship.error.start-before-end = The end moment must be after the start moment.
+sponsor.sponsorship.error.no-donations = You must add at least one donation before publishing this sponsorship.
+sponsor.sponsorship.error.period = The end moment must be after the start moment.
+
+

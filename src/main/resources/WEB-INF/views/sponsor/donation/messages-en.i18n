@@ -1,3 +1,4 @@
+sponsor.donation.list.title = Donation List
 sponsor.donation.list.label.name = Name
 sponsor.donation.list.label.money = Money
 sponsor.donation.list.label.kind = Kind
@@ -17,3 +18,5 @@ sponsor.donation.list.button.return = Return
 sponsor.donation.form.button.create = Create
 sponsor.donation.form.button.return = Return
 sponsor.donation.form.button.publish = Publish
+
+acme.validation.job.ticker.message = hola
