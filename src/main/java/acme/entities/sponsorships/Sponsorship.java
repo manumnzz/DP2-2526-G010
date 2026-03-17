@@ -1,7 +1,7 @@
 
 package acme.entities.sponsorships;
 
-import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,12 +18,14 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
+import acme.constraints.ValidSponsorship;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
 
+@ValidSponsorship
 @Entity
 @Getter
 @Setter
@@ -74,11 +76,14 @@ public class Sponsorship extends AbstractEntity {
 
 	@Transient
 	public double getMonthsActive() {
+		double result;
+		double months;
 
-		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
-		long days = duration.toDays();
-		double months = days / 30.0;
-		return Math.round(months * 10.0) / 10.0;
+		if (this.startMoment == null || this.endMoment == null)
+			return 0.0;
+		months = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.DAYS) / 30.0;
+		result = Math.round(months * 10.0) / 10.0;
+		return result;
 	}
 
 	@Transient
