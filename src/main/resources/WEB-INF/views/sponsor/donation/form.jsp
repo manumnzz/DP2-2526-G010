@@ -7,9 +7,6 @@
 	<acme:form-textarea code="sponsor.donation.form.label.notes" path="notes"/>
 	<acme:form-money    code="sponsor.donation.form.label.money" path="money"/>
 	<acme:form-select   code="sponsor.donation.form.label.kind"  path="kind" choices="${kinds}"/>
-	<jstl:if test="${_command != 'create'}">
-		<acme:form-checkbox code="sponsor.donation.form.label.draftMode" path="draftMode"/>
-	</jstl:if>
 	<jstl:choose>
 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
