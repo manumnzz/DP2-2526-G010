@@ -1,5 +1,5 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
-campaign-00,CA00-BASE0,"Base Campaign","Base campaign entity for boundary testing purposes",2025/01/01 00:00,2200/12/31 23:59,https://example.com/base,true,spokesperson-01
+campaign-00,CA00-BASE0,"Base Campaign","Base campaign entity for boundary testing purposes",2000/01/01 00:00,2200/12/31 23:59,https://example.com/base,true,spokesperson-01
 campaign-bl-01,BL01-ABCDE,"A","A",2025/01/02 00:01,2025/01/02 00:02,,false,spokesperson-01
 campaign-bl-02,BL02-ABCDEFGHIJ,"1","B",2025/01/02 00:01,2025/01/02 00:02,https://example.com/bl2,true,spokesperson-02
 campaign-bl-03,BL03-ABCDEF,"Ticker suffix 6","Ticker suffix with six alphanumeric characters boundary test",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl3,true,spokesperson-01
@@ -25,8 +25,8 @@ campaign-bl-22,BL22-DXSSMAR,"XSS marquee in description","<marquee>Hacked</marqu
 campaign-bl-23,BL23-DXSSSCR,"XSS script in description","<script>alert('Hacked!');</script>",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl23,false,spokesperson-01
 campaign-bl-24,BL24-START1,"Start just future","Campaign starting just one minute after base moment",2025/01/01 00:01,2030/06/01 00:00,https://example.com/bl24,false,spokesperson-02
 campaign-bl-25,BL25-STARTFAR,"Start far future","Campaign starting very far in the future boundary test",2199/12/31 23:58,2200/12/31 23:59,https://example.com/bl25,false,spokesperson-01
-campaign-bl-26,BL26-ENDMIN,"One minute interval","Campaign where start and end are one minute apart",2030/01/01 00:00,2030/01/01 00:01,https://example.com/bl26,false,spokesperson-02
-campaign-bl-27,BL27-ENDFAR,"Far future end","Campaign ending very far in the future boundary test",2030/01/01 00:00,2200/12/31 23:59,https://example.com/bl27,false,spokesperson-01
+campaign-bl-26,BL26-ENDMIN,"One minute interval","Campaign where start and end are one minute apart",2025/01/01 00:00,2025/01/01 00:01,https://example.com/bl26,false,spokesperson-02
+campaign-bl-27,BL27-ENDFAR,"Far future end","Campaign ending very far in the future boundary test",2025/01/01 00:00,2200/12/31 23:59,https://example.com/bl27,false,spokesperson-01
 campaign-bl-28,BL28-SAMEDAY,"Same day moments","Campaign where start and end fall on the same day but different time",2030/06/15 08:00,2030/06/15 23:59,https://example.com/bl28,false,spokesperson-02
 campaign-bl-29,BL29-NOURL1,"No moreInfo absent","Campaign with no optional moreInfo URL provided at all",2030/03/01 00:00,2030/09/01 00:00,,false,spokesperson-01
 campaign-bl-30,BL30-URLMIN,"Minimal valid URL","Campaign with minimal valid moreInfo URL boundary test",2030/03/01 00:00,2030/09/01 00:00,https://a.org,false,spokesperson-02
