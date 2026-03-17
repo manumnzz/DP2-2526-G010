@@ -32,3 +32,11 @@ fundraiser.strategy.form.button.update = Update
 fundraiser.strategy.form.button.delete = Delete
 fundraiser.strategy.form.button.publish = Publish
 fundraiser.strategy.form.button.tactics = Tactics
+
+acme.validation.strategy.duplicated-ticker.message = A strategy with this ticker already exists.
+acme.validation.strategy.period.message = The end moment must be after the start moment.
+fundraiser.strategy.error.expected-percentage = The strategy cannot be published because the total expected percentage cannot exceed 100%.
+fundraiser.strategy.error.no-tactics = The strategy must have at least one tactic in order to be published.
+fundraiser.strategy.error.start-future = The start moment must be in the future to publish the strategy.
+fundraiser.strategy.error.end-future = The end moment must be in the future to publish the strategy.
+fundraiser.strategy.error.start-before-end = The end moment must be after the start moment.
