@@ -1,4 +1,4 @@
-# messages-en.i18n
+# messages-es.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
 #
@@ -8,16 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.part.form.title = Part Details
-any.part.list.title = Parts List
+any.inventor.form.title = Inventor
 
-any.part.form.label.name = Name:
-any.part.form.label.description = Description:
-any.part.form.label.cost = Cost:
-any.part.form.label.kind = Kind:
-any.part.form.label.invention = Invention:
-
-any.part.list.label.name = Name
-any.part.list.label.kind = Kind
-any.part.list.label.cost = Cost
-any.part.list.label.invention = Invention
+any.inventor.form.label.bio = Biografía:
+any.inventor.form.label.keywords = Palabras clave:
+any.inventor.form.label.licensed = Licenciado:

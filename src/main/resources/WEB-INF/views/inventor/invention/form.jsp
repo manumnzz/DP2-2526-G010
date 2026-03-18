@@ -22,7 +22,6 @@
 	<acme:form-moment code="inventor.invention.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="inventor.invention.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="inventor.invention.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-checkbox code="inventor.invention.form.label.draftMode" path="draftMode"/>
 	<acme:form-double code="inventor.invention.form.label.monthsActive" path="monthsActive" readonly="true"/>
 	<acme:form-money code="inventor.invention.form.label.cost" path="cost" readonly="true"/>
 	

@@ -40,13 +40,14 @@ public class InventorPartShowService extends AbstractService<Inventor, Part> {
 	public void unbind() {
 		SelectChoices choices;
 		Tuple tuple;
-		
+
 		choices = SelectChoices.from(PartKind.class, this.part.getKind());
 
-		tuple = super.unbindObject(this.part, "name", "description", "cost");
-		tuple.put("kind", choices.getSelected().getKey());
+		tuple = super.unbindObject(this.part, "name", "description", "cost", "kind");
 		tuple.put("kinds", choices);
 		tuple.put("inventionId", this.part.getInvention().getId());
 		tuple.put("draftMode", this.part.getInvention().isDraftMode());
+
+		super.getResponse().addData(tuple);
 	}
 }

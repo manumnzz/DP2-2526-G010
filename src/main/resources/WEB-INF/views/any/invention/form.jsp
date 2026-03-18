@@ -27,4 +27,5 @@
 	<acme:form-money code="any.invention.form.label.cost" path="cost" readonly="true"/>
 	
 	<acme:button code="any.invention.form.button.inventions" action="/any/part/list?inventionId=${id}"/>
+	<acme:button code="any.invention.form.button.inventor" action="/any/inventor/show?id=${inventorId}"/>
 </acme:form>
