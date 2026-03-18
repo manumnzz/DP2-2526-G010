@@ -44,6 +44,10 @@ public class Donation extends AbstractEntity {
 	@Column
 	private DonationKind		kind;
 
+	@Mandatory
+	@Column
+	private boolean				draftMode;
+
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)

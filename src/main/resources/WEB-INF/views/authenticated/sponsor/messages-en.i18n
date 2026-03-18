@@ -1,0 +1,7 @@
+authenticated.sponsor.form.title = Sponsor Profile
+authenticated.sponsor.form.label.address = Address
+authenticated.sponsor.form.label.im = IM
+authenticated.sponsor.form.label.gold = Gold sponsor
+
+authenticated.sponsor.form.button.create = Become sponsor
+authenticated.sponsor.form.button.update = Update profile
