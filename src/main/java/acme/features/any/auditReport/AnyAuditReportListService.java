@@ -13,14 +13,10 @@ import acme.entities.audit.AuditReport;
 @Service
 public class AnyAuditReportListService extends AbstractService<Any, AuditReport> {
 
-	// Internal state ---------------------------------------------------------
-
 	@Autowired
 	private AnyAuditReportRepository	repository;
 
 	private Collection<AuditReport>		auditReports;
-
-	// AbstractService interface -----------------------------------------------
 
 
 	@Override
