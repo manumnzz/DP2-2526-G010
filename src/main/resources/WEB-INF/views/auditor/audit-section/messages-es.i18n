@@ -1,0 +1,19 @@
+auditor.auditSection.list.label.name=Nombre
+auditor.auditSection.list.label.hours=Horas
+auditor.auditSection.list.label.kind=Tipo
+auditor.auditSection.list.button.create=Nueva sección
+auditor.auditSection.list.button.back=Volver al informe
+auditor.auditSection.form.label.name=Nombre
+auditor.auditSection.form.label.notes=Notas
+auditor.auditSection.form.label.hours=Horas
+auditor.auditSection.form.label.kind=Tipo
+auditor.auditSection.form.label.draftMode=Modo Borrador del Informe
+auditor.auditSection.form.button.create=Crear
+auditor.auditSection.form.button.update=Actualizar
+auditor.auditSection.form.button.delete=Eliminar
+auditor.auditSection.form.button.back=Volver a secciones
+auditor.auditSection.form.button.cancel=Cancelar
+
+sectionKind.PRELIMINARY=Preliminar
+sectionKind.EVALUATION=Evaluación
+sectionKind.CONCLUSION=Conclusión

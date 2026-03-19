@@ -3,3 +3,4 @@ authenticated.auditor.form.label.highlights=Logros destacados
 authenticated.auditor.form.label.solicitor=Solicitante
 authenticated.auditor.form.button.create=Crear perfil de auditor
 authenticated.auditor.form.button.update=Actualizar perfil de auditor
+authenticated.auditor.form.title = Detalles de auditor

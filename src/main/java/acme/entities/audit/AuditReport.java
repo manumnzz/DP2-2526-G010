@@ -85,12 +85,12 @@ public class AuditReport extends AbstractEntity {
 		return Math.round(months * 10) / 10.0;
 	}
 
-	@Transient
-	public Integer getHours() {
-		if (this.sections == null || this.sections.isEmpty())
-			return 0;
-		return this.sections.stream().mapToInt(AuditSection::getHours).sum();
-	}
+	//@Transient
+	//public Integer getTHours() {
+	//	if (this.sections == null || this.sections.isEmpty())
+	//		return 0;
+	//	return this.sections.stream().mapToInt(AuditSection::getHours).sum();
+	//}
 
 
 	@NotNull

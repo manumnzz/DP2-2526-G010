@@ -1,5 +1,17 @@
-any.audit-report.list.title=Informes de Auditoría Publicados
+# Any audit report list
 any.auditReport.list.label.ticker=Código
 any.auditReport.list.label.name=Nombre
 any.auditReport.list.label.startMoment=Fecha Inicio
 any.auditReport.list.label.endMoment=Fecha Fin
+
+# Any audit report form
+any.auditReport.form.label.ticker=Código
+any.auditReport.form.label.name=Nombre
+any.auditReport.form.label.description=Descripción
+any.auditReport.form.label.startMoment=Fecha inicio
+any.auditReport.form.label.endMoment=Fecha fin
+any.auditReport.form.label.moreInfo=Más información
+any.auditReport.form.label.monthsActive=Meses activo
+any.auditReport.form.label.hours=Horas totales
+any.auditReport.form.button.sections=Ver secciones
+any.auditReport.form.button.auditor=Ver auditor

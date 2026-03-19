@@ -1,5 +1,17 @@
-any.audit-report.list.title=Published Audit Reports
+# Any audit report list
 any.auditReport.list.label.ticker=Ticker
 any.auditReport.list.label.name=Name
 any.auditReport.list.label.startMoment=Start Date
 any.auditReport.list.label.endMoment=End Date
+
+# Any audit report form
+any.auditReport.form.label.ticker=Ticker
+any.auditReport.form.label.name=Name
+any.auditReport.form.label.description=Description
+any.auditReport.form.label.startMoment=Start moment
+any.auditReport.form.label.endMoment=End moment
+any.auditReport.form.label.moreInfo=More info
+any.auditReport.form.label.monthsActive=Months active
+any.auditReport.form.label.hours=Total hours
+any.auditReport.form.button.sections=View sections
+any.auditReport.form.button.auditor=View auditor

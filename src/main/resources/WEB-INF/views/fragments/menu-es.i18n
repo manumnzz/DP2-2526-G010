@@ -74,3 +74,5 @@ master.menu.spokesperson = Portavoz
 master.menu.spokesperson.list-my-campaigns = Mis campañas
 master.menu.user-account.become-spokesperson = Hacerse portavoz
 master.menu.user-account.spokesperson-profile = Perfil de portavoz
+master.menu.user-account.become-auditor=Convertirse en auditor
+master.menu.user-account.auditor-profile=Perfil de auditor
