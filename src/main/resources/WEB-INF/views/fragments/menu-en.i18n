@@ -31,6 +31,11 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.auditor ##########################################################
+
+master.menu.auditor=Auditor
+master.menu.auditor.list-my-reports=My audit reports
+
 # master.menu.any #############################################################
 
 master.menu.any = Public

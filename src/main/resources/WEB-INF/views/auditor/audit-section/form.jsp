@@ -19,12 +19,7 @@
 	<acme:form-textbox code="auditor.auditSection.form.label.name" path="name"/>
 	<acme:form-textarea code="auditor.auditSection.form.label.notes" path="notes"/>
 	<acme:form-integer code="auditor.auditSection.form.label.hours" path="hours"/>
-	<acme:form-select code="auditor.auditSection.form.label.kind" path="kind" choices="${kinds}"/>
-	
-	<jstl:if test="${_command != 'create' && _command != 'show'}">
-		<acme:form-checkbox code="auditor.auditSection.form.label.draftMode" path="auditReport.draftMode" readonly="true"/>
-	</jstl:if>
-	
+	<acme:form-select   code="sponsor.donation.form.label.kind"  path="kind" choices="${kinds}"/>				
 	<input type="hidden" name="reportId" value="${reportId}"/>
 	
 	<jstl:choose>

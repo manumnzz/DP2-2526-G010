@@ -43,7 +43,9 @@
 		<acme:menu-option code="master.menu.sponsor" access="hasRealm('Sponsor')">
 			<acme:menu-suboption code="master.menu.sponsor.list-my-sponsorships" action="/sponsor/sponsorship/list"/>
 		</acme:menu-option>
-		
+		<acme:menu-option code="master.menu.auditor" access="hasRealm('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.list-my-reports" action="/auditor/audit-report/list"/>
+		</acme:menu-option>
 		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
 			<acme:menu-suboption code="master.menu.spokesperson.list-my-campaigns" action="/spokesperson/campaign/list"/>
 		</acme:menu-option>

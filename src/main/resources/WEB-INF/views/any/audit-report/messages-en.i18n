@@ -1,4 +1,5 @@
 # Any audit report list
+any.audit-report.list.title= Audit Reports
 any.auditReport.list.label.ticker=Ticker
 any.auditReport.list.label.name=Name
 any.auditReport.list.label.startMoment=Start Date

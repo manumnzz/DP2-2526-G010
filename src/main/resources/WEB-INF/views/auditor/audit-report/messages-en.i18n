@@ -19,3 +19,4 @@ auditor.auditReport.form.button.publish=Publish
 auditor.auditReport.form.button.delete=Delete
 auditor.auditReport.form.button.sections=Manage Sections
 auditor.auditReport.form.button.cancel=Cancel
+auditor.audit-report.list.title=My Audit Reports

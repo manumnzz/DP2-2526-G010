@@ -42,12 +42,12 @@ public class AuditorAuditReportCreateService extends AbstractService<Auditor, Au
 
 	@Override
 	public void validate() {
-		boolean valid;
-
-		valid = this.auditReport.getEndMoment().after(this.auditReport.getStartMoment());
-		super.state(valid, "endMoment", "auditor.auditReport.error.end-before-start");
-
-		super.validateObject(this.auditReport);
+		//		boolean valid;
+		//
+		//		valid = this.auditReport.getEndMoment().after(this.auditReport.getStartMoment());
+		//		super.state(valid, "endMoment", "auditor.auditReport.error.end-before-start");
+		//
+		//		super.validateObject(this.auditReport);
 	}
 
 	@Override

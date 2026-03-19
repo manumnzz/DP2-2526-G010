@@ -22,6 +22,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
+import acme.constraints.ValidAuditReport;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
@@ -32,6 +33,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidAuditReport
 public class AuditReport extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;

@@ -17,6 +17,7 @@ public class AnyAuditSectionListService extends AbstractService<Any, AuditSectio
 	private AnyAuditSectionRepository	repository;
 
 	private Collection<AuditSection>	sections;
+	private int							reportId;
 
 
 	@Override
@@ -26,11 +27,9 @@ public class AnyAuditSectionListService extends AbstractService<Any, AuditSectio
 
 	@Override
 	public void load() {
-		int reportId;
-		reportId = super.getRequest().getData("reportId", int.class);
-		this.sections = this.repository.findSectionsByReportId(reportId);
+		this.reportId = super.getRequest().getData("reportId", int.class);
+		this.sections = this.repository.findSectionsByReportId(this.reportId);
 	}
-
 	@Override
 	public void unbind() {
 		super.unbindObjects(this.sections, "name", "hours", "kind");
