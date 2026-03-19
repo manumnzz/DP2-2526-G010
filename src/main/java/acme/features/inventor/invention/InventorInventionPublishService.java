@@ -1,9 +1,13 @@
 package acme.features.inventor.invention;
 
+
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.inventions.Invention;
 import acme.realms.Inventor;
@@ -52,8 +56,29 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 			hasParts = !this.repository.findPartsByInventionId(this.invention.getId()).isEmpty();
 			super.state(hasParts, "*", "inventor.invention.form.error.no-parts");
 		}
-	}
 
+		{
+			Date now;
+
+			now = MomentHelper.getCurrentMoment();
+
+			if (!super.getResponse().getErrors().hasErrors("startMoment") && this.invention.getStartMoment() != null)
+				super.state(MomentHelper.isAfter(this.invention.getStartMoment(), now), "startMoment", "inventor.invention.form.error.start-future");
+
+			if (!super.getResponse().getErrors().hasErrors("endMoment") && this.invention.getEndMoment() != null)
+				super.state(MomentHelper.isAfter(this.invention.getEndMoment(), now), "endMoment", "inventor.invention.form.error.end-future");
+
+			if (this.invention.getStartMoment() != null && this.invention.getEndMoment() != null)
+				super.state(MomentHelper.isAfter(this.invention.getEndMoment(), this.invention.getStartMoment()), "endMoment", "inventor.invention.form.error.start-before-end");
+		}
+
+		{
+			boolean notDraft;
+
+			notDraft = this.invention.isDraftMode();
+			super.state(notDraft, "*", "inventor.invention.form.error.already-published");
+		}
+	}
 	@Override
 	public void execute() {
 		this.invention.setDraftMode(false);

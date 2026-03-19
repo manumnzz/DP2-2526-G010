@@ -7,3 +7,4 @@ user-account-inventor-err-05,true,"UserIdentity{name:'Error', surname:'Inventor5
 user-account-inventor-err-06,true,"UserIdentity{name:'Error', surname:'Inventor6', email:'inventor.err6-acme.com'}",inventorErr6,inventorErr6
 user-account-fundraiser-01,true,"UserIdentity{name: '', surname: '', email: ''}","",""
 user-account-spokesperson-err,false,"UserIdentity{name: '', surname: '', email: ''}","",""
+user-account-sponsor-err,false,"UserIdentity{name: '', surname: '', email: ''}","",""

@@ -8,8 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.part.form.title = Detalles de la Pieza
-any.part.list.title = Lista de Piezas
+any.part.form.title = Part Details
+any.part.list.title = Parts List
 
 any.part.form.label.name = Name:
 any.part.form.label.description = Description:

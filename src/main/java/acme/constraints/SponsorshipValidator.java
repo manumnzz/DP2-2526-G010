@@ -54,9 +54,11 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 				start = sponsorship.getStartMoment();
 				end = sponsorship.getEndMoment();
 
+				// Si falta alguno, lo gestionan @Mandatory/@ValidMoment
 				correctPeriod = start == null || end == null || MomentHelper.isAfter(end, start);
 
-				super.state(context, correctPeriod, "endMoment", "acme.validation.sponsorship.period.message");
+				// Misma clave que el servicio (period)
+				super.state(context, correctPeriod, "endMoment", "sponsor.sponsorship.error.period");
 			}
 
 			result = !super.hasErrors(context);
