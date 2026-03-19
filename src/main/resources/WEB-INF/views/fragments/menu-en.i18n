@@ -37,14 +37,29 @@ master.menu.any = Public
 master.menu.any.list-strategies = List strategies
 master.menu.any.list-auditReport=Audit Reports
 master.menu.any.auditReport.list.title=List published reports
+master.menu.any.list-inventions = List inventions
+master.menu.any.list-parts = List parts
+master.menu.any.list-sponsorship= List sponsorships
 
 # master.menu.fundraiser ######################################################
 
 master.menu.fundraiser = Fundraiser
 master.menu.fundraiser.list-my-strategies = My strategies
 
+<<<<<<< HEAD
 # master.menu.audits ######################################################
 
+=======
+# master.menu.inventor ######################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.list-my-inventions = My inventions
+
+# master.menu.user-account ####################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.list-my-sponsorships = My sponsorship
+>>>>>>> origin/main
 
 # master.menu.user-account ####################################################
 
@@ -56,6 +71,8 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
 master.menu.user-account.become-fundraiser = Become a fundraiser
 master.menu.user-account.fundraiser-profile = Fundraiser profile
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor-profile = Sponsor profile
 master.menu.any.list-campaigns = Campaigns
 master.menu.any.list-milestones = Milestones
 master.menu.spokesperson = Spokesperson

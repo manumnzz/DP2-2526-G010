@@ -1,0 +1,44 @@
+key,name,notes,money,kind,draftMode,key:sponsorship
+donation-01,Base donation,Base notes.,EUR 0.00,ALTRUIST,false,sponsorship-01
+donation-02,Base donation,Base notes.,EUR 500000.00,REWARDED,false,sponsorship-01
+donation-03,Base donation,Base notes.,EUR 1000000.00,CELEBRATED,false,sponsorship-01
+
+donation-04,A,Base notes.,EUR 10.00,ALTRUIST,false,sponsorship-03
+donation-05,Name in the middle,Base notes.,EUR 10.00,REWARDED,false,sponsorship-03
+donation-06,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Base notes.,EUR 10.00,CELEBRATED,false,sponsorship-03
+
+donation-07,Base donation,B,EUR 10.00,ALTRUIST,false,sponsorship-05
+donation-08,Base donation,Notes in the middle.,EUR 10.00,REWARDED,false,sponsorship-05
+donation-09,Base donation,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,EUR 10.00,CELEBRATED,false,sponsorship-05
+
+donation-10,Kind altruist,Base notes.,EUR 1.00,ALTRUIST,false,sponsorship-07
+donation-11,Kind rewarded,Base notes.,EUR 1.00,REWARDED,false,sponsorship-07
+donation-12,Kind celebrated,Base notes.,EUR 1.00,CELEBRATED,false,sponsorship-07
+
+donation-13,Donation for sponsorship-02,Auto-added to satisfy publish rule.,EUR 10.00,ALTRUIST,false,sponsorship-02
+donation-14,Donation for sponsorship-04,Auto-added to satisfy publish rule.,EUR 10.00,REWARDED,false,sponsorship-04
+donation-15,Donation for sponsorship-06,Auto-added to satisfy publish rule.,EUR 10.00,CELEBRATED,false,sponsorship-06
+donation-16,Donation for sponsorship-08,Auto-added to satisfy publish rule.,EUR 10.00,ALTRUIST,false,sponsorship-08
+donation-17,Donation for sponsorship-09,Auto-added to satisfy publish rule.,EUR 10.00,REWARDED,false,sponsorship-09
+donation-18,Donation for sponsorship-10,Auto-added to satisfy publish rule.,EUR 10.00,CELEBRATED,false,sponsorship-10
+donation-19,Donation for sponsorship-11,Auto-added to satisfy publish rule.,EUR 10.00,ALTRUIST,false,sponsorship-11
+donation-20,Donation for sponsorship-12,Auto-added to satisfy publish rule.,EUR 10.00,REWARDED,false,sponsorship-12
+donation-23,Donation for sponsorship-13,Auto-added to satisfy publish rule.,EUR 10.00,CELEBRATED,false,sponsorship-13
+donation-24,Donation for sponsorship-14,Auto-added to satisfy publish rule.,EUR 10.00,ALTRUIST,false,sponsorship-14
+
+donation-25,Donation for min moment,Satisfy published sponsorship donation rule.,EUR 10.00,ALTRUIST,false,sponsorship-15
+donation-26,Donation for max moment,Satisfy published sponsorship donation rule.,EUR 10.00,REWARDED,false,sponsorship-16
+donation-27,Donation for past mid,Satisfy published sponsorship donation rule.,EUR 10.00,CELEBRATED,false,sponsorship-17
+donation-28,Donation for past near,Satisfy published sponsorship donation rule.,EUR 10.00,ALTRUIST,false,sponsorship-18
+
+donation-29,捐赠测试,备注中文😀,EUR 10.00,ALTRUIST,false,sponsorship-19
+donation-33,寄付テスト,日本語メモ🚀,EUR 10.00,REWARDED,false,sponsorship-20
+donation-32,Emoji🙂Donation,Notes🙂🔥,EUR 10.00,CELEBRATED,false,sponsorship-24
+donation-30,Donación básica,Notas con tildes y ñ: año acción corazón.,EUR 12.34,ALTRUIST,false,sponsorship-30
+donation-35,โลเร็ม อิปซัม,บันทึกทดสอบ😀,EUR 10.00,ALTRUIST,false,sponsorship-25
+donation-36,لوريم إيبسوم,ملاحظة تجريبية🚀,EUR 10.00,REWARDED,false,sponsorship-26
+donation-34,<marquee>Hacked</marquee>,<script>alert('Hacked');</script>  'or'A'='A,EUR 10.00,CELEBRATED,false,sponsorship-27
+donation-31,Beiträge,Notizen auf Deutsch: Größe Straße Fußball,EUR 56.78,REWARDED,false,sponsorship-31
+
+donation-21,Draft donation 1,Donation in draft for testing.,EUR 20.00,ALTRUIST,true,sponsorship-21
+donation-22,Draft donation 2,Donation in draft for testing.,EUR 25.00,REWARDED,true,sponsorship-22

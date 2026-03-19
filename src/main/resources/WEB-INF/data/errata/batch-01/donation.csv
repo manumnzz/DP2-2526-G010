@@ -1,0 +1,24 @@
+key,name,notes,money,kind,draftMode,key:sponsorship
+# money MIN-Δ
+err-don-01,Valid name,Valid notes.,EUR -0.01,ALTRUIST,false,err-spons-03
+# money MAX+Δ
+err-don-02,Valid name,Valid notes.,EUR 1000000.01,REWARDED,false,err-spons-03
+
+# name MIN-Δ (empty)
+err-don-03,,Valid notes.,EUR 10.00,CELEBRATED,false,err-spons-03
+# name MAX+Δ (76 chars)
+err-don-04,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Valid notes.,EUR 10.00,ALTRUIST,false,err-spons-03
+
+# notes MIN-Δ (empty)
+err-don-05,Valid name,,EUR 10.00,REWARDED,false,err-spons-03
+# notes MAX+Δ (256 chars) (assumes ValidText max=255)
+err-don-06,Valid name,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,EUR 10.00,REWARDED,false,err-spons-03
+
+# kind invalid
+err-don-07,Valid name,Valid notes.,EUR 10.00,ALTRUIST,false,err-spons-03
+
+# missing sponsorship
+err-don-08,Valid name,Valid notes.,EUR 10.00,ALTRUIST,false,
+
+# money empty (mandatory)
+err-don-10,Valid name,Valid notes.,,CELEBRATED,false,err-spons-03

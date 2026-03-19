@@ -40,31 +40,43 @@ milestone-38,Ad Campaign,Launched video ads on digital and outdoor media,17.0,EN
 milestone-39,License Test Pilots,Partnered with driving schools for safety modules,15.0,CONVERSION,campaign-08
 milestone-40,Pledge Campaign,Collected 5000 safe driving pledges from young drivers,22.0,CONVERSION,campaign-08
 milestone-bl-01,D,C,1.0,TEASER,campaign-09
-milestone-bl-02,Long Title Boundary,Achievement with title at max header length,5.0,ENGAGING,campaign-09
+milestone-bl-02,AB,Achievement with exactly two characters in title min plus one,5.0,ENGAGING,campaign-09
 milestone-bl-03,Title with min achievement,B,8.0,CONVERSION,campaign-09
-milestone-bl-04,Title with max achievement,Achievement with maximum allowed text length for boundary test,12.0,TEASER,campaign-09
+milestone-bl-04,Title with two char achievement,XY,12.0,TEASER,campaign-09
 milestone-bl-05,Effort at zero boundary,Effort is exactly zero as minimum allowed value,0.0,TEASER,campaign-10
 milestone-bl-06,Effort very large,Effort set to a very large value to test upper boundary,9999.99,ENGAGING,campaign-10
 milestone-bl-07,Effort decimal precision,Effort with two decimal places to test precision,0.01,CONVERSION,campaign-10
 milestone-bl-08,Kind TEASER test,Testing TEASER kind explicitly as boundary enum value,10.0,TEASER,campaign-09
 milestone-bl-09,Kind ENGAGING test,Testing ENGAGING kind explicitly as boundary enum value,10.0,ENGAGING,campaign-10
 milestone-bl-10,Kind CONVERSION test,Testing CONVERSION kind explicitly as boundary enum value,10.0,CONVERSION,campaign-09
-milestone-bl-11,Multilingual title Chinese,Achievement in Chinese completed all objectives and milestones,15.0,TEASER,campaign-10
-milestone-bl-12,Milestone in Amharic,Successful campaign result for community benefit,10.0,ENGAGING,campaign-09
+milestone-bl-11,Title 74 chars boundary test for header exactly seventy four!!!!!!!,Achievement in Chinese completed all objectives and milestones,15.0,TEASER,campaign-10
+milestone-bl-12,Title 75 chars boundary test for header exactly seventy five chars!!!!!,Successful campaign result for community benefit,10.0,ENGAGING,campaign-09
 milestone-bl-13,Effort 0.01 near zero,Effort just above zero to test near-minimum boundary,0.01,CONVERSION,campaign-10
 milestone-bl-14,Same effort as another,Effort identical to existing milestone to test non-unique,10.0,TEASER,campaign-09
 milestone-bl-15,Special chars in title,Achievement with special chars and symbols boundary test,7.5,ENGAGING,campaign-10
 milestone-bl-16,Zalgo text title,Zalgo text boundary test for Unicode combining characters,5.0,TEASER,campaign-09
-milestone-sql-01,SQL Injection TEASER 1,Classic SQL injection tautology test,10.0,TEASER,campaign-01
-milestone-sql-02,SQL Injection ENGAGING 2,SQL injection with DROP TABLE attempt,15.0,ENGAGING,campaign-02
-milestone-sql-03,SQL Injection CONVERSION 3,Union-based SQL injection test,12.0,CONVERSION,campaign-03
-milestone-sql-04,SQL Injection TEASER 4,SQL injection with command execution,8.0,TEASER,campaign-04
-milestone-sql-05,SQL Injection ENGAGING 5,Another variant of tautology injection,9.0,ENGAGING,campaign-05
-milestone-sql-06,SQL Injection CONVERSION 6,Escaped quote injection test,11.0,CONVERSION,campaign-06
-milestone-sql-07,SQL Injection TEASER 7,SQL injection with emojis test,7.5,TEASER,campaign-07
-milestone-sql-08,SQL Injection ENGAGING 8,Time-based SQL injection test,13.0,ENGAGING,campaign-08
-milestone-sql-09,SQL Injection CONVERSION 9,Error-based SQL injection test,14.0,CONVERSION,campaign-09
-milestone-sql-10,SQL Injection TEASER 10,SQL injection with update attempt,16.0,TEASER,campaign-10
+milestone-bl-17,Unicode Thai title,Achievement boundary test description value here,5.0,TEASER,campaign-10
+milestone-bl-18,Unicode Arabic title,Achievement boundary test description value here,5.0,ENGAGING,campaign-09
+milestone-bl-19,Unicode Chinese title,Achievement boundary test description value here,5.0,CONVERSION,campaign-10
+milestone-bl-20,<marquee>Hacked</marquee>,Achievement XSS marquee tag in title boundary test,5.0,TEASER,campaign-09
+milestone-bl-21,<script>alert('Hacked!');</script>,Achievement XSS script tag in title boundary test,5.0,ENGAGING,campaign-10
+milestone-bl-22,Achievement 254 chars title,This achievement is intentionally crafted to reach near the maximum allowed length for the ValidText annotation which is two hundred and fifty-five characters and this text is written to fill up to two hundred and fifty-four characters exactly!!!,5.0,CONVERSION,campaign-09
+milestone-bl-23,Achievement 255 chars title,This achievement is intentionally crafted to reach the maximum allowed length for the ValidText annotation which is two hundred and fifty-five characters long and this sentence is written to fill all of that space right up to the very last allowed char!!,5.0,TEASER,campaign-10
+milestone-bl-24,Achievement unicode Thai,โลเร็ม อิปซัม,5.0,ENGAGING,campaign-09
+milestone-bl-25,Achievement unicode Arabic,لوريم إيبسوم,5.0,CONVERSION,campaign-10
+milestone-bl-26,Achievement unicode Chinese,洛伦·伊普森,5.0,TEASER,campaign-09
+milestone-bl-27,Achievement XSS marquee,<marquee>Hacked</marquee>,5.0,ENGAGING,campaign-10
+milestone-bl-28,Achievement XSS script,<script>alert('Hacked!');</script>,5.0,CONVERSION,campaign-09
+milestone-sql-01,' OR '1'='1,Classic SQL injection tautology test in title,10.0,TEASER,campaign-01
+milestone-sql-02,'; DROP TABLE users; --,SQL injection with DROP TABLE in title,15.0,ENGAGING,campaign-02
+milestone-sql-03,' UNION SELECT * FROM passwords; --,Union-based SQL injection in title,12.0,CONVERSION,campaign-03
+milestone-sql-04,admin' --,SQL injection comment in title,8.0,TEASER,campaign-04
+milestone-sql-05,'; EXEC xp_cmdshell('dir'); --,SQL injection command execution in title,9.0,ENGAGING,campaign-05
+milestone-sql-06,SQL injection in achievements,' OR '1'='1,11.0,CONVERSION,campaign-06
+milestone-sql-07,SQL DROP in achievements,'; DROP TABLE users; --,7.5,TEASER,campaign-07
+milestone-sql-08,SQL UNION in achievements,' UNION SELECT * FROM passwords; --,13.0,ENGAGING,campaign-08
+milestone-sql-09,SQL comment in achievements,admin' --,14.0,CONVERSION,campaign-09
+milestone-sql-10,SQL cmdshell in achievements,'; EXEC xp_cmdshell('dir'); --,16.0,TEASER,campaign-10
 milestone-extra-01,BL11 First Milestone,First milestone for published campaign boundary test,5.0,TEASER,campaign-bl-11
 milestone-extra-02,BL03 First Milestone,First milestone for long name campaign boundary test,5.0,TEASER,campaign-bl-03
 milestone-extra-03,BL04 First Milestone,First milestone for short description campaign boundary test,5.0,TEASER,campaign-bl-04

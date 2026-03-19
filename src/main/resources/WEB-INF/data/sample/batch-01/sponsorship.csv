@@ -1,0 +1,39 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:sponsor
+sponsorship-21,SP21-DRAFT01,Draft for sponsor1,Draft sponsorship for app testing.,2026/08/01 10:00,2026/12/01 10:00,https://example.com/s/21,true,sponsor-01
+sponsorship-22,SP22-DRAFT02,Draft for sponsor2,Draft sponsorship for app testing.,2026/08/02 10:00,2026/12/02 10:00,https://example.com/s/22,true,sponsor-02
+sponsorship-23,SP23-DRAFT03,Draft without donations,Draft sponsorship with no donations associated.,2024/08/03 10:00,2024/12/03 10:00,https://example.com/s/23,true,sponsor-01
+sponsorship-40,SP40-DRAFT04,Draft without donations,Draft sponsorship with no donations associated.,2024/08/03 10:00,2024/12/03 10:00,https://example.com/s/40,true,sponsor-02
+
+sponsorship-01,SP01-ABCDE,Base sponsorship,Base description valid.,2026/06/01 10:00,2026/09/01 10:00,https://example.com/s/1,false,sponsor-01
+sponsorship-02,SP02-ABCDEFG,Base sponsorship,Base description valid.,2026/06/02 10:00,2026/09/02 10:00,https://example.com/s/2,false,sponsor-02
+sponsorship-03,SP03-ABCDEFGHIJ,Base sponsorship,Base description valid.,2026/06/03 10:00,2026/09/03 10:00,https://example.com/s/3,false,sponsor-01
+
+sponsorship-04,SP04-NAME01,A,Base description valid.,2026/06/04 10:00,2026/09/04 10:00,https://example.com/s/4,false,sponsor-01
+sponsorship-05,SP05-NAME02,Name in the middle,Base description valid.,2026/06/05 10:00,2026/09/05 10:00,https://example.com/s/5,false,sponsor-02
+sponsorship-06,SP06-NAME03,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Base description valid.,2026/06/06 10:00,2026/09/06 10:00,https://example.com/s/6,false,sponsor-01
+
+sponsorship-07,SP07-DESC01,Base sponsorship,B,2026/06/07 10:00,2026/09/07 10:00,https://example.com/s/7,false,sponsor-01
+sponsorship-08,SP08-DESC02,Base sponsorship,Description in the middle.,2026/06/08 10:00,2026/09/08 10:00,https://example.com/s/8,false,sponsor-02
+sponsorship-09,SP09-DESC03,Base sponsorship,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,2026/06/09 10:00,2026/09/09 10:00,https://example.com/s/9,false,sponsor-01
+
+sponsorship-10,SP10-MOM01,Near future,Start/end just after now.,2026/03/03 00:01,2026/03/03 00:02,https://example.com/s/10,false,sponsor-01
+sponsorship-11,SP11-MOM02,Mid future,Several months ahead.,2026/09/01 09:00,2027/03/01 09:00,https://example.com/s/11,false,sponsor-02
+sponsorship-12,SP12-MOM03,Far future,Very far future but valid.,2199/01/01 10:00,2199/06/01 10:00,https://example.com/s/12,false,sponsor-01
+
+sponsorship-13,SP13-PUBL01,Published example,Published mode false example.,2026/07/02 10:00,2026/12/02 10:00,https://example.com/s/13,false,sponsor-01
+sponsorship-14,SP14-PUBL02,Published example,Published mode false example.,2026/07/03 10:00,2026/12/03 10:00,https://example.com/s/14,false,sponsor-02
+
+sponsorship-15,SP15-MINM01,Min moment case,Start/end on minimum allowed moment.,2000/01/01 00:00,2000/01/01 00:01,https://example.com/s/15,false,sponsor-01
+sponsorship-16,SP16-MAXM01,Max moment case,Start/end on maximum allowed moment.,2200/12/31 23:58,2200/12/31 23:59,https://example.com/s/16,false,sponsor-02
+sponsorship-17,SP17-PAST01,Past published (mid),Published sponsorship in the past for testing.,2012/07/02 10:00,2012/12/02 10:00,https://example.com/s/17,false,sponsor-01
+sponsorship-18,SP18-PAST02,Past published (near),Published sponsorship close to base moment.,2025/12/31 10:00,2025/12/31 11:00,https://example.com/s/18,false,sponsor-02
+
+sponsorship-19,SP19-CNTEST1,赞助测试,中文描述😀🔥,2012/08/01 10:00,2012/12/01 10:00,https://example.com/s/19,false,sponsor-01
+sponsorship-20,SP20-JPTEST1,スポンサー試験,日本語の説明🚀✨,2025/02/01 10:00,2025/06/01 10:00,https://example.com/s/20,false,sponsor-02
+sponsorship-24,SP24-EMJ001,Emoji🙂Test,Descripción🙂con🔥emojis,2026/10/01 10:00,2026/12/01 10:00,https://example.com/s/24,false,sponsor-01
+sponsorship-25,SP25-THAI01,โลเร็ม อิปซัม,คำอธิบายทดสอบ😀,2012/09/01 10:00,2012/12/01 10:00,https://example.com/s/25,false,sponsor-01
+sponsorship-26,SP26-ARAB01,لوريم إيبسوم,وصف تجريبي✨,2025/03/01 10:00,2025/06/01 10:00,https://example.com/s/26,false,sponsor-02
+sponsorship-27,SP27-INJ001,<marquee>Hacked</marquee>,<script>alert('Hacked');</script>  'or'A'='A,2026/10/02 10:00,2026/12/02 10:00,https://example.com/s/27,false,sponsor-01
+sponsorship-30,SP30-UNICD01,Innovación y Salud 🚀,Descripción con acentos: áéíóú ñ ç ü ß,2026/08/10 10:00,2026/12/10 10:00,https://example.com/s/30,false,sponsor-01
+sponsorship-31,SP31-UNICD02,Niño–Müller,Texto en varios idiomas: español français deutsch,2026/08/11 10:00,2026/12/11 10:00,https://example.com/s/31,false,sponsor-02
+

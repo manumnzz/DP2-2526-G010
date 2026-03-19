@@ -11,6 +11,7 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoney;
+import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.datatypes.DonationKind;
 import lombok.Getter;
@@ -24,7 +25,7 @@ public class Donation extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	@ValidText
+	@ValidHeader
 	@Column
 	private String				name;
 
@@ -39,8 +40,13 @@ public class Donation extends AbstractEntity {
 	private Money				money;
 
 	@Mandatory
+	@Valid
 	@Column
 	private DonationKind		kind;
+
+	@Mandatory
+	@Column
+	private boolean				draftMode;
 
 	@NotNull
 	@Valid

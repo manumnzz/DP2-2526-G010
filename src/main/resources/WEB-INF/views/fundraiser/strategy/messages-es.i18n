@@ -24,9 +24,20 @@ fundraiser.strategy.form.label.description = Descripción:
 fundraiser.strategy.form.label.startMoment = Fecha inicio:
 fundraiser.strategy.form.label.endMoment = Fecha fin:
 fundraiser.strategy.form.label.moreInfo = Más información:
+fundraiser.strategy.form.label.monthsActive = Meses activos
+fundraiser.strategy.form.label.expectedPercentage = Porcentaje esperado
 
 fundraiser.strategy.form.button.create = Crear
 fundraiser.strategy.form.button.update = Actualizar
 fundraiser.strategy.form.button.delete = Eliminar
 fundraiser.strategy.form.button.publish = Publicar
 fundraiser.strategy.form.button.tactics = Tácticas
+
+
+acme.validation.strategy.duplicated-ticker.message = Ya existe una estrategia con ese ticker.
+acme.validation.strategy.period.message = La fecha de fin debe ser posterior a la fecha de inicio.
+fundraiser.strategy.error.expected-percentage = La estrategia no se puede publicar porque el porcentaje esperado total no puede superar el 100%.
+fundraiser.strategy.error.no-tactics = La estrategia debe tener al menos una táctica para poder publicarse.
+fundraiser.strategy.error.start-future = La fecha de inicio debe ser futura para publicar la estrategia.
+fundraiser.strategy.error.end-future = La fecha de fin debe ser futura para publicar la estrategia.
+fundraiser.strategy.error.start-before-end = La fecha de fin debe ser posterior a la fecha de inicio.

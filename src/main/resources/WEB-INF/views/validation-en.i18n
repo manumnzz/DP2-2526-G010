@@ -1,0 +1,4 @@
+acme.validation.header.message = Must have from 1 to 75 characters
+acme.validation.text.message = Must have from 1 to 255 characters
+acme.validation.job.ticker.message = Must follow the format XX00-XXXXX (two uppercase letters, two digits, hyphen, five to ten alphanumeric characters)
+acme.validation.campaign.invalid-time-interval.message = The end moment must be after the start moment

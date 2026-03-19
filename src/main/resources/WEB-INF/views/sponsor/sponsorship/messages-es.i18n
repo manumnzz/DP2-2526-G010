@@ -1,0 +1,32 @@
+sponsor.sponsorship.list.title = Listado de Patrocinios
+sponsor.sponsorship.form.title = Detalles de Patrocino
+sponsor.sponsorship.list.label.ticker = Ticker
+sponsor.sponsorship.list.label.name = Nombre
+sponsor.sponsorship.list.label.startMoment = Inicio
+sponsor.sponsorship.list.label.endMoment = Fin
+sponsor.sponsorship.list.button.create = Crear patrocinio
+
+sponsor.sponsorship.form.label.ticker = Ticker
+sponsor.sponsorship.form.label.name = Nombre
+sponsor.sponsorship.form.label.description = Descripción
+sponsor.sponsorship.form.label.startMoment = Inicio
+sponsor.sponsorship.form.label.endMoment = Fin
+sponsor.sponsorship.form.label.moreInfo = Más información
+sponsor.sponsorship.form.label.monthsActive = Meses activos
+sponsor.sponsorship.form.label.totalMoney = Total recaudado
+sponsor.donation.form.label.draftMode = Modo Borrador
+
+sponsor.sponsorship.form.button.donations = Donaciones
+sponsor.sponsorship.form.button.update = Actualizar
+sponsor.sponsorship.form.button.delete = Eliminar
+sponsor.sponsorship.form.button.publish = Publicar
+
+sponsor.sponsorship.form.error.no-donations = Debe añadir al menos una donación antes de publicar.
+
+sponsor.sponsorship.form.button.create = Crear
+sponsor.sponsorship.form.button.return = Volver
+sponsor.sponsorship.form.error.donations-not-published = Debe publicar todas las donaciones antes de publicar el patrocinio.
+sponsor.sponsorship.error.no-donations = Debe añadir al menos una donación antes de publicar.
+sponsor.sponsorship.error.start-future = La fecha de inicio debe estar en el futuro.
+sponsor.sponsorship.error.end-future = La fecha de fin debe estar en el futuro.
+sponsor.sponsorship.error.start-before-end = La fecha de fin debe ser posterior a la de inicio.

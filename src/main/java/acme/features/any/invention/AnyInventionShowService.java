@@ -1,4 +1,4 @@
-package acme.features.any.inventon;
+package acme.features.any.invention;
 
 import java.util.Collection;
 
@@ -44,20 +44,16 @@ public class AnyInventionShowService extends AbstractService<Any, Invention>{
 		
 		@Override
 		public void unbind() {
-			Collection<Inventor> inventors;
-			SelectChoices choices;
 			Tuple tuple;
-
-			inventors = this.repository.findAllInventors();
-			choices = SelectChoices.from(inventors, "userAccount.username", this.invention.getInventor());
 
 			tuple = super.unbindObject(this.invention,
 				"ticker", "name", "description", "startMoment", "endMoment",
 				"moreInfo", "draftMode", "monthsActive", "cost"
 			);
 
-			tuple.put("inventor", choices.getSelected().getKey());
-			tuple.put("inventors", choices);
+			tuple.put("inventorId", this.invention.getInventor().getId());
+
+			super.getResponse().addData(tuple);
 		}
 
 }

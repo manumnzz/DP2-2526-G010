@@ -21,8 +21,12 @@ public class AnySpokespersonShowService extends AbstractService<Any, Spokesperso
 	@Override
 	public void load() {
 		int id;
-		id = super.getRequest().getData("id", int.class);
-		this.spokesperson = this.repository.findSpokespersonById(id);
+		try {
+			id = super.getRequest().getData("id", int.class);
+			this.spokesperson = this.repository.findSpokespersonById(id);
+		} catch (Exception e) {
+			this.spokesperson = null;
+		}
 	}
 
 	@Override

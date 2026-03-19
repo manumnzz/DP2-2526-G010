@@ -16,7 +16,6 @@ import javax.validation.constraints.NotNull;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
-import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidCampaign;
@@ -53,12 +52,12 @@ public class Campaign extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				startMoment;
 
 	@Mandatory
-	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				endMoment;
 
@@ -77,6 +76,10 @@ public class Campaign extends AbstractEntity {
 	public double getMonthsActive() {
 		double result;
 		Duration duration;
+
+		if (this.startMoment == null || this.endMoment == null)
+			return 0.0;
+
 		duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 		result = duration.toDays() / 30.0;
 		return result;

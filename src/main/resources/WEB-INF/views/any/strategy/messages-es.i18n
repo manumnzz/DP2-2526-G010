@@ -14,6 +14,7 @@ any.strategy.list.label.name = Nombre
 any.strategy.list.label.startMoment = Fecha inicio
 any.strategy.list.label.endMoment = Fecha fin
 
+any.strategy.form.title = Formulario de estrategia
 any.strategy.form.label.ticker = Ticker:
 any.strategy.form.label.name = Nombre:
 any.strategy.form.label.description = Descripción:
