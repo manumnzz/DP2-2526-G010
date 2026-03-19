@@ -81,8 +81,8 @@ public class AuditReport extends AbstractEntity {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
 		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
-		double months = duration.toDays() / 30.44; // Aproximación más precisa
-		return Math.round(months * 10) / 10.0; // Redondear a 1 decimal
+		double months = duration.toDays() / 30.44;
+		return Math.round(months * 10) / 10.0;
 	}
 
 	@Transient
@@ -91,8 +91,6 @@ public class AuditReport extends AbstractEntity {
 			return 0;
 		return this.sections.stream().mapToInt(AuditSection::getHours).sum();
 	}
-
-	// Relationships ----------------------------------------------------------
 
 
 	@NotNull

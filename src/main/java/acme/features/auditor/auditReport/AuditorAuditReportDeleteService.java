@@ -28,27 +28,20 @@ public class AuditorAuditReportDeleteService extends AbstractService<Auditor, Au
 		this.auditReport = this.repository.findAuditReportById(id);
 		principal = super.getRequest().getPrincipal();
 
-		status = this.auditReport != null && this.auditReport.isDraftMode() &&  // Solo borrable si está en borrador
-			principal.hasRealmOfType(Auditor.class) && this.auditReport.getAuditor().getId() == principal.getActiveRealm().getId();
+		status = this.auditReport != null && this.auditReport.isDraftMode() && principal.hasRealmOfType(Auditor.class) && this.auditReport.getAuditor().getId() == principal.getActiveRealm().getId();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		// Ya tenemos this.auditReport del authorise
-	}
 
-	@Override
-	public void bind() {
-		// No hay bind en delete
 	}
 
 	@Override
 	public void validate() {
 		boolean hasSections;
 
-		// No se puede borrar si tiene secciones (opcional, según reglas)
 		hasSections = !this.repository.findSectionsByReportId(this.auditReport.getId()).isEmpty();
 		super.state(!hasSections, "*", "auditor.auditReport.error.has-sections");
 	}
@@ -58,8 +51,4 @@ public class AuditorAuditReportDeleteService extends AbstractService<Auditor, Au
 		this.repository.delete(this.auditReport);
 	}
 
-	@Override
-	public void unbind() {
-		// No hay unbind en delete
-	}
 }

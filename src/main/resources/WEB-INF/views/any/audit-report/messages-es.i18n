@@ -1,0 +1,5 @@
+any.audit-report.list.title=Informes de Auditoría Publicados
+any.auditReport.list.label.ticker=Código
+any.auditReport.list.label.name=Nombre
+any.auditReport.list.label.startMoment=Fecha Inicio
+any.auditReport.list.label.endMoment=Fecha Fin

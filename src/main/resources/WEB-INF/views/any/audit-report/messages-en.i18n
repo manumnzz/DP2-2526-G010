@@ -1,0 +1,5 @@
+any.audit-report.list.title=Published Audit Reports
+any.auditReport.list.label.ticker=Ticker
+any.auditReport.list.label.name=Name
+any.auditReport.list.label.startMoment=Start Date
+any.auditReport.list.label.endMoment=End Date

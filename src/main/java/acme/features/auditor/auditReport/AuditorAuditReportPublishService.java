@@ -28,32 +28,23 @@ public class AuditorAuditReportPublishService extends AbstractService<Auditor, A
 		this.auditReport = this.repository.findAuditReportById(id);
 		principal = super.getRequest().getPrincipal();
 
-		status = this.auditReport != null && this.auditReport.isDraftMode() &&  // Solo publicable si está en borrador
-			principal.hasRealmOfType(Auditor.class) && this.auditReport.getAuditor().getId() == principal.getActiveRealm().getId();
+		status = this.auditReport != null && this.auditReport.isDraftMode() && principal.hasRealmOfType(Auditor.class) && this.auditReport.getAuditor().getId() == principal.getActiveRealm().getId();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		// Ya tenemos this.auditReport del authorise
-	}
 
-	@Override
-	public void bind() {
-		// No hay bind en publish
 	}
 
 	@Override
 	public void validate() {
 		boolean hasSections;
 
-		// Regla: No se puede publicar sin al menos una sección
 		hasSections = !this.repository.findSectionsByReportId(this.auditReport.getId()).isEmpty();
 		super.state(hasSections, "*", "auditor.auditReport.error.no-sections");
 
-		// Validar que las fechas son futuras (opcional, según requisitos)
-		// ...
 	}
 
 	@Override
@@ -62,8 +53,4 @@ public class AuditorAuditReportPublishService extends AbstractService<Auditor, A
 		this.repository.save(this.auditReport);
 	}
 
-	@Override
-	public void unbind() {
-		// No hay unbind en publish
-	}
 }

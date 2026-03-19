@@ -1,0 +1,4 @@
+key,key:userAccount,firm,highlights,solicitor
+auditor-01,user-account-auditor-01,"Auditoría Uno, S.L.",Auditor senior especializado en finanzas,true
+auditor-02,user-account-auditor-02,"Auditoría Dos, S.A.",Experto en cumplimiento normativo,true
+auditor-03,user-account-auditor-03,"Auditoría Tres, S.L.",Auditor junior en formación,false

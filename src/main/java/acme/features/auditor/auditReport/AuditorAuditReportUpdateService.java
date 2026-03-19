@@ -28,8 +28,7 @@ public class AuditorAuditReportUpdateService extends AbstractService<Auditor, Au
 		this.auditReport = this.repository.findAuditReportById(id);
 		principal = super.getRequest().getPrincipal();
 
-		status = this.auditReport != null && this.auditReport.isDraftMode() &&  // Solo editable si está en borrador
-			principal.hasRealmOfType(Auditor.class) && this.auditReport.getAuditor().getId() == principal.getActiveRealm().getId();
+		status = this.auditReport != null && this.auditReport.isDraftMode() && principal.hasRealmOfType(Auditor.class) && this.auditReport.getAuditor().getId() == principal.getActiveRealm().getId();
 
 		super.setAuthorised(status);
 	}
@@ -47,7 +46,6 @@ public class AuditorAuditReportUpdateService extends AbstractService<Auditor, Au
 	public void validate() {
 		boolean valid;
 
-		// Validar que endMoment > startMoment
 		valid = this.auditReport.getEndMoment().after(this.auditReport.getStartMoment());
 		super.state(valid, "endMoment", "auditor.auditReport.error.end-before-start");
 

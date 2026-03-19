@@ -35,11 +35,16 @@ master.menu.consumer.favourite-link = Favourite link
 
 master.menu.any = Public
 master.menu.any.list-strategies = List strategies
+master.menu.any.list-auditReport=Audit Reports
+master.menu.any.auditReport.list.title=List published reports
 
 # master.menu.fundraiser ######################################################
 
 master.menu.fundraiser = Fundraiser
 master.menu.fundraiser.list-my-strategies = My strategies
+
+# master.menu.audits ######################################################
+
 
 # master.menu.user-account ####################################################
 
