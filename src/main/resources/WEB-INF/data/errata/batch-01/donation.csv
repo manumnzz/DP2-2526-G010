@@ -22,3 +22,15 @@ err-don-08,Valid name,Valid notes.,EUR 10.00,ALTRUIST,false,
 
 # money empty (mandatory)
 err-don-10,Valid name,Valid notes.,,CELEBRATED,false,err-spons-03
+
+# currency not EUR (si tu validación exige EUR)
+err-don-11,Valid name,Valid notes.,USD 10.00,ALTRUIST,false,err-spons-03
+
+# money format invalid (sin espacio)
+err-don-12,Valid name,Valid notes.,EUR10.00,REWARDED,false,err-spons-03
+
+# money format invalid (negativo)
+err-don-13,Valid name,Valid notes.,EUR -10.00,CELEBRATED,false,err-spons-03
+
+# notes blank spaces (si ValidText es NotBlank)
+err-don-15,Valid name,   ,EUR 10.00,REWARDED,false,err-spons-03
