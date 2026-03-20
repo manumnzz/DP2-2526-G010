@@ -48,6 +48,8 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 
 	@Override
 	public void validate() {
+		super.validateObject(this.invention);
+
 		boolean hasParts = !this.repository.findPartsByInventionId(this.invention.getId()).isEmpty();
 		super.state(hasParts, "*", "inventor.invention.form.error.no-parts");
 

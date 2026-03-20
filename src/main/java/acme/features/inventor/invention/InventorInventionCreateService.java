@@ -55,6 +55,6 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 	public void unbind() {
 		Tuple tuple;
 		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
-		tuple.put("draftmode", true);
+		tuple.put("draftMode", true);
 	}
 }
