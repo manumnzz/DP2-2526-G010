@@ -21,12 +21,14 @@ sponsor.sponsorship.form.button.update = Actualizar
 sponsor.sponsorship.form.button.delete = Eliminar
 sponsor.sponsorship.form.button.publish = Publicar
 
-sponsor.sponsorship.form.error.no-donations = Debe añadir al menos una donación antes de publicar.
+sponsor.sponsorship.form.error.no-donations = Debe añadir al menos una donación antes de publicar
 
 sponsor.sponsorship.form.button.create = Crear
 sponsor.sponsorship.form.button.return = Volver
-sponsor.sponsorship.form.error.donations-not-published = Debe publicar todas las donaciones antes de publicar el patrocinio.
-sponsor.sponsorship.error.no-donations = Debe añadir al menos una donación antes de publicar.
-sponsor.sponsorship.error.start-future = La fecha de inicio debe estar en el futuro.
-sponsor.sponsorship.error.end-future = La fecha de fin debe estar en el futuro.
-sponsor.sponsorship.error.start-before-end = La fecha de fin debe ser posterior a la de inicio.
+sponsor.sponsorship.form.error.donations-not-published = Debe publicar todas las donaciones antes de publicar el patrocinio
+sponsor.sponsorship.error.no-donations = Debe añadir al menos una donación antes de publicar
+sponsor.sponsorship.error.start-future = La fecha de inicio debe estar en el futuro
+sponsor.sponsorship.error.end-future = La fecha de fin debe estar en el futuro
+sponsor.sponsorship.error.start-before-end = La fecha de fin debe ser posterior a la de inicio
+sponsor.sponsorship.error.period = Error en el periodo
+acme.validation.sponsorship.duplicated-ticker.message = Ticker duplicado

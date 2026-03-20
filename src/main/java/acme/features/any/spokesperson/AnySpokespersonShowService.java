@@ -1,4 +1,3 @@
-
 package acme.features.any.spokesperson;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,20 +12,15 @@ import acme.realms.Spokesperson;
 public class AnySpokespersonShowService extends AbstractService<Any, Spokesperson> {
 
 	@Autowired
-	private AnySpokespersonRepository	repository;
+	private AnySpokespersonRepository repository;
 
-	private Spokesperson				spokesperson;
-
+	private Spokesperson spokesperson;
 
 	@Override
 	public void load() {
 		int id;
-		try {
-			id = super.getRequest().getData("id", int.class);
-			this.spokesperson = this.repository.findSpokespersonById(id);
-		} catch (Exception e) {
-			this.spokesperson = null;
-		}
+		id = super.getRequest().getData("id", int.class);
+		this.spokesperson = this.repository.findSpokespersonById(id);
 	}
 
 	@Override

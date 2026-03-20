@@ -9,3 +9,18 @@ err-spons-07,SP27-ABCDE,Past start,Start must be future.,2025/01/01 00:00,2026/0
 err-spons-08,SP28-ABCDE,Bad period,End before start.,2026/09/01 10:00,2026/06/01 10:00,https://example.com/e/8,false,sponsor-err-01
 err-spons-09,SP29-ABCDE,Bad URL,Invalid URL.,2026/06/07 10:00,2026/09/07 10:00,notaurl,false,sponsor-err-01
 err-spons-10,SP30-ABCDE,Missing sponsor,Sponsor is mandatory.,2026/06/08 10:00,2026/09/08 10:00,https://example.com/e/10,false,
+err-spons-11,SP31-ABCDE,Out of range low,Dates before minimum allowed.,1998/01/01 00:00,1998/06/01 00:00,https://example.com/e/11,false,sponsor-err-01
+err-spons-12,SP32-ABCDE,Out of range high,Dates after maximum allowed.,2201/01/01 00:00,2201/06/01 00:00,https://example.com/e/12,false,sponsor-err-01
+err-spons-13,sp33-abcde,Lowercase ticker,Ticker in lowercase should fail pattern.,2026/06/09 10:00,2026/09/09 10:00,https://example.com/e/13,false,sponsor-err-01
+err-spons-14,SP45-URLT01,URL test,Invalid URL (scheme only).,2026/06/10 10:00,2026/09/10 10:00,http://,false,sponsor-err-01
+err-spons-15,SP46-URLT02,URL test,Invalid URL (ftp scheme only).,2026/06/11 10:00,2026/09/11 10:00,ftp://,false,sponsor-err-01
+err-spons-16,SP47-URLT03,URL test,Invalid URL (host without domain).,2026/06/12 10:00,2026/09/12 10:00,http://a,false,sponsor-err-01
+err-spons-17,SP48-URLT04,URL test,Invalid URL (ftp host without domain).,2026/06/13 10:00,2026/09/13 10:00,ftp://a,false,sponsor-err-01
+err-spons-18,SP34-ABC$D,Valid name,Valid description.,2026/06/14 10:00,2026/09/14 10:00,https://example.com/e/18,false,sponsor-err-01
+err-spons-19,SP3A-ABCDE,Valid name,Valid description.,2026/06/15 10:00,2026/09/15 10:00,https://example.com/e/19,false,sponsor-err-01
+err-spons-20,SP341ABCDE,Valid name,Valid description.,2026/06/16 10:00,2026/09/16 10:00,https://example.com/e/20,false,sponsor-err-01
+err-spons-21,SP35-ABCDE,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Valid description.,2026/06/17 10:00,2026/09/17 10:00,https://example.com/e/21,false,sponsor-err-01
+err-spons-22,SP36-ABCDE,Valid name,Valid description.,2026/06/18 10:00,1999/12/31 23:59,https://example.com/e/22,false,sponsor-err-01
+err-spons-23,SP37-ABCDE,Valid name,Valid description.,2026/06/19 10:00,2201/01/01 00:00,https://example.com/e/23,false,sponsor-err-01
+err-spons-24,SP38-ABCDE,Valid name,Valid description.,2000/01/01 00:00,1999/12/31 23:59,https://example.com/e/24,false,sponsor-err-01
+err-spons-25,SP39-ABCDE,Valid name,Valid description.,2026/06/20 10:00,2026/09/20 10:00,http://example.com, false,sponsor-err-01

@@ -1,4 +1,3 @@
-
 package acme.features.any.milestone;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,20 +14,16 @@ import acme.entities.milestone.Milestone;
 public class AnyMilestoneShowService extends AbstractService<Any, Milestone> {
 
 	@Autowired
-	private AnyMilestoneRepository	repository;
+	private AnyMilestoneRepository repository;
 
-	private Milestone				milestone;
-
+	private Milestone milestone;
 
 	@Override
 	public void load() {
 		int id;
-		try {
-			id = super.getRequest().getData("id", int.class);
-			this.milestone = this.repository.findMilestoneById(id);
-		} catch (Exception e) {
-			this.milestone = null;
-		}
+		id = super.getRequest().getData("id", int.class);
+		this.milestone = this.repository.findMilestoneById(id);
+
 	}
 
 	@Override

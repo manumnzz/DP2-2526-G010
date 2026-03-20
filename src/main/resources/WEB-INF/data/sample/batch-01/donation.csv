@@ -1,20 +1,26 @@
 key,name,notes,money,kind,draftMode,key:sponsorship
+# ---- Money limits (acme.data.money.minimum/maximum) ----
 donation-01,Base donation,Base notes.,EUR 0.00,ALTRUIST,false,sponsorship-01
 donation-02,Base donation,Base notes.,EUR 500000.00,REWARDED,false,sponsorship-01
 donation-03,Base donation,Base notes.,EUR 1000000.00,CELEBRATED,false,sponsorship-01
 
+# ---- Header length limits (ValidHeader name: 1..75) ----
 donation-04,A,Base notes.,EUR 10.00,ALTRUIST,false,sponsorship-03
 donation-05,Name in the middle,Base notes.,EUR 10.00,REWARDED,false,sponsorship-03
 donation-06,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Base notes.,EUR 10.00,CELEBRATED,false,sponsorship-03
 
+# ---- Text length limits (ValidText notes: typically 1..255) ----
 donation-07,Base donation,B,EUR 10.00,ALTRUIST,false,sponsorship-05
 donation-08,Base donation,Notes in the middle.,EUR 10.00,REWARDED,false,sponsorship-05
 donation-09,Base donation,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,EUR 10.00,CELEBRATED,false,sponsorship-05
 
+# ---- Enum coverage (DonationKind) ----
 donation-10,Kind altruist,Base notes.,EUR 1.00,ALTRUIST,false,sponsorship-07
 donation-11,Kind rewarded,Base notes.,EUR 1.00,REWARDED,false,sponsorship-07
 donation-12,Kind celebrated,Base notes.,EUR 1.00,CELEBRATED,false,sponsorship-07
 
+# ---- Published sponsorships must have published donations ----
+# - Ensures: no sponsorship with draftMode=false is left without at least one donation with draftMode=false
 donation-13,Donation for sponsorship-02,Auto-added to satisfy publish rule.,EUR 10.00,ALTRUIST,false,sponsorship-02
 donation-14,Donation for sponsorship-04,Auto-added to satisfy publish rule.,EUR 10.00,REWARDED,false,sponsorship-04
 donation-15,Donation for sponsorship-06,Auto-added to satisfy publish rule.,EUR 10.00,CELEBRATED,false,sponsorship-06
@@ -25,20 +31,37 @@ donation-19,Donation for sponsorship-11,Auto-added to satisfy publish rule.,EUR 
 donation-20,Donation for sponsorship-12,Auto-added to satisfy publish rule.,EUR 10.00,REWARDED,false,sponsorship-12
 donation-23,Donation for sponsorship-13,Auto-added to satisfy publish rule.,EUR 10.00,CELEBRATED,false,sponsorship-13
 donation-24,Donation for sponsorship-14,Auto-added to satisfy publish rule.,EUR 10.00,ALTRUIST,false,sponsorship-14
-
+donation-41,URL donation 41,Donation for url case.,EUR 10.00,ALTRUIST,false,sponsorship-41
+donation-42,URL donation 42,Donation for url case.,EUR 10.00,REWARDED,false,sponsorship-42
+donation-43,URL donation 43,Donation for url case.,EUR 10.00,CELEBRATED,false,sponsorship-43
+donation-44,URL donation 44,Donation for url case.,EUR 10.00,ALTRUIST,false,sponsorship-44
+donation-45,URL donation 45,Donation for url case.,EUR 10.00,REWARDED,false,sponsorship-45
+donation-46,URL donation 46,Donation for url case.,EUR 10.00,CELEBRATED,false,sponsorship-46
+donation-47,URL donation 47,Donation for url case.,EUR 10.00,ALTRUIST,false,sponsorship-47
+donation-48,URL donation 48,Donation for url case.,EUR 10.00,REWARDED,false,sponsorship-48
+donation-49,URL donation 49,Donation for url case.,EUR 10.00,ALTRUIST,false,sponsorship-49
+donation-50,URL donation 50,Donation for url case.,EUR 10.00,REWARDED,false,sponsorship-50
+donation-51,URL donation 51,Donation for url case.,EUR 10.00,CELEBRATED,false,sponsorship-51
 donation-25,Donation for min moment,Satisfy published sponsorship donation rule.,EUR 10.00,ALTRUIST,false,sponsorship-15
 donation-26,Donation for max moment,Satisfy published sponsorship donation rule.,EUR 10.00,REWARDED,false,sponsorship-16
 donation-27,Donation for past mid,Satisfy published sponsorship donation rule.,EUR 10.00,CELEBRATED,false,sponsorship-17
 donation-28,Donation for past near,Satisfy published sponsorship donation rule.,EUR 10.00,ALTRUIST,false,sponsorship-18
 
+# ---- Unicode and emoji in header/text fields (system supports Unicode) ----
 donation-29,捐赠测试,备注中文😀,EUR 10.00,ALTRUIST,false,sponsorship-19
 donation-33,寄付テスト,日本語メモ🚀,EUR 10.00,REWARDED,false,sponsorship-20
 donation-32,Emoji🙂Donation,Notes🙂🔥,EUR 10.00,CELEBRATED,false,sponsorship-24
 donation-30,Donación básica,Notas con tildes y ñ: año acción corazón.,EUR 12.34,ALTRUIST,false,sponsorship-30
 donation-35,โลเร็ม อิปซัม,บันทึกทดสอบ😀,EUR 10.00,ALTRUIST,false,sponsorship-25
 donation-36,لوريم إيبسوم,ملاحظة تجريبية🚀,EUR 10.00,REWARDED,false,sponsorship-26
+
+# ---- Injection-like strings treated as plain text (security robustness) ----
 donation-34,<marquee>Hacked</marquee>,<script>alert('Hacked');</script>  'or'A'='A,EUR 10.00,CELEBRATED,false,sponsorship-27
+
+# ---- Unicode Latin variants (accents) ----
 donation-31,Beiträge,Notizen auf Deutsch: Größe Straße Fußball,EUR 56.78,REWARDED,false,sponsorship-31
 
+# ---- Draft donations for draft sponsorships (UI workflow) ----
+# - Used to test sponsor publish/update/delete flows in draft mode
 donation-21,Draft donation 1,Donation in draft for testing.,EUR 20.00,ALTRUIST,true,sponsorship-21
 donation-22,Draft donation 2,Donation in draft for testing.,EUR 25.00,REWARDED,true,sponsorship-22
