@@ -31,10 +31,17 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.auditor ##########################################################
+
+master.menu.auditor=Auditor
+master.menu.auditor.list-my-reports=My audit reports
+
 # master.menu.any #############################################################
 
 master.menu.any = Public
 master.menu.any.list-strategies = List strategies
+master.menu.any.list-auditReport=Audit Reports
+master.menu.any.auditReport.list.title=List published reports
 master.menu.any.list-inventions = List inventions
 master.menu.any.list-parts = List parts
 master.menu.any.list-sponsorship= List sponsorships
@@ -72,3 +79,5 @@ master.menu.spokesperson = Spokesperson
 master.menu.spokesperson.list-my-campaigns = My campaigns
 master.menu.user-account.become-spokesperson = Become a spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
+master.menu.user-account.become-auditor=Become an auditor
+master.menu.user-account.auditor-profile=Auditor profile

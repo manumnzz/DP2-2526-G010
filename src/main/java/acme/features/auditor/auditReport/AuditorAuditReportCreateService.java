@@ -30,7 +30,6 @@ public class AuditorAuditReportCreateService extends AbstractService<Auditor, Au
 	public void load() {
 		this.auditReport = new AuditReport();
 
-		// Valores por defecto
 		this.auditReport.setDraftMode(true);
 		this.auditReport.setStartMoment(MomentHelper.getCurrentMoment());
 		this.auditReport.setEndMoment(MomentHelper.getCurrentMoment());
@@ -43,18 +42,16 @@ public class AuditorAuditReportCreateService extends AbstractService<Auditor, Au
 
 	@Override
 	public void validate() {
-		boolean valid;
-
-		// Validar que endMoment > startMoment
-		valid = this.auditReport.getEndMoment().after(this.auditReport.getStartMoment());
-		super.state(valid, "endMoment", "auditor.auditReport.error.end-before-start");
-
-		super.validateObject(this.auditReport);
+		//		boolean valid;
+		//
+		//		valid = this.auditReport.getEndMoment().after(this.auditReport.getStartMoment());
+		//		super.state(valid, "endMoment", "auditor.auditReport.error.end-before-start");
+		//
+		//		super.validateObject(this.auditReport);
 	}
 
 	@Override
 	public void execute() {
-		// Asignar el auditor actual
 		Principal principal;
 		Auditor auditor;
 

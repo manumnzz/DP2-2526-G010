@@ -1,4 +1,3 @@
-
 package acme.features.any.campaign;
 
 import org.springframework.beans.factory.annotation.Autowired;

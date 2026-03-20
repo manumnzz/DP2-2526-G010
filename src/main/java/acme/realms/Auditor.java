@@ -22,30 +22,25 @@ public class Auditor extends AbstractRole {
 
 	private static final long			serialVersionUID	= 1L;
 
-	// Attributes -------------------------------------------------------------
-
 	@Mandatory
-	@ValidString        // CAMBIA @ValidHeader por @ValidString
+	@ValidString
 	@Column(nullable = false)
 	private String						firm;
 
 	@Mandatory
-	@ValidString        // CAMBIA @ValidHeader por @ValidString
+	@ValidString
 	@Column(nullable = false, length = 1000)
 	private String						highlights;
 
 	@Mandatory
-	@ValidString        // CAMBIA la validación del boolean
+	@ValidString
 	@Column(nullable = false)
-	private String						solicitor;  // String en lugar de Boolean
-
-	// Relationships ----------------------------------------------------------
+	private String						solicitor;
 
 	@OneToMany(mappedBy = "auditor")
 	private List<@Valid AuditReport>	auditReports;
 
 
-	// Método helper (opcional)
 	public Boolean isSolicitor() {
 		return "true".equalsIgnoreCase(this.solicitor);
 	}

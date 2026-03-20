@@ -31,10 +31,17 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
+# master.menu.auditor ##########################################################
+
+master.menu.auditor=Auditor
+master.menu.auditor.list-my-reports=Mis informes de auditoría
+
 # master.menu.any #############################################################
 
 master.menu.any = Público
 master.menu.any.list-strategies = Listar estrategias
+master.menu.any.list-auditReport=Informes de Auditoría
+master.menu.any.audit-report.list.title=Informes publicados
 master.menu.any.list-inventions = Listar invenciones
 master.menu.any.list-parts = Listar piezas
 master.menu.any.list-sponsorship = Listar patrocinios
@@ -72,3 +79,5 @@ master.menu.spokesperson = Portavoz
 master.menu.spokesperson.list-my-campaigns = Mis campañas
 master.menu.user-account.become-spokesperson = Hacerse portavoz
 master.menu.user-account.spokesperson-profile = Perfil de portavoz
+master.menu.user-account.become-auditor=Convertirse en auditor
+master.menu.user-account.auditor-profile=Perfil de auditor

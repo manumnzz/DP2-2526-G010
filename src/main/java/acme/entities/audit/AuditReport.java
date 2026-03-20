@@ -22,6 +22,7 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
+import acme.constraints.ValidAuditReport;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
@@ -32,6 +33,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidAuditReport
 public class AuditReport extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -81,18 +83,16 @@ public class AuditReport extends AbstractEntity {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
 		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
-		double months = duration.toDays() / 30.44; // Aproximación más precisa
-		return Math.round(months * 10) / 10.0; // Redondear a 1 decimal
+		double months = duration.toDays() / 30.44;
+		return Math.round(months * 10) / 10.0;
 	}
 
-	@Transient
-	public Integer getHours() {
-		if (this.sections == null || this.sections.isEmpty())
-			return 0;
-		return this.sections.stream().mapToInt(AuditSection::getHours).sum();
-	}
-
-	// Relationships ----------------------------------------------------------
+	//@Transient
+	//public Integer getTHours() {
+	//	if (this.sections == null || this.sections.isEmpty())
+	//		return 0;
+	//	return this.sections.stream().mapToInt(AuditSection::getHours).sum();
+	//}
 
 
 	@NotNull

@@ -1,4 +1,3 @@
-
 package acme.features.any.spokesperson;
 
 import org.springframework.beans.factory.annotation.Autowired;

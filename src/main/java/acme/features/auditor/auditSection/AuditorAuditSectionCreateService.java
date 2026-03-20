@@ -1,13 +1,19 @@
 
 package acme.features.auditor.auditSection;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
 import acme.client.components.principals.Principal;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.audit.AuditReport;
 import acme.entities.audit.AuditSection;
+import acme.entities.audit.SectionKind;
 import acme.realms.Auditor;
 
 @Service
@@ -17,60 +23,85 @@ public class AuditorAuditSectionCreateService extends AbstractService<Auditor, A
 	private AuditorAuditSectionRepository	repository;
 
 	private AuditSection					section;
+	private int								reportId;  // Añade esto
 
 
 	@Override
 	public void authorise() {
 		boolean status;
-		int reportId;
 		AuditReport report;
 		Principal principal;
 
-		reportId = super.getRequest().getData("reportId", int.class);
-		report = this.repository.findAuditReportById(reportId);
+		this.reportId = super.getRequest().getData("reportId", int.class);  // Guardar en variable de instancia
+		report = this.repository.findAuditReportById(this.reportId);
 		principal = super.getRequest().getPrincipal();
 
-		status = report != null && report.isDraftMode() &&  // Solo se pueden añadir secciones a informes en borrador
-			principal.hasRealmOfType(Auditor.class) && report.getAuditor().getId() == principal.getActiveRealm().getId();
+		status = report != null && report.isDraftMode() && principal.hasRealmOfType(Auditor.class) && report.getAuditor().getId() == principal.getActiveRealm().getId();
 
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		int reportId;
-		AuditReport report;
+		AuditReport report = this.repository.findAuditReportById(this.reportId);  // Usar la variable guardada
 
-		reportId = super.getRequest().getData("reportId", int.class);
-		report = this.repository.findAuditReportById(reportId);
-
-		this.section = new AuditSection();
+		this.section = super.newObject(AuditSection.class);
 		this.section.setAuditReport(report);
 		this.section.setHours(1);
+		this.section.setKind(SectionKind.PRELIMINARY);
 	}
 
 	@Override
 	public void bind() {
-		super.bindObject(this.section, "name", "notes", "hours", "kind");
-	}
+		// Primero, recuperar el report usando el reportId guardado
+		AuditReport report = this.repository.findAuditReportById(this.reportId);
 
-	@Override
-	public void validate() {
-		boolean valid;
+		// Hacer el bind normal
+		super.bindObject(this.section, "name", "notes", "hours");
 
-		valid = this.section.getHours() > 0;
-		super.state(valid, "hours", "auditor.auditSection.error.hours-positive");
+		// Asignar el kind
+		String kindStr = super.getRequest().getData("kind", String.class);
+		if (kindStr != null)
+			this.section.setKind(SectionKind.valueOf(kindStr));
 
-		super.validateObject(this.section);
+		// RE-ASIGNAR EL REPORT (esto es crucial)
+		this.section.setAuditReport(report);
 	}
 
 	@Override
 	public void execute() {
+		System.out.println("=== EXECUTE ===");
+		System.out.println("Name: " + this.section.getName());
+		System.out.println("Notes: " + this.section.getNotes());
+		System.out.println("Hours: " + this.section.getHours());
+		System.out.println("Kind: " + this.section.getKind());
+		System.out.println("Report ID: " + (this.section.getAuditReport() != null ? this.section.getAuditReport().getId() : "null"));
+
 		this.repository.save(this.section);
 	}
 
 	@Override
+	public void validate() {
+		// Validaciones
+		if (this.section.getName() == null || this.section.getName().trim().isEmpty())
+			super.state(false, "name", "auditor.auditSection.error.name-required");
+		if (this.section.getHours() <= 0)
+			super.state(false, "hours", "auditor.auditSection.error.hours-positive");
+	}
+
+	@Override
 	public void unbind() {
-		super.unbindObject(this.section, "name", "notes", "hours", "kind");
+		Tuple tuple;
+		Collection<SectionKind> kinds;
+		SelectChoices choices;
+
+		kinds = Arrays.asList(SectionKind.values());
+		choices = SelectChoices.from(SectionKind.class, this.section.getKind());
+		tuple = super.unbindObject(this.section, "name", "notes", "hours", "kind");
+
+		tuple.put("kinds", choices);
+		tuple.put("reportId", this.reportId);  // Añadir reportId al tuple para el formulario
+
+		super.getResponse().setData(tuple);
 	}
 }
