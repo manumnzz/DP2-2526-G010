@@ -36,3 +36,23 @@ inventor.invention.list.label.endMoment=End moment
 
 # Invention list buttons
 inventor.invention.list.button.create=Create
+
+#Errors
+acme.validation.invention.duplicated-ticker.message = This ticker is already in use
+inventor.invention.form.error.start-future = The start moment must be in the future
+inventor.invention.form.error.end-future = The end moment must be in the future
+inventor.invention.form.error.no-parts = The invention must have at least one part
+inventor.invention.form.error.end-after-start = The end moment must be after the start moment
+inventor.invention.form.error.start-before-end = The end moment must be after the start moment
+
+# Invention - Publish validation errors
+
+inventor.invention.form.error.no-parts = The invention must include at least one part.
+
+inventor.invention.form.error.start-future = The start moment must be in the future.
+
+inventor.invention.form.error.end-future = The end moment must be in the future.
+
+inventor.invention.form.error.start-before-end = The end moment must be after the start moment.
+
+inventor.invention.form.error.already-published = This invention has already been published.

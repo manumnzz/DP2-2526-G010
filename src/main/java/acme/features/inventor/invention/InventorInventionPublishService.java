@@ -50,35 +50,23 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 	public void validate() {
 		super.validateObject(this.invention);
 
-		{
-			boolean hasParts;
+		boolean hasParts = !this.repository.findPartsByInventionId(this.invention.getId()).isEmpty();
+		super.state(hasParts, "*", "inventor.invention.form.error.no-parts");
 
-			hasParts = !this.repository.findPartsByInventionId(this.invention.getId()).isEmpty();
-			super.state(hasParts, "*", "inventor.invention.form.error.no-parts");
-		}
+		Date now = MomentHelper.getCurrentMoment();
 
-		{
-			Date now;
+		if (!super.getResponse().getErrors().hasErrors("startMoment") && this.invention.getStartMoment() != null)
+			super.state(MomentHelper.isAfter(this.invention.getStartMoment(), now), "startMoment", "inventor.invention.form.error.start-future");
 
-			now = MomentHelper.getCurrentMoment();
+		if (!super.getResponse().getErrors().hasErrors("endMoment") && this.invention.getEndMoment() != null)
+			super.state(MomentHelper.isAfter(this.invention.getEndMoment(), now), "endMoment", "inventor.invention.form.error.end-future");
 
-			if (!super.getResponse().getErrors().hasErrors("startMoment") && this.invention.getStartMoment() != null)
-				super.state(MomentHelper.isAfter(this.invention.getStartMoment(), now), "startMoment", "inventor.invention.form.error.start-future");
+		if (this.invention.getStartMoment() != null && this.invention.getEndMoment() != null)
+			super.state(MomentHelper.isAfter(this.invention.getEndMoment(), this.invention.getStartMoment()), "endMoment", "inventor.invention.form.error.start-before-end");
 
-			if (!super.getResponse().getErrors().hasErrors("endMoment") && this.invention.getEndMoment() != null)
-				super.state(MomentHelper.isAfter(this.invention.getEndMoment(), now), "endMoment", "inventor.invention.form.error.end-future");
-
-			if (this.invention.getStartMoment() != null && this.invention.getEndMoment() != null)
-				super.state(MomentHelper.isAfter(this.invention.getEndMoment(), this.invention.getStartMoment()), "endMoment", "inventor.invention.form.error.start-before-end");
-		}
-
-		{
-			boolean notDraft;
-
-			notDraft = this.invention.isDraftMode();
-			super.state(notDraft, "*", "inventor.invention.form.error.already-published");
-		}
+		super.state(this.invention.isDraftMode(), "*", "inventor.invention.form.error.already-published");
 	}
+	
 	@Override
 	public void execute() {
 		this.invention.setDraftMode(false);
@@ -90,5 +78,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 		Tuple tuple;
 
 		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "cost");
+
+		super.getResponse().addData(tuple);
 	}
 }

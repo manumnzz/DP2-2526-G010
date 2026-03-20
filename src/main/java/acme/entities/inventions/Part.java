@@ -10,12 +10,11 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoney;
-import acme.constraints.ValidPart;
+import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
-@ValidPart
 @Entity
 @Getter
 @Setter
@@ -27,7 +26,7 @@ public class Part extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	//@ValidHeader
+	@ValidHeader
 	@Column
 	private String				name;
 
