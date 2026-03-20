@@ -13,20 +13,16 @@ import acme.entities.campaign.Campaign;
 public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 
 	@Autowired
-	private AnyCampaignRepository	repository;
+	private AnyCampaignRepository repository;
 
-	private Campaign				campaign;
-
+	private Campaign campaign;
 
 	@Override
 	public void load() {
 		int id;
-		try {
-			id = super.getRequest().getData("id", int.class);
-			this.campaign = this.repository.findCampaignById(id);
-		} catch (Exception e) {
-			this.campaign = null;
-		}
+		id = super.getRequest().getData("id", int.class);
+		this.campaign = this.repository.findCampaignById(id);
+
 	}
 
 	@Override
@@ -41,13 +37,15 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 		Tuple tuple;
 		Double effort;
 
-		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment",
+				"moreInfo", "draftMode");
 
 		effort = this.repository.computeCampaignEffort(this.campaign.getId());
 		tuple.put("effort", effort == null ? 0.0 : effort);
 		tuple.put("monthsActive", this.campaign.getMonthsActive());
 		tuple.put("spokespersonId", this.campaign.getSpokesperson().getId());
-		tuple.put("spokesperson.userAccount.identity.fullName", this.campaign.getSpokesperson().getUserAccount().getIdentity().getFullName());
+		tuple.put("spokesperson.userAccount.identity.fullName",
+				this.campaign.getSpokesperson().getUserAccount().getIdentity().getFullName());
 		tuple.put("readonly", true);
 
 		super.getResponse().addData(tuple);
