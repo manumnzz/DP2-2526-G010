@@ -42,5 +42,6 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 		Tuple tuple;
 
 		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "cost");
+		super.getResponse().addData(tuple);
 	}
 }

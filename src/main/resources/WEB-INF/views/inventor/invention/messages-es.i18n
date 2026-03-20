@@ -37,3 +37,8 @@ inventor.invention.list.label.endMoment=Momento de fin
 
 # Botón de la lista
 inventor.invention.list.button.create=Crear
+
+@#Errores
+inventor.invention.form.error.start-future = La fecha de inicio debe ser posterior al momento actual
+inventor.invention.form.error.end-future = La fecha de fin debe ser posterior al momento actual
+inventor.invention.form.error.no-parts = La invención debe tener al menos una parte
