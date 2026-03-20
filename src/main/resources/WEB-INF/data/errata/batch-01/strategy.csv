@@ -27,15 +27,12 @@ strategy-err-12,FR01-ABCDE6,Valid Name,Valid description,2201/01/01 00:00,2201/0
 strategy-err-13,FR01-ABCDE7,Valid Name,Valid description,2026/02/01 10:00,2201/01/01 00:00,http://example.com/x,FALSE,fundraiser-01
 strategy-err-14,FR01-ABCDE8,Valid Name,Valid description,2026/02/01 10:00,2020/06/01 10:00,http://example.com/x,FALSE,fundraiser-01
 strategy-err-15,FR01-ABCDE9,Valid Name,Valid description,2026/06/01 10:00,2026/06/01 10:00,http://example.com/x,FALSE,fundraiser-01
+strategy-err-16,FR01-ABCDF2,Valid Name,Valid description,1999/12/31 23:59,2026/06/01 10:00,http://example.com/x,FALSE,fundraiser-01
+strategy-err-17,FR01-ABCDF3,Valid Name,Valid description,2026/02/01 10:00,1999/12/31 23:59,http://example.com/x,FALSE,fundraiser-01
 
 # URL invalid
-strategy-err-16,FR01-ABCDF0,Valid Name,Valid description,2026/02/01 10:00,2026/06/01 10:00,http://,FALSE,fundraiser-01
+strategy-err-18,FR01-ABCDF0,Valid Name,Valid description,2026/02/01 10:00,2026/06/01 10:00,http://,FALSE,fundraiser-01
 
 # fundraiser FK missing
-strategy-err-17,FR01-ABCDF1,Valid Name,Valid description,2026/02/01 10:00,2026/06/01 10:00,http://example.com/x,FALSE,
+strategy-err-19,FR01-ABCDF1,Valid Name,Valid description,2026/02/01 10:00,2026/06/01 10:00,http://example.com/x,FALSE,
 
-# moment invalid - below configured minimum
-strategy-err-18,FR01-ABCDF2,Valid Name,Valid description,1999/12/31 23:59,2026/06/01 10:00,http://example.com/x,FALSE,fundraiser-01
-strategy-err-19,FR01-ABCDF3,Valid Name,Valid description,2026/02/01 10:00,1999/12/31 23:59,http://example.com/x,FALSE,fundraiser-01
-
-# moment invalid - above configured maximum
