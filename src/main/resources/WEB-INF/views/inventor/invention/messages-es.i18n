@@ -38,7 +38,10 @@ inventor.invention.list.label.endMoment=Momento de fin
 # Botón de la lista
 inventor.invention.list.button.create=Crear
 
-@#Errores
+#Errores
+acme.validation.invention.duplicated-ticker.message = Este ticker se encuentra ya en uso
 inventor.invention.form.error.start-future = La fecha de inicio debe ser posterior al momento actual
 inventor.invention.form.error.end-future = La fecha de fin debe ser posterior al momento actual
 inventor.invention.form.error.no-parts = La invención debe tener al menos una parte
+inventor.invention.form.error.end-after-start = La fecha de fin debe ser posterior a la fecha de inicio
+inventor.invention.form.error.start-before-end = La fecha de fin debe ser posterior a la fecha de inicio

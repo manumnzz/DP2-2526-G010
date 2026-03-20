@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.inventions.Invention;
 import acme.entities.inventions.InventionRepository;
 
@@ -53,6 +54,10 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 
 				super.state(context, hasInventor, "inventor", "acme.validation.invention.inventor-required.message");
 			}
+			// End moment posterior a start moment
+			if (invention.getStartMoment() != null && invention.getEndMoment() != null)
+				super.state(context, MomentHelper.isAfter(invention.getEndMoment(), invention.getStartMoment()), "endMoment", "inventor.invention.form.error.end-after-start");
+
 
 			result = !super.hasErrors(context);
 		}
