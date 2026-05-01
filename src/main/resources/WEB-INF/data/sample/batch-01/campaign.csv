@@ -8,24 +8,24 @@ campaign-bl-01,BL01-ABCDE,"A","A",2025/01/02 00:01,2025/01/02 00:02,,false,spoke
 campaign-bl-02,BL02-ABCDEFGHIJ,"1","B",2025/01/02 00:01,2025/01/02 00:02,https://example.com/bl2,true,spokesperson-02
 campaign-bl-03,BL03-ABCDEF,"Ticker suffix 6","Ticker suffix with six alphanumeric characters boundary test",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl3,true,spokesperson-01
 campaign-bl-04,BL04-ABCDEFGHI,"Ticker suffix 9","Ticker suffix with nine alphanumeric characters boundary test",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl4,true,spokesperson-02
-campaign-bl-51,BL51-ABCDEFG,"Ticker suffix 7","Ticker suffix with seven alphanumeric characters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl51,false,spokesperson-01
+campaign-bl-51,BL51-ABCDEFG,"Ticker suffix 7","Ticker suffix with seven alphanumeric characters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl51,true,spokesperson-01
 campaign-bl-52,BL52-ABCDEFGH,"Ticker suffix 8","Ticker suffix with eight alphanumeric characters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl52,false,spokesperson-02
-campaign-bl-53,BL53-ABCDEFGHIJ,"Ticker suffix 10","Ticker suffix with ten alphanumeric characters (max)",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl53,false,spokesperson-01
+campaign-bl-53,BL53-ABCDEFGHIJ,"Ticker suffix 10","Ticker suffix with ten alphanumeric characters (max)",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl53,true,spokesperson-01
 
 # name - standard variations
 campaign-bl-05,BL05-NAME01,"A","Name with exactly one character minimum boundary test value",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl5,true,spokesperson-01
 campaign-bl-06,BL06-NAME02,"AB","Name with exactly two characters min plus one boundary test",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl6,true,spokesperson-02
 campaign-bl-07,BL07-NAME74,"Campaign name of exactly seventy-four characters boundary test!!!!!!!","Name 74 chars boundary test description",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl7,false,spokesperson-01
 campaign-bl-08,BL08-NAME75,"Campaign name of exactly seventy-five characters for header test!!!!!!!!","Name 75 chars boundary test description",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl8,false,spokesperson-02
-campaign-bl-09,BL09-UNITHAI,เมืองสีเขียว,"Unicode Thai name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl9,false,spokesperson-01
-campaign-bl-10,BL10-UNIARAB,لوريم إيبسوم,"Unicode Arabic name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl10,false,spokesperson-02
-campaign-bl-11,BL11-UNICHIN,洛伦·伊普森,"Unicode Chinese name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl11,false,spokesperson-01
-campaign-bl-12,BL12-UNIEMOJ,"😈","Unicode emoji name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl12,false,spokesperson-02
+campaign-bl-09,BL09-UNITHAI,เมืองสีเขียว,"Unicode Thai name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl9,true,spokesperson-01
+campaign-bl-10,BL10-UNIARAB,لوريم إيبسوم,"Unicode Arabic name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl10,true,spokesperson-02
+campaign-bl-11,BL11-UNICHIN,洛伦·伊普森,"Unicode Chinese name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl11,true,spokesperson-01
+campaign-bl-12,BL12-UNIEMOJ,"😈","Unicode emoji name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl12,true,spokesperson-02
 campaign-bl-13,BL13-XSSMAR,"<marquee>Hacked</marquee>","XSS marquee tag in name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl13,false,spokesperson-01
 campaign-bl-14,BL14-XSSSCR,"<script>alert('Hacked!');</script>","XSS script tag in name boundary test description value here",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl14,false,spokesperson-02
-campaign-bl-39,BL39-NZALGO,"C̷̣͝r̵̰̈é̵͜e̷͎͑p̷̲̽ÿ̸́","Zalgo text in name boundary test description value here",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl39,false,spokesperson-02
-campaign-bl-41,BL41-ACCENT1,"Innovación y Salud 🚀","Descripción con acentos: áéíóú ñ ç ü ß",2030/08/10 10:00,2030/12/10 10:00,https://example.com/bl41,false,spokesperson-01
-campaign-bl-42,BL42-ACCENT2,"Niño–Müller","Texto en varios idiomas: español français deutsch",2030/08/11 10:00,2030/12/11 10:00,https://example.com/bl42,false,spokesperson-02
+campaign-bl-39,BL39-NZALGO,"C̷̣͝r̵̰̈é̵͜e̷͎͑p̷̲̽ÿ̸́","Zalgo text in name boundary test description value here",2030/03/01 00:00,2030/09/01 00:00,https://example.com/bl39,true,spokesperson-02
+campaign-bl-41,BL41-ACCENT1,"Innovación y Salud 🚀","Descripción con acentos: áéíóú ñ ç ü ß",2030/08/10 10:00,2030/12/10 10:00,https://example.com/bl41,true,spokesperson-01
+campaign-bl-42,BL42-ACCENT2,"Niño–Müller","Texto en varios idiomas: español français deutsch",2030/08/11 10:00,2030/12/11 10:00,https://example.com/bl42,true,spokesperson-02
 
 # description - standard variations
 campaign-bl-15,BL15-DESC01,"Description one char","X",2030/01/01 00:00,2030/06/01 00:00,https://example.com/bl15,false,spokesperson-01
@@ -59,8 +59,8 @@ campaign-bl-47,BL47-PAST12,"Past published (2012)","Published campaign in the pa
 campaign-bl-48,BL48-PAST25,"Past published (2025)","Published campaign close to base moment",2025/12/31 10:00,2025/12/31 11:00,https://example.com/bl48,false,spokesperson-02
 campaign-bl-56,BL56-IMMED,"Immediate future window","Campaign starting very soon with short duration",2025/01/08 00:01,2025/01/09 00:01,https://example.com/bl56,false,spokesperson-01
 campaign-bl-57,BL57-MEDIUM,"Medium future window","Campaign from June to December 2025",2025/06/01 09:00,2025/12/01 18:00,https://example.com/bl57,false,spokesperson-02
-campaign-bl-58,BL58-FAR,"Far future window","Campaign covering year 2026",2026/01/01 08:00,2026/12/31 20:00,https://example.com/bl58,false,spokesperson-01
-campaign-bl-59,BL59-VFAR,"Very far future window","Campaign starting in 2027",2027/01/01 08:00,2027/06/01 20:00,https://example.com/bl59,false,spokesperson-02
+campaign-bl-58,BL58-FARRE,"Far future window","Campaign covering year 2026",2026/01/01 08:00,2026/12/31 20:00,https://example.com/bl58,false,spokesperson-01
+campaign-bl-59,BL59-VFARR,"Very far future window","Campaign starting in 2027",2027/01/01 08:00,2027/06/01 20:00,https://example.com/bl59,false,spokesperson-02
 campaign-bl-63,BL63-FAR2199,"Far future 2199","Campaign in year 2199, far but not at max boundary",2199/01/01 10:00,2199/06/01 10:00,https://example.com/bl63,false,spokesperson-02
 
 # moreInfo - standard variations
