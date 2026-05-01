@@ -1,4 +1,3 @@
-
 package acme.constraints;
 
 import javax.validation.ConstraintValidatorContext;
@@ -20,7 +19,6 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 	// AbstractValidator interface --------------------------------------------
 
-
 	@Override
 	protected void initialise(final ValidCampaign annotation) {
 		assert annotation != null;
@@ -35,14 +33,30 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 		if (campaign == null)
 			result = true;
 		else {
-			boolean validTimeInterval;
 
-			if (campaign.getStartMoment() != null && campaign.getEndMoment() != null)
-				validTimeInterval = campaign.getStartMoment().before(campaign.getEndMoment());
-			else
-				validTimeInterval = true;
+			// Ticker único
+			{
+				boolean uniqueCampaign;
+				Campaign existing;
 
-			super.state(context, validTimeInterval, "endMoment", "acme.validation.campaign.invalid-time-interval.message");
+				existing = this.repository.findCampaignByTicker(campaign.getTicker());
+				uniqueCampaign = existing == null || existing.equals(campaign);
+
+				super.state(context, uniqueCampaign, "ticker", "acme.validation.campaign.duplicated-ticker.message");
+			}
+
+			// Intervalo de tiempo válido
+			{
+				boolean validTimeInterval;
+
+				if (campaign.getStartMoment() != null && campaign.getEndMoment() != null)
+					validTimeInterval = campaign.getStartMoment().before(campaign.getEndMoment());
+				else
+					validTimeInterval = true;
+
+				super.state(context, validTimeInterval, "endMoment",
+						"acme.validation.campaign.invalid-time-interval.message");
+			}
 
 			result = !super.hasErrors(context);
 		}
