@@ -35,16 +35,16 @@ invention-25,IN25-ALPHA25,"Smart Sensor","Detailed description intended to exerc
 invention-26,IN26-BETA26,"Smart Sensor","<script>alert('test')</script>",2030/01/10 10:00,2030/04/10 10:00,https://example.com/inv26,false,inventor-01
 
 # startMoment - standard variations
-invention-27,IN27-GAMMA27,"Smart Sensor","Standard invention description for baseline testing",2030/01/01 00:00,2030/04/10 10:00,https://example.com/inv27,false,inventor-01
-invention-28,IN28-DELTA28,"Smart Sensor","Standard invention description for baseline testing",2030/01/01 00:01,2030/04/10 10:00,https://example.com/inv28,false,inventor-01
-invention-29,IN29-EPSIL29,"Smart Sensor","Standard invention description for baseline testing",2030/06/10 09:00,2030/09/10 09:00,https://example.com/inv29,false,inventor-01
-invention-30,IN30-ZETA30,"Smart Sensor","Standard invention description for baseline testing",2031/01/15 08:30,2031/05/15 08:30,https://example.com/inv30,false,inventor-01
+invention-27,IN27-GAMMA27,"Smart Sensor","Standard invention description for baseline testing",2000/01/01 00:00,2030/04/10 10:00,https://example.com/inv27,false,inventor-01
+invention-28,IN28-DELTA28,"Smart Sensor","Standard invention description for baseline testing",2000/01/01 00:01,2030/04/10 10:00,https://example.com/inv28,false,inventor-01
+invention-29,IN29-EPSIL29,"Smart Sensor","Standard invention description for baseline testing",2024/12/31 23:59,2030/09/10 09:00,https://example.com/inv29,false,inventor-01
+invention-30,IN30-ZETA30,"Smart Sensor","Standard invention description for baseline testing",2025/01/01 00:00,2031/05/15 08:30,https://example.com/inv30,false,inventor-01
 
 # endMoment - standard variations
-invention-31,IN31-ETA31,"Smart Sensor","Standard invention description for baseline testing",2030/01/10 10:00,2030/01/10 10:01,https://example.com/inv31,false,inventor-01
-invention-32,IN32-THETA32,"Smart Sensor","Standard invention description for baseline testing",2030/01/10 10:00,2030/02/10 10:00,https://example.com/inv32,false,inventor-01
-invention-33,IN33-IOTA33,"Smart Sensor","Standard invention description for baseline testing",2030/01/10 10:00,2030/12/31 23:59,https://example.com/inv33,true,inventor-01
-invention-34,IN34-KAPPA34,"Smart Sensor","Standard invention description for baseline testing",2031/03/01 09:00,2031/07/01 09:00,https://example.com/inv34,true,inventor-01
+invention-31,IN31-ETA31,"Smart Sensor","Standard invention description for baseline testing",2000/01/01 00:00,2200/12/31 23:59,https://example.com/inv31,false,inventor-01
+invention-32,IN32-THETA32,"Smart Sensor","Standard invention description for baseline testing",2000/01/01 00:01,2199/12/31 23:59,https://example.com/inv32,false,inventor-01
+invention-33,IN33-IOTA33,"Smart Sensor","Standard invention description for baseline testing",2024/12/31 23:59,2025/01/08 00:01,https://example.com/inv33,true,inventor-01
+invention-34,IN34-KAPPA34,"Smart Sensor","Standard invention description for baseline testing",2025/01/01 00:00,2025/01/08 00:00,https://example.com/inv34,true,inventor-01
 
 # moreInfo - standard variations
 invention-35,IN35-LAMBD35,"Smart Sensor","Standard invention description for baseline testing",2030/01/10 10:00,2030/04/10 10:00,,true,inventor-02
