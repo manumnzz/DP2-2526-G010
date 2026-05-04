@@ -50,7 +50,7 @@ campaign-bl-25,BL25-STARTFAR,"Start far future","Campaign starting very far in t
 campaign-bl-26,BL26-ENDMIN,"One minute interval","Campaign where start and end are one minute apart",2025/01/01 00:00,2025/01/01 00:01,https://example.com/bl26,false,spokesperson-02
 campaign-bl-27,BL27-ENDFAR,"Far future end","Campaign ending very far in the future boundary test",2025/01/01 00:00,2200/12/31 23:59,https://example.com/bl27,false,spokesperson-01
 campaign-bl-61,BL61-NEARMAX,"Near maximum valid end","End near maximum allowed moment",2200/12/30 23:58,2200/12/31 23:59,https://example.com/bl61,false,spokesperson-02
-campaign-bl-50,BL50-MAXMOM,"Max moment end","End on maximum allowed moment",2200/12/31 23:58,2200/12/31 23:59,https://example.com/bl50,false,spokesperson-02
+campaign-bl-50,BL50-MAXMOM,"Max moment end","End on maximum allowed moment",2000/01/01 00:01,2000/01/02 00:02,https://example.com/bl50,false,spokesperson-02
 
 # startMoment + endMoment - interval variations
 campaign-bl-62,BL62-SAMEDAY25,"Same day future valid","Start and end on same day in 2025",2025/01/01 00:01,2025/01/01 00:02,https://example.com/bl62,false,spokesperson-01
