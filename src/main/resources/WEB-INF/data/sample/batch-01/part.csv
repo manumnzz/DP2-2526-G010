@@ -35,8 +35,8 @@ part-025,"Sensor Core","Main sensing unit","EUR 10.00",CORE,invention-12
 part-026,"Sensor Core","Main sensing unit","EUR 99.99",CORE,invention-12
 part-027,"Sensor Core","Main sensing unit","EUR 100.00",CORE,invention-13
 part-028,"Sensor Core","Main sensing unit","EUR 999.99",CORE,invention-13
-part-029,"Sensor Core","Main sensing unit","EUR 1000.00",CORE,invention-14
-part-030,"Sensor Core","Main sensing unit","EUR 9999.99",CORE,invention-14
+part-029,"Sensor Core","Main sensing unit","EUR 1000000.00",CORE,invention-14
+part-030,"Sensor Core","Main sensing unit","EUR 999999.99",CORE,invention-14
 
 # kind - standard variations
 part-031,"Sensor Core","Main sensing unit","EUR 120.00",CORE,invention-15
