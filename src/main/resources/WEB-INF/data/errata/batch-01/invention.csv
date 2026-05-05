@@ -12,7 +12,7 @@ invention-err-06,ER06-ABCDE,"Lorem ipsum dolor sit amet consectetur adipiscing e
 
 # DESCRIPTION
 invention-err-07,ER07-ABCDE,"Valid",,2030/01/01 00:00,2030/06/01 00:00,https://ok.com,true,inventor-01
-invention-err-07,ER07-ABCDE,"Valid","",2030/01/01 00:00,2030/06/01 00:00,https://ok.com,true,inventor-01
+invention-err-22,ER07-ABCDE,"Valid","",2030/01/01 00:00,2030/06/01 00:00,https://ok.com,true,inventor-01
 invention-err-08,ER08-ABCDE,"Valid","Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur EXTRA","2030/01/01 00:00",2030/06/01 00:00,https://ok.com,true,inventor-01
 
 # MOMENT (CREATION) 
