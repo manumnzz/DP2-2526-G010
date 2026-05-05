@@ -28,3 +28,4 @@ spokesperson.campaign.form.error.start-before-end = The start moment must be bef
 spokesperson.campaign.form.error.end-before-start = The end moment must be after the start moment.
 spokesperson.campaign.form.error.start-future = The start moment must be in the future.
 spokesperson.campaign.form.error.end-future = The end moment must be in the future.
+acme.validation.campaign.duplicated-ticker.message = Ticker already used

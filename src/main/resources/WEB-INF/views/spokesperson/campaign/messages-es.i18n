@@ -28,3 +28,4 @@ spokesperson.campaign.form.error.start-before-end = La fecha de inicio debe ser 
 spokesperson.campaign.form.error.end-before-start = La fecha de fin debe ser posterior a la fecha de inicio.
 spokesperson.campaign.form.error.start-future = La fecha de inicio debe ser en el futuro.
 spokesperson.campaign.form.error.end-future = La fecha de fin debe ser en el futuro.
+acme.validation.campaign.duplicated-ticker.message = Ya existe ese ticker

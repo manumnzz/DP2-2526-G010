@@ -1,16 +1,39 @@
-key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
-campaign-err-01,invalid-ticker,"Bad Ticker","Ticker does not match pattern XX00-XXXXX",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err1,true,spokesperson-err-01
-campaign-err-02,ca02-ABCDE,"Lowercase prefix","Ticker prefix must be uppercase letters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err2,true,spokesperson-err-02
-campaign-err-03,ER03-AB,"Short suffix","Ticker suffix has fewer than 5 characters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err3,true,spokesperson-err-03
-campaign-err-04,ER04-ABCDEFGHIJK,"Long suffix","Ticker suffix has more than 10 characters",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err4,true,spokesperson-err-04
-campaign-err-05,ER05-ABCDE," ","Name is blank so ValidHeader NotBlank should fail",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err5,true,spokesperson-err-01
-campaign-err-06,ER06-ABCDE,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","Name exceeds 76 characters which is over ValidHeader max of 75",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err6,true,spokesperson-err-01
-campaign-err-07,ER07-ABCDE,"Valid Name"," ",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err7,true,spokesperson-err-02
-campaign-err-08,ER08-ABCDE,"Valid Name","BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB!",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err8,true,spokesperson-err-03
-campaign-err-09,ER09-ABCDE,"Valid Name","startMoment is in the past",2020/01/01 00:00,2030/06/01 00:00,https://example.com/err9,true,spokesperson-err-04
-campaign-err-10,ER10-ABCDE,"Valid Name","endMoment is in the past",2030/01/01 00:00,2020/06/01 00:00,https://example.com/err10,true,spokesperson-err-02
-campaign-err-11,ER11-ABCDE,"Valid Name","endMoment is before startMoment violating time interval",2030/06/01 00:00,2030/01/01 00:00,https://example.com/err11,true,spokesperson-err-01
-campaign-err-12,ER12-ABCDE,"Valid Name","endMoment equals startMoment so interval is not valid",2030/06/01 00:00,2030/06/01 00:00,https://example.com/err12,true,spokesperson-err-02
-campaign-err-13,ER13-ABCDE,"Valid Name","moreInfo is not a valid URL",2030/01/01 00:00,2030/06/01 00:00,not-a-valid-url,true,spokesperson-err-03
-campaign-err-14,ER14-ABCDE,"Valid Name","moreInfo has no schema so ValidUrl should reject it",2030/01/01 00:00,2030/06/01 00:00,example.com/noschema,true,spokesperson-err-04
-campaign-err-15,ER15-ABCDE,"Valid Name","draftMode false with no milestones linked to this campaign",2030/01/01 00:00,2030/06/01 00:00,https://example.com/err15,false,spokesperson-err-01
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:__spokesperson__
+
+# ticker invalid
+campaign-err-01,,"Valid Name",Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-02,invalid-ticker,"Valid Name",Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-03,ca03-ABCDE,"Valid Name",Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-04,CA0A-ABCDE,"Valid Name",Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-05,CA05-AB,"Valid Name",Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-06,CA06-ABCDEFGHIJK,"Valid Name",Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-07,CA07-__abcde__,"Valid Name",Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+
+# name invalid
+campaign-err-08,CA08-ABCDE1,,Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-09,CA09-ABCDE2,"   ",Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-10,CA10-ABCDE3,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",Valid description,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+
+# description invalid
+campaign-err-11,CA11-ABCDE1,Valid Name,,2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-12,CA12-ABCDE2,Valid Name,"   ",2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-13,CA13-ABCDE3,Valid Name,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",2030/01/01 00:00,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+
+# startMoment invalid
+campaign-err-14,CA14-ABCDE1,Valid Name,Valid description,,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-15,CA15-ABCDE2,Valid Name,Valid description,1999/12/31 23:59,2030/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+campaign-err-16,CA16-ABCDE3,Valid Name,Valid description,2201/01/01 00:01,2201/06/01 00:00,https://example.com/x,true,spokesperson-err-01
+
+# endMoment invalid
+campaign-err-17,CA17-ABCDE1,Valid Name,Valid description,2030/01/01 00:00,,https://example.com/x,true,spokesperson-err-01
+campaign-err-18,CA18-ABCDE2,Valid Name,Valid description,2030/01/01 00:00,1999/12/31 23:59,https://example.com/x,true,spokesperson-err-01
+campaign-err-19,CA19-ABCDE3,Valid Name,Valid description,2030/01/01 00:00,2201/01/01 00:01,https://example.com/x,true,spokesperson-err-01
+
+# moreInfo invalid
+campaign-err-22,CA22-ABCDE1,Valid Name,Valid description,2030/01/01 00:00,2030/06/01 00:00,http://,true,spokesperson-err-01
+campaign-err-23,CA23-ABCDE2,Valid Name,Valid description,2030/01/01 00:00,2030/06/01 00:00,example.com/__noschema__,true,spokesperson-err-01
+campaign-err-24,CA24-ABCDE3,Valid Name,Valid description,2030/01/01 00:00,2030/06/01 00:00,not-a-valid-url,true,spokesperson-err-01
+campaign-err-25,CA25-ABCDE4,Valid Name,Valid description,2030/01/01 00:00,2030/06/01 00:00,ftp://,true,spokesperson-err-01
+campaign-err-26,CA26-ABCDE5,Valid Name,Valid description,2030/01/01 00:00,2030/06/01 00:00,http://a,true,spokesperson-err-01
+campaign-err-27,CA27-ABCDE6,Valid Name,Valid description,2030/01/01 00:00,2030/06/01 00:00,ftp://a,true,spokesperson-err-01
+campaign-err-28,CA28-ABCDE7,Valid Name,Valid description,2030/01/01 00:00,2030/06/01 00:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x",true,spokesperson-err-01
