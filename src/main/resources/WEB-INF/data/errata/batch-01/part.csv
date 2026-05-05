@@ -2,7 +2,7 @@ key,name,description,cost,kind,key:invention
 
 # NAME (TEXT) → EMPTY
 part-err-01,,"Valid description","EUR 10.00",CORE,invention-err-01
-part-err-01,"","Valid description","EUR 10.00",CORE,invention-err-01
+part-err-05,"","Valid description","EUR 10.00",CORE,invention-err-01
 
 # NAME (TEXT) → MIN - Δ
 part-err-02,,"Valid description","EUR 10.00",CORE,invention-err-01
@@ -12,7 +12,7 @@ part-err-03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: ei
 
 # DESCRIPTION (TEXT) → EMPTY
 part-err-04,"Valid name",,"EUR 10.00",CORE,invention-err-01
-part-err-22,"Valid name","","EUR 10.00",CORE,invention-err-01
+part-err-12,"Valid name","","EUR 10.00",CORE,invention-err-01
 
 # DESCRIPTION (TEXT) → MAX + Δ
 part-err-06,"Valid name","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i","EUR 10.00",CORE,invention-err-01
